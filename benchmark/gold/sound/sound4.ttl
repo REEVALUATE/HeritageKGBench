@@ -1,0 +1,149 @@
+# Gold standard: sound4 – Azande songs (Evans-Pritchard, Sudan, 1926–1928)
+# Source text : txt/sound/sound4.txt
+# Students    : annotator4, annotator1
+# Primary     : annotator4 (86 cylinders, Cylinder 28 detail, Wikidata) + annotator1 (E65_Creation, sessions)
+
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+@prefix ex:    <https://example.org/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+
+# PEOPLE
+ex:evans_pritchard a crm:E21_Person ;
+    rdfs:label "Edward E. Evans-Pritchard"@en ;
+    owl:sameAs wd:Q150379 .
+
+ex:seligman a crm:E21_Person ;
+    rdfs:label "C. G. Seligman (ethnographic survey of Southern Sudan)"@en ;
+    owl:sameAs wd:Q550556 .
+
+ex:hornbostel a crm:E21_Person ;
+    rdfs:label "Erich M. von Hornbostel"@en ;
+    owl:sameAs wd:Q78975 .
+
+# GROUPS (Zande princes mentioned in cylinder 28)
+ex:gbudwe a crm:E21_Person ;
+    rdfs:label "Gbudwe (Zande prince)"@en .
+
+ex:rikita a crm:E21_Person ;
+    rdfs:label "Rikita (Zande prince)"@en .
+
+ex:gangura a crm:E21_Person ;
+    rdfs:label "Gangura (Zande prince)"@en .
+
+ex:mboli a crm:E21_Person ;
+    rdfs:label "Mboli (Zande prince, possibly)"@en .
+
+# PLACES
+ex:sw_sudan a crm:E53_Place ;
+    rdfs:label "Southwestern Sudan (Azande territory)"@en .
+
+ex:london_school_oriental_studies a crm:E53_Place ;
+    rdfs:label "School of Oriental Studies, London"@en .
+
+# INSTITUTION
+ex:berlin_phonogramm_archiv a crm:E74_Group ;
+    rdfs:label "Berlin Phonogramm-Archiv"@en ;
+    owl:sameAs wd:Q821680 .
+
+# INSTRUMENT: Edison phonograph
+ex:edison_phonograph a cacao:CACAO_0000023 ;
+    rdfs:label "Edison phonograph (provided by Hornbostel)"@en .
+
+# FIELDWORK SESSIONS
+ex:fieldwork_azande_1926 a crm:E7_Activity ;
+    rdfs:label "Evans-Pritchard first fieldwork among Azande (1926)"@en ;
+    crm:P14_carried_out_by ex:evans_pritchard ;
+    crm:P7_took_place_at ex:sw_sudan ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1926-01-01/1926-12-31" ; crm:P82_at_some_time_within "1926-01-01/1926-12-31" ] .
+
+ex:fieldwork_azande_1928 a crm:E7_Activity ;
+    rdfs:label "Evans-Pritchard second fieldwork among Azande (1928)"@en ;
+    crm:P14_carried_out_by ex:evans_pritchard ;
+    crm:P7_took_place_at ex:sw_sudan ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1928-01-01/1928-12-31" ; crm:P82_at_some_time_within "1928-01-01/1928-12-31" ] ;
+    crm:P16_used_specific_object ex:edison_phonograph .
+
+# RECORDING CREATION
+ex:recording_azande a crm:E65_Creation ;
+    rdfs:label "Evans-Pritchard recording of 86 Azande cylinders (1928)"@en ;
+    crm:P14_carried_out_by ex:evans_pritchard ;
+    crm:P7_took_place_at ex:sw_sudan ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1928-01-01/1928-12-31" ; crm:P82_at_some_time_within "1928-01-01/1928-12-31" ] ;
+    crm:P94_has_created ex:collection_azande .
+
+# COLLECTION (86 cylinders)
+ex:collection_azande a crm:E78_Curated_Holding ;
+    rdfs:label "86 wax cylinder recordings of Azande music and narratives"@en ;
+    crm:P50_has_current_keeper ex:berlin_phonogramm_archiv ;
+    crm:P3_has_note "Copies sent to School of Oriental Studies, London."@en ;
+    crm:P43_has_dimension [
+        a crm:E54_Dimension ;
+        rdfs:label "86 cylinders total"@en ;
+        crm:P90_has_value "86"^^xsd:integer ;
+        crm:P91_has_unit ex:unit_wax_cylinder ;
+        crm:P2_has_type ex:type_count
+    ] .
+
+ex:collection_narratives a crm:E73_Information_Object ;
+    rdfs:label "39 cylinders of narratives (circumcision, adultery cases)"@en ;
+    crm:P46i_forms_part_of ex:collection_azande ;
+    crm:P43_has_dimension [
+        a crm:E54_Dimension ;
+        rdfs:label "39 cylinders"@en ;
+        crm:P90_has_value "39"^^xsd:integer ;
+        crm:P91_has_unit ex:unit_wax_cylinder ;
+        crm:P2_has_type ex:type_count
+    ] .
+
+ex:collection_songs a crm:E73_Information_Object ;
+    rdfs:label "47 cylinders of songs (dance songs, war songs, beer songs; mostly solo)"@en ;
+    crm:P46i_forms_part_of ex:collection_azande ;
+    crm:P43_has_dimension [
+        a crm:E54_Dimension ;
+        rdfs:label "47 cylinders"@en ;
+        crm:P90_has_value "47"^^xsd:integer ;
+        crm:P91_has_unit ex:unit_wax_cylinder ;
+        crm:P2_has_type ex:type_count
+    ] .
+
+# CYLINDER 28 (featured)
+ex:cylinder_28 a crm:E84_Information_Carrier, cacao:CACAO_0000023 ;
+    rdfs:label "Cylinder 28 (two Zande songs in recitativo style)"@en ;
+    crm:P46i_forms_part_of ex:collection_azande ;
+    crm:P128_carries ex:song_28_first, ex:song_28_second .
+
+ex:song_28_first a crm:E73_Information_Object ;
+    rdfs:label "Cylinder 28, Song 1: mourning the Zande kings (recitativo style)"@en ;
+    crm:P3_has_note "17 similar phrases of equal length; each ends with same refrain; melody begins vary with tonal lyrics; pentatonic scale; mentions princes Gbudwe, Rikita, Gangura, Mboli."@en ;
+    crm:P129_is_about ex:gbudwe, ex:rikita, ex:gangura, ex:mboli .
+
+ex:song_28_second a crm:E73_Information_Object ;
+    rdfs:label "Cylinder 28, Song 2: glorious feats of Zande kings"@en ;
+    crm:P129_is_about ex:gbudwe, ex:rikita, ex:gangura, ex:mboli .
+
+ex:type_recitativo a crm:E55_Type ;
+    rdfs:label "Recitativo style (lyrics on few key pitches of pentatonic scale)"@en .
+
+ex:song_28_first crm:P2_has_type ex:type_recitativo .
+ex:song_28_second crm:P2_has_type ex:type_recitativo .
+
+# SOUND QUALITY NOTE
+ex:sound_quality_note a crm:E13_Attribute_Assignment ;
+    rdfs:label "Note on poor sound quality of Cylinder 28"@en ;
+    crm:P140_assigned_attribute_to ex:cylinder_28 ;
+    crm:P3_has_note "Lyrics difficult to transcribe due to poor sound quality."@en .
+
+# DIMENSION TYPES & UNITS
+ex:type_count a crm:E55_Type ; rdfs:label "count"@en .
+ex:unit_wax_cylinder a crm:E58_Measurement_Unit ; rdfs:label "wax cylinder"@en .
+
+# ===================================================================
+# gold-v2 enrichment: AAT/Wikidata grounding (curator-accepted)
+# ===================================================================
+
+ex:type_count owl:sameAs aat:300404433 .

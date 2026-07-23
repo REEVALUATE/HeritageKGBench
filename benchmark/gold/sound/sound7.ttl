@@ -1,0 +1,92 @@
+# Gold standard: sound7 – Lithuanian skuduciai flutes (Eduard Wolter, 1909)
+# Source text : txt/sound/sound7.txt
+# Students    : annotator5, annotator1
+# Primary     : annotator1 (richest: skuduciai Wikidata, sutartine, hocket, Juzintai Wikidata, Wolter dates)
+
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+@prefix ex:    <https://example.org/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+# PEOPLE
+ex:wolter a crm:E21_Person ;
+    rdfs:label "Eduard Wolter (1856–1941)"@en ;
+    crm:P3_has_note "Linguist, folklorist, ethnographer and historian of literature; author of numerous studies on Lithuanian language, mythology, and Lithuanian/Latvian folklore."@en .
+
+ex:sabaliauskas a crm:E21_Person ;
+    rdfs:label "Adolfas Sabaliauskas (collector, 1916)"@en .
+
+# PLACES
+ex:juzintai a crm:E53_Place ;
+    rdfs:label "Parish of Juzintai, northeast Lithuania"@en ;
+    owl:sameAs wd:Q2157268 .
+
+ex:northeast_lithuania a crm:E53_Place ;
+    rdfs:label "Northeast Lithuania (small territory on Lithuanian-Latvian border)"@en .
+
+ex:lithuania a crm:E53_Place ;
+    rdfs:label "Lithuania"@en ;
+    owl:sameAs wd:Q37 .
+
+# INSTRUMENTS
+ex:skuduciai_set a cacao:CACAO_0000023 ;
+    rdfs:label "Skuduciai set (single-pitch flutes, Lithuania)"@en ;
+    crm:P2_has_type ex:type_skuduciai ;
+    owl:sameAs wd:Q116843667 ;
+    crm:P3_has_note "4–8 flutes per set; pipes 10–20 cm long; made of chervil, reed, goutweed, or (preferably) wood (acorn, alder, ashwood, garden willow). Each participant plays 1–2 instruments."@en .
+
+ex:type_skuduciai a crm:E55_Type ;
+    rdfs:label "Skuduciai (Lithuanian single-pitch flutes)"@en ;
+    owl:sameAs wd:Q116843667 .
+
+ex:ragai a cacao:CACAO_0000023 ;
+    rdfs:label "Ragai (wooden trumpets, northeast Lithuania)"@en ;
+    crm:P3_has_note "Played in homogenous ensemble alongside skuduciai; similar repertoire."@en .
+
+# MUSICAL CONCEPTS
+ex:sutartine a crm:E55_Type ;
+    rdfs:label "Sutartine (Lithuanian vocal polyphony / Schwebungsdiaphonie)"@en ;
+    owl:sameAs wd:Q988502 ;
+    crm:P3_has_note "Northeast Lithuanian vocal polyphony; polyrhythmic, harmony rich in seconds, limited rhythmic values (quavers and crotchets)."@en .
+
+ex:hocket_principle a crm:E55_Type ;
+    rdfs:label "Hocket (complementary rhythmic interrelation of parts)"@en ;
+    owl:sameAs wd:Q994621 .
+
+# ORAL NOTATION
+ex:oral_notation a crm:E73_Information_Object ;
+    rdfs:label "Oral notation for skuduciai and ragai (syllable combinations for instruction)"@en ;
+    crm:P3_has_note "Special syllable combinations used for instruction and memorization."@en .
+
+# RECORDING (1909)
+ex:recording_skuduciai_1909 a crm:E65_Creation ;
+    rdfs:label "Eduard Wolter recording of two skuduciai pieces in Juzintai (1909)"@en ;
+    crm:P14_carried_out_by ex:wolter ;
+    crm:P7_took_place_at ex:juzintai ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1909-01-01/1909-12-31" ; crm:P82_at_some_time_within "1909-01-01/1909-12-31" ] ;
+    crm:P94_has_created ex:piece_skuduciai_1, ex:piece_skuduciai_2 .
+
+# PIECE 1
+ex:piece_skuduciai_1 a cacao:CACAO_0000089 ;
+    rdfs:label "Skuduciai Piece 1 (two musicians, 22 two-measure sections)"@en ;
+    crm:P3_has_note "Each musician plays a pair of flutes. 22 two-measure sections; main version appears in section 3, repeated without variation until final section. Possibly a sutartine song played instrumentally."@en ;
+    crm:P2_has_type ex:sutartine .
+
+# PIECE 2
+ex:piece_skuduciai_2 a cacao:CACAO_0000089 ;
+    rdfs:label "Skuduciai Piece 2 (three musicians, 18 sections, strong hocket)"@en ;
+    crm:P3_has_note "Three musicians: one plays two flutes, others each play one. 18 sections; 4 larger formal units; rhythmic variation in lower part, melodic in upper part (sections 5–11 and 15–18); strong hocket principle."@en ;
+    crm:P2_has_type ex:hocket_principle .
+
+# PERFORMANCE CONTEXTS
+ex:performance_contexts a crm:E73_Information_Object ;
+    rdfs:label "Performance contexts for skuduciai: outdoor (nightly grazing, Whitmonday, rye harvest, Midsummer, St. Peter's Day)"@en .
+
+# SABALIAUSKAS 1916 NOTE
+ex:sabaliauskas_note_1916 a crm:E33_Linguistic_Object ;
+    rdfs:label "Sabaliauskas (1916): 'Today one plays skuduciai standing, but once also while walking'"@en ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1916-01-01/1916-12-31" ; crm:P82_at_some_time_within "1916-01-01/1916-12-31" ] ;
+    crm:P14_carried_out_by ex:sabaliauskas .

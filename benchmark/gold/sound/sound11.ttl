@@ -1,0 +1,94 @@
+# Gold standard: sound11 – Buduma / Lake Chad (Bückner & Konrad, IWF)
+# Source text : txt/sound/sound11.txt
+# Students    : annotator1, annotator3
+# Primary     : annotator1 (IWF, Nachtigal report, harp recordings, Ra I Wikidata)
+
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+@prefix ex:    <https://example.org/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+# PEOPLE
+ex:fritz_bueckner a crm:E21_Person ;
+    rdfs:label "Fritz Bückner"@en .
+
+ex:walter_konrad a crm:E21_Person ;
+    rdfs:label "Walter Konrad (sound and film recorder)"@en .
+
+ex:thor_heyerdahl a crm:E21_Person ;
+    rdfs:label "Thor Heyerdahl"@en ;
+    owl:sameAs wd:Q133622 .
+
+ex:nachtigal a crm:E21_Person ;
+    rdfs:label "Gustav Nachtigal (explorer, 1881 report)"@en .
+
+# GROUPS
+ex:buduma_people a crm:E74_Group ;
+    rdfs:label "Buduma / Yedina people (Lake Chad islands)"@en ;
+    owl:sameAs wd:Q106727336 ;
+    crm:P3_has_note "Known for papyrus boats; historically feared raiders ('kings of their islands'). Described in Barth and Nachtigal travel reports."@en .
+
+ex:kanuri_people a crm:E74_Group ;
+    rdfs:label "Kanuri people"@en ;
+    owl:sameAs wd:Q572665 ;
+    crm:P3_has_note "Formed from fusion of numerous ethnic groups; 19th century."@en .
+
+# INSTITUTIONS
+ex:iwf a crm:E74_Group ;
+    rdfs:label "IWF (Institut für den Wissenschaftlichen Film, Göttingen)"@en ;
+    owl:sameAs wd:Q1655099 .
+
+# PLACES
+ex:lake_chad a crm:E53_Place ;
+    rdfs:label "Lake Chad (nerve center of central Africa)"@en ;
+    owl:sameAs wd:Q125309 .
+
+ex:borno a crm:E53_Place ;
+    rdfs:label "Borno (southwest Lake Chad)"@en ;
+    owl:sameAs wd:Q337514 .
+
+# HISTORICAL KINGDOMS
+ex:kingdom_kanem a crm:E74_Group ;
+    rdfs:label "Kingdom of Kanem (northeast Lake Chad)"@en ;
+    owl:sameAs wd:Q849841 ;
+    crm:P3_has_note "Kingdom on northeast coast of Lake Chad; center shifted to Borno between 14th and 16th centuries due to Sahara expansion."@en .
+
+# OBJECT: Ra I (Heyerdahl's papyrus boat)
+ex:ra_i a cacao:CACAO_0000023 ;
+    rdfs:label "Ra I (papyrus boat built by Heyerdahl with Buduma experts, 1969)"@en ;
+    owl:sameAs wd:Q10648252 ;
+    crm:P3_has_note "Thor Heyerdahl built Ra I to cross the Atlantic Ocean west to east in 1969, using Buduma papyrus-boat building expertise."@en .
+
+# DOCUMENTARY FILM
+ex:iwf_film a cacao:Video, crm:E31_Document ;
+    rdfs:label "IWF film: Buduma craft techniques (papyrus-boat shipbuilding)"@en ;
+    crm:P70_documents ex:documentation_buduma ;
+    crm:P129_is_about ex:buduma_people, ex:ra_i .
+
+# DOCUMENTATION ACTIVITY
+ex:documentation_buduma a crm:E7_Activity ;
+    rdfs:label "Fritz Bückner & Walter Konrad: IWF documentation of Buduma craft techniques at Lake Chad"@en ;
+    crm:P14_carried_out_by ex:fritz_bueckner, ex:walter_konrad, ex:iwf ;
+    crm:P7_took_place_at ex:lake_chad .
+
+# NACHTIGAL REPORT (1881)
+ex:nachtigal_report_1881 a crm:E33_Linguistic_Object ;
+    rdfs:label "Gustav Nachtigal report on Buduma (1881)"@en ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1881-01-01/1881-12-31" ; crm:P82_at_some_time_within "1881-01-01/1881-12-31" ] ;
+    crm:P129_is_about ex:buduma_people, ex:lake_chad ;
+    crm:P3_has_note "Describes Buduma raids; December 1870 attack on Schoa Datbigg village: 142 enslaved. 'The safety of their difficult-to-access dwelling places has made the Buduma into unusually cheeky robbers.'"@en .
+
+# HARP RECORDINGS (Walter Konrad)
+ex:harp_recording_activity a crm:E65_Creation ;
+    rdfs:label "Walter Konrad: sound/film recordings of harp players on Lake Chad islands"@en ;
+    crm:P14_carried_out_by ex:walter_konrad ;
+    crm:P7_took_place_at ex:lake_chad ;
+    crm:P94_has_created ex:harp_recordings_output ;
+    crm:P3_has_note "See also Konrad (1966)."@en .
+
+ex:harp_recordings_output a cacao:CACAO_0000089 ;
+    rdfs:label "Recordings of Buduma harp players (audio and film)"@en ;
+    crm:P3_has_note "Texts and melodies evoke past images – themes of the Kanem-Borno kingdom. Musicians and listeners look to a past that carries altered meaning in post-colonial context."@en .

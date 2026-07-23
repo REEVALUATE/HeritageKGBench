@@ -1,0 +1,362 @@
+### Ontology Summary ###
+
+## Namespaces:
+- : <http://w3id.org/cacao/cacao/cacao-full.owl#>
+- brick: <https://brickschema.org/schema/Brick#>
+- cacao: <http://w3id.org/cacao/>
+- cidoc: <http://www.cidoc-crm.org/cidoc-crm/>
+- csvw: <http://www.w3.org/ns/csvw#>
+- dc: <http://purl.org/dc/elements/1.1/>
+- dcam: <http://purl.org/dc/dcam/>
+- dcat: <http://www.w3.org/ns/dcat#>
+- dcmitype: <http://purl.org/dc/dcmitype/>
+- dcterms: <http://purl.org/dc/terms/>
+- doap: <http://usefulinc.com/ns/doap#>
+- foaf: <http://xmlns.com/foaf/0.1/>
+- geo: <http://www.opengis.net/ont/geosparql#>
+- ns: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
+- odrl: <http://www.w3.org/ns/odrl/2/>
+- org: <http://www.w3.org/ns/org#>
+- owl: <http://www.w3.org/2002/07/owl#>
+- prof: <http://www.w3.org/ns/dx/prof/>
+- prov: <http://www.w3.org/ns/prov#>
+- qb: <http://purl.org/linked-data/cube#>
+- rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+- rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+- schema: <https://schema.org/>
+- sh: <http://www.w3.org/ns/shacl#>
+- skos: <http://www.w3.org/2004/02/skos/core#>
+- sosa: <http://www.w3.org/ns/sosa/>
+- ssn: <http://www.w3.org/ns/ssn/>
+- time: <http://www.w3.org/2006/time#>
+- vann: <http://purl.org/vocab/vann/>
+- void: <http://rdfs.org/ns/void#>
+- wgs: <https://www.w3.org/2003/01/geo/wgs84_pos#>
+- xml: <http://www.w3.org/XML/1998/namespace>
+- xsd: <http://www.w3.org/2001/XMLSchema#>
+
+## Concepts:
+- 3D Object (cacao:CACAO_0000087)
+- Action (odrl:Action)
+- AdministrativeArea (schema:AdministrativeArea)
+- Agent (foaf:Agent)
+- Agreement (odrl:Agreement)
+- Artist (cacao:CACAO_0000022)
+- Artwork (cacao:CACAO_0000024)
+- Assertion (odrl:Assertion)
+- Asset (odrl:Asset)
+- Asset Collection (odrl:AssetCollection)
+- Audio (cacao:CACAO_0000089)
+- Awards (cacao:CACAO_0000082)
+- Basilicas (cacao:CACAO_0000037)
+- Building (cacao:CACAO_0000019)
+- Cathedrals (cacao:CACAO_0000041)
+- Cemeteries (cacao:CACAO_0000057)
+- Ceremonial Buildings (cacao:CACAO_0000059)
+- Chapels (cacao:CACAO_0000042)
+- Chemises (cacao:CACAO_0000074)
+- Churches (cacao:CACAO_0000029)
+- Class (schema:Class)
+- Cloaks (cacao:CACAO_0000072)
+- Clothing (cacao:CACAO_0000062)
+- Coats (cacao:CACAO_0000067)
+- Complexes (cacao:CACAO_0000056)
+- Conflict Strategy Preference (odrl:ConflictTerm)
+- Constraint (odrl:Constraint)
+- Country (schema:Country)
+- CreativeWork (schema:CreativeWork)
+- Cultural movement (cacao:CACAO_0000012)
+- Cup (cacao:CACAO_0000083)
+- DataType (schema:DataType)
+- Digital Artefact (cacao:CACAO_0000003)
+- Document (foaf:Document)
+- Documents (cacao:CACAO_0000079)
+- Domain (cacao:CACAO_0000014)
+- Domus (cacao:CACAO_0000055)
+- Domus Ecclesiae (cacao:CACAO_0000044)
+- Dresses (cacao:CACAO_0000066)
+- Duty (odrl:Duty)
+- E1 CRM Entity (cidoc:E1_CRM_Entity)
+- E13 Attribute Assignment (cidoc:E13_Attribute_Assignment)
+- E16 Measurement (cidoc:E16_Measurement)
+- E18 Physical Thing (cidoc:E18_Physical_Thing)
+- E19 Physical Object (cidoc:E19_Physical_Object)
+- E2 Temporal Entity (cidoc:E2_Temporal_Entity)
+- E20 Biological Object (cidoc:E20_Biological_Object)
+- E21 Person (cidoc:E21_Person)
+- E22 Human-Made Object (cidoc:E22_Human-Made_Object)
+- E24 Physical Human-Made Thing (cidoc:E24_Physical_Human-Made_Thing)
+- E28 Conceptual Object (cidoc:E28_Conceptual_Object)
+- E3 Condition State (cidoc:E3_Condition_State)
+- E30 Right (cidoc:E30_Right)
+- E33 Linguistic Object (cidoc:E33_Linguistic_Object)
+- E35 Title (cidoc:E35_Title)
+- E36 Visual Item (cidoc:E36_Visual_Item)
+- E39 Actor (cidoc:E39_Actor)
+- E4 Period (cidoc:E4_Period)
+- E41 Appellation (cidoc:E41_Appellation)
+- E42 Identifier (cidoc:E42_Identifier)
+- E5 Event (cidoc:E5_Event)
+- E52 Time-Span (cidoc:E52_Time-Span)
+- E53 Place (cidoc:E53_Place)
+- E54 Dimension (cidoc:E54_Dimension)
+- E55 Type (cidoc:E55_Type)
+- E57 Material (cidoc:E57_Material)
+- E58 Measurement Unit (cidoc:E58_Measurement_Unit)
+- E63 Beginning of Existence (cidoc:E63_Beginning_of_Existence)
+- E64 End of Existence (cidoc:E64_End_of_Existence)
+- E65 Creation (cidoc:E65_Creation)
+- E67 Birth (cidoc:E67_Birth)
+- E69 Death (cidoc:E69_Death)
+- E7 Activity (cidoc:E7_Activity)
+- E70 Thing (cidoc:E70_Thing)
+- E71 Human-Made Thing (cidoc:E71_Human-Made_Thing)
+- E72 Legal Object (cidoc:E72_Legal_Object)
+- E73 Information Object (cidoc:E73_Information_Object)
+- E74 Group (cidoc:E74_Group)
+- E77 Persistent Item (cidoc:E77_Persistent_Item)
+- E78 Curated Holding (cidoc:E78_Curated_Holding)
+- E89 Propositional Object (cidoc:E89_Propositional_Object)
+- E90 Symbolic Object (cidoc:E90_Symbolic_Object)
+- E92 Spacetime Volume (cidoc:E92_Spacetime_Volume)
+- Economic Relevance (cacao:CACAO_0000015)
+- Enumeration (schema:Enumeration)
+- Field Of Work (cacao:CACAO_0000028)
+- Forums (cacao:CACAO_0000051)
+- Genre (cacao:CACAO_0000027)
+- Historical Event (cacao:CACAO_0000005)
+- Houses (cacao:CACAO_0000053)
+- Image (cacao:CACAO_0000086)
+- Instrument (cacao:CACAO_0000025)
+- Intangible (schema:Intangible)
+- Left Operand (odrl:LeftOperand)
+- Letters (cacao:CACAO_0000080)
+- Lingerie (cacao:CACAO_0000077)
+- Logical Constraint (odrl:LogicalConstraint)
+- Main Garments (cacao:CACAO_0000063)
+- Medals (cacao:CACAO_0000081)
+- MediaObject (schema:MediaObject)
+- Mosaics (cacao:CACAO_0000049)
+- Mosques (cacao:CACAO_0000045)
+- Movement (cacao:CACAO_0000036)
+- Museum (cacao:CACAO_0000020)
+- Necropolis (cacao:CACAO_0000058)
+- Offer (odrl:Offer)
+- Open Spaces (cacao:CACAO_0000050)
+- Operator (odrl:Operator)
+- Outerwear (cacao:CACAO_0000064)
+- Painting (cacao:CACAO_0000061)
+- Party (odrl:Party)
+- Party Collection (odrl:PartyCollection)
+- Party Scope (odrl:PartyScope)
+- Permission (odrl:Permission)
+- Person (schema:Person)
+- Physical Artefact (cacao:CACAO_0000023)
+- Place (schema:Place)
+- Plaids (cacao:CACAO_0000068)
+- Policy (odrl:Policy)
+- Political movement (cacao:CACAO_0000013)
+- Privacy Policy (odrl:Privacy)
+- Prohibition (odrl:Prohibition)
+- Property (schema:Property)
+- Religious Buildings (cacao:CACAO_0000021)
+- Religious movement (cacao:CACAO_0000011)
+- Request (odrl:Request)
+- Residential Buildings (cacao:CACAO_0000052)
+- Right Operand (odrl:RightOperand)
+- Robes (cacao:CACAO_0000069)
+- Role (schema:Role)
+- Rule (odrl:Rule)
+- Set (odrl:Set)
+- Social movement (cacao:CACAO_0000010)
+- Specialty (schema:Specialty)
+- Structures (cacao:CACAO_0000046)
+- Suits (cacao:CACAO_0000070)
+- Symbolism (cacao:CACAO_0000016)
+- Temples (cacao:CACAO_0000043)
+- Text (schema:Text)
+- TextObject (schema:TextObject)
+- Thing (schema:Thing)
+- Ticket (odrl:Ticket)
+- Tombs (cacao:CACAO_0000060)
+- Tunics (cacao:CACAO_0000071)
+- URL (schema:URL)
+- Undefined Term (odrl:UndefinedTerm)
+- Underdresses (cacao:CACAO_0000076)
+- Underpants (cacao:CACAO_0000075)
+- Underskirts (cacao:CACAO_0000078)
+- Underwear (cacao:CACAO_0000065)
+- User (cacao:CACAO_0000002)
+- Video (cacao:CACAO_0000088)
+- Villas (cacao:CACAO_0000054)
+- WebPage (schema:WebPage)
+- dcterms:Agent
+- foaf:Organization
+- foaf:Person
+- ns1:Action
+- ns1:CreativeWork
+- ns1:Organization
+- ns1:Person
+- ns2:Agent
+- ns2:Individual
+- ns2:Organization
+- rdfs:Class
+- rdfs:Datatype
+- rdfs:Literal
+- skos:Collection
+- skos:Concept
+- xsd:anyURI
+
+## Relations:
+- Relation 'And (odrl:and)' connects 'Not specified' (domain) to 'Not specified' (range).
+- Relation 'And Sequence (odrl:andSequence)' connects 'Not specified' (domain) to 'Not specified' (range).
+- Relation 'Assignee (odrl:assignee)' connects 'Not specified' (domain) to 'Party (odrl:Party)' (range).
+- Relation 'Assignee Of (odrl:assigneeOf)' connects 'Party (odrl:Party)' (domain) to 'Policy (odrl:Policy)' (range).
+- Relation 'Assigner (odrl:assigner)' connects 'Not specified' (domain) to 'Party (odrl:Party)' (range).
+- Relation 'Assigner Of (odrl:assignerOf)' connects 'Party (odrl:Party)' (domain) to 'Policy (odrl:Policy)' (range).
+- Relation 'Attributed Party (odrl:attributedParty)' connects 'Not specified' (domain) to 'Not specified' (range).
+- Relation 'Attributing Party (odrl:attributingParty)' connects 'Not specified' (domain) to 'Not specified' (range).
+- Relation 'Compensated Party (odrl:compensatedParty)' connects 'Not specified' (domain) to 'Not specified' (range).
+- Relation 'Compensating Party (odrl:compensatingParty)' connects 'Not specified' (domain) to 'Not specified' (range).
+- Relation 'Consented Party (odrl:consentedParty)' connects 'Not specified' (domain) to 'Not specified' (range).
+- Relation 'Consenting Party (odrl:consentingParty)' connects 'Not specified' (domain) to 'Not specified' (range).
+- Relation 'Consequence (odrl:consequence)' connects 'Duty (odrl:Duty)' (domain) to 'Duty (odrl:Duty)' (range).
+- Relation 'Contracted Party (odrl:contractedParty)' connects 'Not specified' (domain) to 'Not specified' (range).
+- Relation 'Contracting Party (odrl:contractingParty)' connects 'Not specified' (domain) to 'Not specified' (range).
+- Relation 'Datatype (odrl:dataType)' connects 'Constraint (odrl:Constraint)' (domain) to 'rdfs:Datatype' (range).
+- Relation 'Failure (odrl:failure)' connects 'Rule (odrl:Rule)' (domain) to 'Rule (odrl:Rule)' (range).
+- Relation 'Function (odrl:function)' connects 'Not specified' (domain) to 'Party (odrl:Party)' (range).
+- Relation 'Handle Policy Conflicts (odrl:conflict)' connects 'Policy (odrl:Policy)' (domain) to 'Conflict Strategy Preference (odrl:ConflictTerm)' (range).
+- Relation 'Has Action (odrl:action)' connects 'Not specified' (domain) to 'Action (odrl:Action)' (range).
+- Relation 'Has Constraint (odrl:constraint)' connects 'Not specified' (domain) to '[Anonymous Class/Blank Node]' (range).
+- Relation 'Has Duty (odrl:duty)' connects 'Permission (odrl:Permission)' (domain) to 'Duty (odrl:Duty)' (range).
+- Relation 'Has Left Operand (odrl:leftOperand)' connects 'Constraint (odrl:Constraint)' (domain) to 'Left Operand (odrl:LeftOperand)' (range).
+- Relation 'Has Operator (odrl:operator)' connects 'Constraint (odrl:Constraint)' (domain) to 'Operator (odrl:Operator)' (range).
+- Relation 'Has Permission (odrl:permission)' connects 'Policy (odrl:Policy)' (domain) to 'Permission (odrl:Permission)' (range).
+- Relation 'Has Prohibition (odrl:prohibition)' connects 'Policy (odrl:Policy)' (domain) to 'Prohibition (odrl:Prohibition)' (range).
+- Relation 'Has Right Operand (odrl:rightOperand)' connects 'Constraint (odrl:Constraint)' (domain) to '[Anonymous Class/Blank Node]' (range).
+- Relation 'Has Right Operand (odrl:rightOperand)' connects 'Constraint (odrl:Constraint)' (domain) to '[Anonymous Class/Blank Node]' (range).
+- Relation 'Implies (odrl:implies)' connects 'Action (odrl:Action)' (domain) to 'Action (odrl:Action)' (range).
+- Relation 'Included In (odrl:includedIn)' connects 'Action (odrl:Action)' (domain) to 'Action (odrl:Action)' (range).
+- Relation 'Informed Party (odrl:informedParty)' connects 'Not specified' (domain) to 'Not specified' (range).
+- Relation 'Inherits From (odrl:inheritFrom)' connects 'Policy (odrl:Policy)' (domain) to 'Policy (odrl:Policy)' (range).
+- Relation 'Obligation (odrl:obligation)' connects 'Policy (odrl:Policy)' (domain) to 'Duty (odrl:Duty)' (range).
+- Relation 'Only One (odrl:xone)' connects 'Not specified' (domain) to 'Not specified' (range).
+- Relation 'Operand (odrl:operand)' connects 'Logical Constraint (odrl:LogicalConstraint)' (domain) to 'Not specified' (range).
+- Relation 'Or (odrl:or)' connects 'Not specified' (domain) to 'Not specified' (range).
+- Relation 'Output (odrl:output)' connects 'Rule (odrl:Rule)' (domain) to 'Asset (odrl:Asset)' (range).
+- Relation 'P1 is identified by (cidoc:P1_is_identified_by)' connects 'E1 CRM Entity (cidoc:E1_CRM_Entity)' (domain) to 'E41 Appellation (cidoc:E41_Appellation)' (range).
+- Relation 'P100 was death of (cidoc:P100_was_death_of)' connects 'E69 Death (cidoc:E69_Death)' (domain) to 'E21 Person (cidoc:E21_Person)' (range).
+- Relation 'P100i died in (cidoc:P100i_died_in)' connects 'E21 Person (cidoc:E21_Person)' (domain) to 'E69 Death (cidoc:E69_Death)' (range).
+- Relation 'P102 has title (cidoc:P102_has_title)' connects 'E71 Human-Made Thing (cidoc:E71_Human-Made_Thing)' (domain) to 'E35 Title (cidoc:E35_Title)' (range).
+- Relation 'P102i is title of (cidoc:P102i_is_title_of)' connects 'E35 Title (cidoc:E35_Title)' (domain) to 'E71 Human-Made Thing (cidoc:E71_Human-Made_Thing)' (range).
+- Relation 'P104 is subject to (cidoc:P104_is_subject_to)' connects 'E72 Legal Object (cidoc:E72_Legal_Object)' (domain) to 'E30 Right (cidoc:E30_Right)' (range).
+- Relation 'P104i applies to (cidoc:P104i_applies_to)' connects 'E30 Right (cidoc:E30_Right)' (domain) to 'E72 Legal Object (cidoc:E72_Legal_Object)' (range).
+- Relation 'P105 right held by (cidoc:P105_right_held_by)' connects 'E72 Legal Object (cidoc:E72_Legal_Object)' (domain) to 'E39 Actor (cidoc:E39_Actor)' (range).
+- Relation 'P105i has right on (cidoc:P105i_has_right_on)' connects 'E39 Actor (cidoc:E39_Actor)' (domain) to 'E72 Legal Object (cidoc:E72_Legal_Object)' (range).
+- Relation 'P106 is composed of (cidoc:P106_is_composed_of)' connects 'E90 Symbolic Object (cidoc:E90_Symbolic_Object)' (domain) to 'E90 Symbolic Object (cidoc:E90_Symbolic_Object)' (range).
+- Relation 'P106i forms part of (cidoc:P106i_forms_part_of)' connects 'E90 Symbolic Object (cidoc:E90_Symbolic_Object)' (domain) to 'E90 Symbolic Object (cidoc:E90_Symbolic_Object)' (range).
+- Relation 'P107 has current or former member (cidoc:P107_has_current_or_former_member)' connects 'E74 Group (cidoc:E74_Group)' (domain) to 'E39 Actor (cidoc:E39_Actor)' (range).
+- Relation 'P107i is current or former member of (cidoc:P107i_is_current_or_former_member_of)' connects 'E39 Actor (cidoc:E39_Actor)' (domain) to 'E74 Group (cidoc:E74_Group)' (range).
+- Relation 'P109 has current or former curator (cidoc:P109_has_current_or_former_curator)' connects 'E78 Curated Holding (cidoc:E78_Curated_Holding), Museum (cacao:CACAO_0000020)' (domain) to 'E39 Actor (cidoc:E39_Actor)' (range).
+- Relation 'P109i is current or former curator of (cidoc:P109i_is_current_or_former_curator_of)' connects 'E39 Actor (cidoc:E39_Actor)' (domain) to 'E78 Curated Holding (cidoc:E78_Curated_Holding)' (range).
+- Relation 'P11 had participant (cidoc:P11_had_participant)' connects 'E5 Event (cidoc:E5_Event)' (domain) to 'E39 Actor (cidoc:E39_Actor)' (range).
+- Relation 'P11i participated in (cidoc:P11i_participated_in)' connects 'E39 Actor (cidoc:E39_Actor)' (domain) to 'E5 Event (cidoc:E5_Event)' (range).
+- Relation 'P12 occurred in the presence of (cidoc:P12_occurred_in_the_presence_of)' connects 'E5 Event (cidoc:E5_Event)' (domain) to 'E77 Persistent Item (cidoc:E77_Persistent_Item)' (range).
+- Relation 'P129 is about (cidoc:P129_is_about)' connects 'E89 Propositional Object (cidoc:E89_Propositional_Object)' (domain) to 'E1 CRM Entity (cidoc:E1_CRM_Entity)' (range).
+- Relation 'P129i is subject of (cidoc:P129i_is_subject_of)' connects 'E1 CRM Entity (cidoc:E1_CRM_Entity)' (domain) to 'E89 Propositional Object (cidoc:E89_Propositional_Object)' (range).
+- Relation 'P12i was present at (cidoc:P12i_was_present_at)' connects 'E77 Persistent Item (cidoc:E77_Persistent_Item)' (domain) to 'E5 Event (cidoc:E5_Event)' (range).
+- Relation 'P130 shows features of (cidoc:P130_shows_features_of)' connects 'E70 Thing (cidoc:E70_Thing)' (domain) to 'E70 Thing (cidoc:E70_Thing)' (range).
+- Relation 'P130i features are also found on (cidoc:P130i_features_are_also_found_on)' connects 'E70 Thing (cidoc:E70_Thing)' (domain) to 'E70 Thing (cidoc:E70_Thing)' (range).
+- Relation 'P138 represents (cidoc:P138_represents)' connects 'E36 Visual Item (cidoc:E36_Visual_Item)' (domain) to 'E1 CRM Entity (cidoc:E1_CRM_Entity)' (range).
+- Relation 'P138i has representation (cidoc:P138i_has_representation)' connects 'E1 CRM Entity (cidoc:E1_CRM_Entity)' (domain) to 'E36 Visual Item (cidoc:E36_Visual_Item)' (range).
+- Relation 'P14 carried out by (cidoc:P14_carried_out_by)' connects 'E7 Activity (cidoc:E7_Activity)' (domain) to 'E39 Actor (cidoc:E39_Actor)' (range).
+- Relation 'P140 assigned attribute to (cidoc:P140_assigned_attribute_to)' connects 'E13 Attribute Assignment (cidoc:E13_Attribute_Assignment)' (domain) to 'E1 CRM Entity (cidoc:E1_CRM_Entity)' (range).
+- Relation 'P140i was attributed by (cidoc:P140i_was_attributed_by)' connects 'E1 CRM Entity (cidoc:E1_CRM_Entity)' (domain) to 'E13 Attribute Assignment (cidoc:E13_Attribute_Assignment)' (range).
+- Relation 'P141 assigned (cidoc:P141_assigned)' connects 'E13 Attribute Assignment (cidoc:E13_Attribute_Assignment)' (domain) to 'E1 CRM Entity (cidoc:E1_CRM_Entity)' (range).
+- Relation 'P141i was assigned by (cidoc:P141i_was_assigned_by)' connects 'E1 CRM Entity (cidoc:E1_CRM_Entity)' (domain) to 'E13 Attribute Assignment (cidoc:E13_Attribute_Assignment)' (range).
+- Relation 'P14i performed (cidoc:P14i_performed)' connects 'E39 Actor (cidoc:E39_Actor)' (domain) to 'E7 Activity (cidoc:E7_Activity)' (range).
+- Relation 'P190 has symbolic content (cidoc:P190_has_symbolic_content)' connects 'E90 Symbolic Object (cidoc:E90_Symbolic_Object)' (domain) to 'Not specified' (range).
+- Relation 'P1i identifies (cidoc:P1i_identifies)' connects 'E41 Appellation (cidoc:E41_Appellation)' (domain) to 'E1 CRM Entity (cidoc:E1_CRM_Entity)' (range).
+- Relation 'P3 has note (cidoc:P3_has_note)' connects 'E1 CRM Entity (cidoc:E1_CRM_Entity)' (domain) to 'Not specified' (range).
+- Relation 'P39 measured (cidoc:P39_measured)' connects 'E16 Measurement (cidoc:E16_Measurement)' (domain) to 'E18 Physical Thing (cidoc:E18_Physical_Thing)' (range).
+- Relation 'P39i was measured by (cidoc:P39i_was_measured_by)' connects 'E18 Physical Thing (cidoc:E18_Physical_Thing)' (domain) to 'E16 Measurement (cidoc:E16_Measurement)' (range).
+- Relation 'P4 has time-span (cidoc:P4_has_time-span)' connects 'E2 Temporal Entity (cidoc:E2_Temporal_Entity)' (domain) to 'E52 Time-Span (cidoc:E52_Time-Span)' (range).
+- Relation 'P40 observed dimension (cidoc:P40_observed_dimension)' connects 'E16 Measurement (cidoc:E16_Measurement)' (domain) to 'E54 Dimension (cidoc:E54_Dimension)' (range).
+- Relation 'P40i was observed in (cidoc:P40i_was_observed_in)' connects 'E54 Dimension (cidoc:E54_Dimension)' (domain) to 'E16 Measurement (cidoc:E16_Measurement)' (range).
+- Relation 'P44 has condition (cidoc:P44_has_condition)' connects 'E18 Physical Thing (cidoc:E18_Physical_Thing)' (domain) to 'E3 Condition State (cidoc:E3_Condition_State)' (range).
+- Relation 'P44i is condition of (cidoc:P44i_is_condition_of)' connects 'E3 Condition State (cidoc:E3_Condition_State)' (domain) to 'E18 Physical Thing (cidoc:E18_Physical_Thing)' (range).
+- Relation 'P45 consists of (cidoc:P45_consists_of)' connects 'E18 Physical Thing (cidoc:E18_Physical_Thing)' (domain) to 'E57 Material (cidoc:E57_Material)' (range).
+- Relation 'P45i is incorporated in (cidoc:P45i_is_incorporated_in)' connects 'E57 Material (cidoc:E57_Material)' (domain) to 'E18 Physical Thing (cidoc:E18_Physical_Thing)' (range).
+- Relation 'P46 is composed of (cidoc:P46_is_composed_of)' connects 'E18 Physical Thing (cidoc:E18_Physical_Thing)' (domain) to 'E18 Physical Thing (cidoc:E18_Physical_Thing)' (range).
+- Relation 'P46i forms part of (cidoc:P46i_forms_part_of)' connects 'E18 Physical Thing (cidoc:E18_Physical_Thing)' (domain) to 'E18 Physical Thing (cidoc:E18_Physical_Thing)' (range).
+- Relation 'P48 has preferred identifier (cidoc:P48_has_preferred_identifier)' connects 'E1 CRM Entity (cidoc:E1_CRM_Entity)' (domain) to 'E42 Identifier (cidoc:E42_Identifier)' (range).
+- Relation 'P48i is preferred identifier of (cidoc:P48i_is_preferred_identifier_of)' connects 'E42 Identifier (cidoc:E42_Identifier)' (domain) to 'E1 CRM Entity (cidoc:E1_CRM_Entity)' (range).
+- Relation 'P49 has former or current keeper (cidoc:P49_has_former_or_current_keeper)' connects 'E18 Physical Thing (cidoc:E18_Physical_Thing)' (domain) to 'E39 Actor (cidoc:E39_Actor)' (range).
+- Relation 'P49i is former or current keeper of (cidoc:P49i_is_former_or_current_keeper_of)' connects 'E39 Actor (cidoc:E39_Actor)' (domain) to 'E18 Physical Thing (cidoc:E18_Physical_Thing)' (range).
+- Relation 'P4i is time-span of (cidoc:P4i_is_time-span_of)' connects 'E52 Time-Span (cidoc:E52_Time-Span)' (domain) to 'E2 Temporal Entity (cidoc:E2_Temporal_Entity)' (range).
+- Relation 'P50 has current keeper (cidoc:P50_has_current_keeper)' connects 'E18 Physical Thing (cidoc:E18_Physical_Thing)' (domain) to 'E39 Actor (cidoc:E39_Actor)' (range).
+- Relation 'P50i is current keeper of (cidoc:P50i_is_current_keeper_of)' connects 'E39 Actor (cidoc:E39_Actor)' (domain) to 'E18 Physical Thing (cidoc:E18_Physical_Thing)' (range).
+- Relation 'P51 has former or current owner (cidoc:P51_has_former_or_current_owner)' connects 'E18 Physical Thing (cidoc:E18_Physical_Thing)' (domain) to 'E39 Actor (cidoc:E39_Actor)' (range).
+- Relation 'P51i is former or current owner of (cidoc:P51i_is_former_or_current_owner_of)' connects 'E39 Actor (cidoc:E39_Actor)' (domain) to 'E18 Physical Thing (cidoc:E18_Physical_Thing)' (range).
+- Relation 'P52 has current owner (cidoc:P52_has_current_owner)' connects 'E18 Physical Thing (cidoc:E18_Physical_Thing)' (domain) to 'E39 Actor (cidoc:E39_Actor)' (range).
+- Relation 'P52i is current owner of (cidoc:P52i_is_current_owner_of)' connects 'E39 Actor (cidoc:E39_Actor)' (domain) to 'E18 Physical Thing (cidoc:E18_Physical_Thing)' (range).
+- Relation 'P53 has former or current location (cidoc:P53_has_former_or_current_location)' connects 'E18 Physical Thing (cidoc:E18_Physical_Thing)' (domain) to 'E53 Place (cidoc:E53_Place)' (range).
+- Relation 'P53i is former or current location of (cidoc:P53i_is_former_or_current_location_of)' connects 'E53 Place (cidoc:E53_Place)' (domain) to 'E18 Physical Thing (cidoc:E18_Physical_Thing)' (range).
+- Relation 'P54 has current permanent location (cidoc:P54_has_current_permanent_location)' connects 'E19 Physical Object (cidoc:E19_Physical_Object)' (domain) to 'E53 Place (cidoc:E53_Place)' (range).
+- Relation 'P54i is current permanent location of (cidoc:P54i_is_current_permanent_location_of)' connects 'E53 Place (cidoc:E53_Place)' (domain) to 'E19 Physical Object (cidoc:E19_Physical_Object)' (range).
+- Relation 'P55 has current location (cidoc:P55_has_current_location)' connects 'E19 Physical Object (cidoc:E19_Physical_Object)' (domain) to 'E53 Place (cidoc:E53_Place)' (range).
+- Relation 'P55i currently holds (cidoc:P55i_currently_holds)' connects 'E53 Place (cidoc:E53_Place)' (domain) to 'E19 Physical Object (cidoc:E19_Physical_Object)' (range).
+- Relation 'P67 refers to (cidoc:P67_refers_to)' connects 'E89 Propositional Object (cidoc:E89_Propositional_Object)' (domain) to 'E1 CRM Entity (cidoc:E1_CRM_Entity)' (range).
+- Relation 'P67i is referred to by (cidoc:P67i_is_referred_to_by)' connects 'E1 CRM Entity (cidoc:E1_CRM_Entity)' (domain) to 'E89 Propositional Object (cidoc:E89_Propositional_Object)' (range).
+- Relation 'P7 took place at (cidoc:P7_took_place_at)' connects 'E4 Period (cidoc:E4_Period)' (domain) to 'E53 Place (cidoc:E53_Place)' (range).
+- Relation 'P75 possesses (cidoc:P75_possesses)' connects 'E39 Actor (cidoc:E39_Actor)' (domain) to 'E30 Right (cidoc:E30_Right)' (range).
+- Relation 'P75i is possessed by (cidoc:P75i_is_possessed_by)' connects 'E30 Right (cidoc:E30_Right)' (domain) to 'E39 Actor (cidoc:E39_Actor)' (range).
+- Relation 'P79 beginning is qualified by (cidoc:P79_beginning_is_qualified_by)' connects 'E52 Time-Span (cidoc:E52_Time-Span)' (domain) to 'Not specified' (range).
+- Relation 'P7i witnessed (cidoc:P7i_witnessed)' connects 'E53 Place (cidoc:E53_Place)' (domain) to 'E4 Period (cidoc:E4_Period)' (range).
+- Relation 'P80 end is qualified by (cidoc:P80_end_is_qualified_by)' connects 'E52 Time-Span (cidoc:E52_Time-Span)' (domain) to 'Not specified' (range).
+- Relation 'P89 falls within (cidoc:P89_falls_within)' connects 'E53 Place (cidoc:E53_Place)' (domain) to 'E53 Place (cidoc:E53_Place)' (range).
+- Relation 'P89i contains (cidoc:P89i_contains)' connects 'E53 Place (cidoc:E53_Place)' (domain) to 'E53 Place (cidoc:E53_Place)' (range).
+- Relation 'P90 has value (cidoc:P90_has_value)' connects 'E54 Dimension (cidoc:E54_Dimension)' (domain) to 'Not specified' (range).
+- Relation 'P91 has unit (cidoc:P91_has_unit)' connects 'E54 Dimension (cidoc:E54_Dimension)' (domain) to 'E58 Measurement Unit (cidoc:E58_Measurement_Unit)' (range).
+- Relation 'P91i is unit of (cidoc:P91i_is_unit_of)' connects 'E58 Measurement Unit (cidoc:E58_Measurement_Unit)' (domain) to 'E54 Dimension (cidoc:E54_Dimension)' (range).
+- Relation 'P92 brought into existence (cidoc:P92_brought_into_existence)' connects 'E63 Beginning of Existence (cidoc:E63_Beginning_of_Existence)' (domain) to 'E77 Persistent Item (cidoc:E77_Persistent_Item)' (range).
+- Relation 'P92i was brought into existence by (cidoc:P92i_was_brought_into_existence_by)' connects 'E77 Persistent Item (cidoc:E77_Persistent_Item)' (domain) to 'E63 Beginning of Existence (cidoc:E63_Beginning_of_Existence)' (range).
+- Relation 'P93 took out of existence (cidoc:P93_took_out_of_existence)' connects 'E64 End of Existence (cidoc:E64_End_of_Existence)' (domain) to 'E77 Persistent Item (cidoc:E77_Persistent_Item)' (range).
+- Relation 'P93i was taken out of existence by (cidoc:P93i_was_taken_out_of_existence_by)' connects 'E77 Persistent Item (cidoc:E77_Persistent_Item)' (domain) to 'E64 End of Existence (cidoc:E64_End_of_Existence)' (range).
+- Relation 'P94 has created (cidoc:P94_has_created)' connects 'E65 Creation (cidoc:E65_Creation)' (domain) to 'E28 Conceptual Object (cidoc:E28_Conceptual_Object)' (range).
+- Relation 'P94i was created by (cidoc:P94i_was_created_by)' connects 'E28 Conceptual Object (cidoc:E28_Conceptual_Object)' (domain) to 'E65 Creation (cidoc:E65_Creation)' (range).
+- Relation 'P98 brought into life (cidoc:P98_brought_into_life)' connects 'E67 Birth (cidoc:E67_Birth)' (domain) to 'E21 Person (cidoc:E21_Person)' (range).
+- Relation 'P98i was born (cidoc:P98i_was_born)' connects 'E21 Person (cidoc:E21_Person)' (domain) to 'E67 Birth (cidoc:E67_Birth)' (range).
+- Relation 'Part Of (odrl:partOf)' connects 'Not specified' (domain) to '[Anonymous Class/Blank Node]' (range).
+- Relation 'Refinement (odrl:refinement)' connects 'Not specified' (domain) to '[Anonymous Class/Blank Node]' (range).
+- Relation 'Relation (odrl:relation)' connects 'Not specified' (domain) to 'Asset (odrl:Asset)' (range).
+- Relation 'Remedy (odrl:remedy)' connects 'Prohibition (odrl:Prohibition)' (domain) to 'Duty (odrl:Duty)' (range).
+- Relation 'Target (odrl:target)' connects 'Not specified' (domain) to 'Asset (odrl:Asset)' (range).
+- Relation 'Target Policy (odrl:hasPolicy)' connects 'Asset (odrl:Asset)' (domain) to 'Policy (odrl:Policy)' (range).
+- Relation 'Tracked Party (odrl:trackedParty)' connects 'Not specified' (domain) to 'Not specified' (range).
+- Relation 'Tracking Party (odrl:trackingParty)' connects 'Not specified' (domain) to 'Not specified' (range).
+- Relation 'description (schema:description)' connects 'Thing (schema:Thing)' (domain) to '[Anonymous Class/Blank Node]' (range).
+- Relation 'diameter (cacao:CACAO_0000032)' connects 'Not specified' (domain) to 'Not specified' (range).
+- Relation 'europeana (cacao:CACAO_0000039)' connects 'Not specified' (domain) to 'Not specified' (range).
+- Relation 'expressedBy (cacao:CACAO_0000006)' connects 'E30 Right (cidoc:E30_Right)' (domain) to 'Policy (odrl:Policy)' (range).
+- Relation 'fieldOfWork (cacao:CACAO_0000026)' connects 'E39 Actor (cidoc:E39_Actor)' (domain) to 'Field Of Work (cacao:CACAO_0000028)' (range).
+- Relation 'genre (cacao:CACAO_0000017)' connects 'E1 CRM Entity (cidoc:E1_CRM_Entity)' (domain) to 'Genre (cacao:CACAO_0000027)' (range).
+- Relation 'hasDomain (cacao:CACAO_0000000)' connects 'E1 CRM Entity (cidoc:E1_CRM_Entity)' (domain) to 'Domain (cacao:CACAO_0000014)' (range).
+- Relation 'hasEconomicRelevance (cacao:CACAO_0000001)' connects 'E1 CRM Entity (cidoc:E1_CRM_Entity)' (domain) to 'Economic Relevance (cacao:CACAO_0000015)' (range).
+- Relation 'hasSymbolism (cacao:CACAO_0000004)' connects 'E70 Thing (cidoc:E70_Thing)' (domain) to 'Symbolism (cacao:CACAO_0000016)' (range).
+- Relation 'height (cacao:CACAO_0000030)' connects 'Not specified' (domain) to 'Not specified' (range).
+- Relation 'interest (foaf:interest)' connects 'Agent (foaf:Agent), E39 Actor (cidoc:E39_Actor)' (domain) to 'Document (foaf:Document)' (range).
+- Relation 'length (cacao:CACAO_0000034)' connects 'Not specified' (domain) to 'Not specified' (range).
+- Relation 'movement (cacao:CACAO_0000035)' connects 'E1 CRM Entity (cidoc:E1_CRM_Entity)' (domain) to 'Movement (cacao:CACAO_0000036)' (range).
+- Relation 'nationality (schema:nationality)' connects 'E39 Actor (cidoc:E39_Actor), Person (schema:Person)' (domain) to '[Anonymous Class/Blank Node]' (range).
+- Relation 'partner (cacao:CACAO_0000040)' connects 'E39 Actor (cidoc:E39_Actor)' (domain) to 'E39 Actor (cidoc:E39_Actor)' (range).
+- Relation 'roleName (schema:roleName)' connects 'E39 Actor (cidoc:E39_Actor), Role (schema:Role)' (domain) to '[Anonymous Class/Blank Node]' (range).
+- Relation 'socialMovement (cacao:CACAO_0000018)' connects 'E1 CRM Entity (cidoc:E1_CRM_Entity)' (domain) to 'Social movement (cacao:CACAO_0000010)' (range).
+- Relation 'specialty (schema:specialty)' connects 'E39 Actor (cidoc:E39_Actor), WebPage (schema:WebPage)' (domain) to '[Anonymous Class/Blank Node]' (range).
+- Relation 'supersededBy (schema:supersededBy)' connects 'Not specified' (domain) to '[Anonymous Class/Blank Node]' (range).
+- Relation 'thickness (cacao:CACAO_0000033)' connects 'Not specified' (domain) to 'Not specified' (range).
+- Relation 'website (cacao:CACAO_0000038)' connects 'Not specified' (domain) to 'Not specified' (range).
+- Relation 'width (cacao:CACAO_0000031)' connects 'Not specified' (domain) to 'Not specified' (range).
+
+### End of Summary ###

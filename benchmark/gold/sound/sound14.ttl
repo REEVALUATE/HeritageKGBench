@@ -1,0 +1,135 @@
+# Gold standard: sound14 – Egyptian folk music concert, Dahlem Museum Berlin (June 6, 1977)
+# Source text : txt/sound/sound14.txt
+# Students    : annotator2, annotator3, annotator9
+# Primary     : annotator2/annotator9 (both identical; rich instrument types with Wikidata) + annotator3 (sub-performances)
+
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+@prefix ex:    <https://example.org/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+
+# PEOPLE / CONTEXT
+ex:dept_ethnomusicology a crm:E74_Group ;
+    rdfs:label "Department of Ethnomusicology (Dahlem Museum, Berlin)"@en .
+
+# GROUPS (ensembles)
+ex:mizmar_baladi_ensemble a crm:E74_Group ;
+    rdfs:label "Mizmar-baladi ensemble (from south Egypt)"@en ;
+    crm:P3_has_note "3 oboes (narrow and wide bore), 2 percussion, stick dancers. Melody circulates in small tonal range in heterophonic style. Horse dance pantomime."@en .
+
+ex:upper_egypt_ensemble a crm:E74_Group ;
+    rdfs:label "Upper Egypt multipart music group"@en ;
+    crm:P3_has_note "Representative of music that retreated to upper Egypt due to Islamization and Europeanization. Drone-like sustained notes, double clarinet, rebabah, end-blown flute, duff, tabla."@en .
+
+# PLACES
+ex:dahlem_museum a crm:E53_Place ;
+    rdfs:label "Upper foyer of the Dahlem Museum, Berlin"@en ;
+    owl:sameAs wd:Q487962 ;
+    crm:P89_falls_within wd:Q64 .
+
+# CONCERT EVENT
+ex:concert_1977 a crm:E7_Activity ;
+    rdfs:label "Egyptian folk music concert at Dahlem Museum (June 6, 1977)"@en ;
+    crm:P2_has_type ex:type_music_concert ;
+    crm:P14_carried_out_by ex:dept_ethnomusicology ;
+    crm:P7_took_place_at ex:dahlem_museum ;
+    crm:P11_had_participant ex:mizmar_baladi_ensemble, ex:upper_egypt_ensemble ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1977-06-06"^^xsd:date ; crm:P82_at_some_time_within "1977-06-06"^^xsd:date ] ;
+    crm:P9_consists_of ex:performance_mizmar_baladi, ex:performance_upper_egypt .
+
+ex:type_music_concert a crm:E55_Type ;
+    rdfs:label "Music concert"@en .
+
+# SUB-PERFORMANCES
+ex:performance_mizmar_baladi a crm:E7_Activity ;
+    rdfs:label "Performance of mizmar-baladi ensemble (concert, June 6, 1977)"@en ;
+    crm:P14_carried_out_by ex:mizmar_baladi_ensemble .
+
+ex:performance_upper_egypt a crm:E7_Activity ;
+    rdfs:label "Performance of Upper Egypt multipart music group (concert, June 6, 1977)"@en ;
+    crm:P14_carried_out_by ex:upper_egypt_ensemble .
+
+# INSTRUMENTS – MIZMAR-BALADI
+ex:mizmar_oboe a crm:E55_Type ;
+    rdfs:label "Mizmar (folk oboe, narrow and wide bore variants)"@en ;
+    owl:sameAs wd:Q1952403 .
+
+ex:large_drum a crm:E55_Type ;
+    rdfs:label "Large drum"@en .
+
+ex:kettledrum a crm:E55_Type ;
+    rdfs:label "Small kettledrum (hung in front of body, beaten with small sticks)"@en .
+
+ex:stick_dance a crm:E55_Type ;
+    rdfs:label "Stick dance (pantomime; 'horse dance' folk subject)"@en .
+
+ex:mizmar_baladi_ensemble
+    crm:P67_refers_to ex:mizmar_oboe, ex:large_drum, ex:kettledrum, ex:stick_dance .
+
+# INSTRUMENTS – UPPER EGYPT ENSEMBLE
+ex:double_clarinet a crm:E55_Type ;
+    rdfs:label "Double clarinet (burring/droning sound)"@en .
+
+ex:rebabah a crm:E55_Type ;
+    rdfs:label "Rebabah (two-string spike fiddle)"@en ;
+    owl:sameAs wd:Q146595 ;
+    crm:P3_has_note "Player also sings popular traditional song-narratives (countryside, love, nature); sometimes supports rhythm with bow."@en .
+
+ex:end_blown_flute a crm:E55_Type ;
+    rdfs:label "End-blown flute"@en ;
+    owl:sameAs wd:Q1879241.
+
+ex:duff a crm:E55_Type ;
+    rdfs:label "Duff (frame drum; African off-beat rhythms)"@en ;
+    owl:sameAs wd:Q11414 .
+
+ex:tabla a crm:E55_Type ;
+    rdfs:label "Tabla"@en ;
+    owl:sameAs wd:Q191106 .
+
+ex:upper_egypt_ensemble
+    crm:P67_refers_to ex:double_clarinet, ex:rebabah, ex:end_blown_flute, ex:duff, ex:tabla .
+
+# NEWSPAPER ARTICLE (source document)
+ex:tagesspiegel_article a crm:E73_Information_Object ;
+    rdfs:label "Der Tagesspiegel, Berlin, June 6, 1977 – concert review"@en ;
+    crm:P2_has_type ex:type_newspaper_article ;
+    crm:P70_documents ex:concert_1977 ;
+    crm:P3_has_note "Source: 'Der Tagesspiegel,' Berlin, June 6, 1977, pp. 256–257."@en .
+
+ex:type_newspaper_article a crm:E55_Type ;
+    rdfs:label "Newspaper article"@en ;
+    owl:sameAs wd:Q5707594.
+
+# PHOTOGRAPH
+ex:photo_concert a crm:E38_Image ;
+    rdfs:label "Photo: stick dancers and musicians of mizmar-baladi ensemble during concert (pp. 256–7)"@en ;
+    crm:P67_refers_to ex:performance_mizmar_baladi .
+
+# CULTURAL CONTEXT NOTE
+ex:folk_music_tradition a crm:E73_Information_Object ;
+    rdfs:label "Egyptian folk music tradition (5,000 years of itinerant professional musicians)"@en ;
+    crm:P3_has_note "Art passed on within family. Defends against European influence, media, commercialization. Performed at weddings, saint celebrations, circumcisions, pilgrim greetings, village dances. Oldest performer 60; youngest 15."@en ;
+    crm:P129_is_about wd:Q79 .
+
+# ===================================================================
+# gold-v2 enrichment: AAT/Wikidata grounding (curator-accepted)
+# ===================================================================
+
+ex:double_clarinet crm:P127_has_broader_term aat:300195685 .
+ex:double_clarinet crm:P127_has_broader_term wd:Q229717 .
+ex:duff owl:sameAs aat:300194204 .
+ex:duff owl:sameAs wd:Q1283177 .
+ex:end_blown_flute crm:P127_has_broader_term wd:Q11405 .
+ex:kettledrum crm:P127_has_broader_term aat:300041741 .
+ex:kettledrum crm:P127_has_broader_term wd:Q189737 .
+ex:large_drum crm:P127_has_broader_term aat:300041729 .
+ex:large_drum crm:P127_has_broader_term wd:Q11404 .
+ex:tabla owl:sameAs aat:300206829 .
+ex:tabla owl:sameAs wd:Q213100 .
+ex:type_music_concert crm:P127_has_broader_term aat:300069210 .
+ex:type_music_concert crm:P127_has_broader_term wd:Q182832 .

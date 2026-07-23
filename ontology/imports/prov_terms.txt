@@ -1,0 +1,107 @@
+# PROV-O (W3C Provenance Ontology)
+# Core provenance concepts for tracking facts, opinions, and interpretations
+
+# Core Classes - Starting Point
+http://www.w3.org/ns/prov#Entity
+http://www.w3.org/ns/prov#Activity
+http://www.w3.org/ns/prov#Agent
+
+# Expanded Classes - Agents
+http://www.w3.org/ns/prov#Person
+http://www.w3.org/ns/prov#Organization
+http://www.w3.org/ns/prov#SoftwareAgent
+
+# Expanded Classes - Collections and Plans
+http://www.w3.org/ns/prov#Collection
+http://www.w3.org/ns/prov#EmptyCollection
+http://www.w3.org/ns/prov#Bundle
+http://www.w3.org/ns/prov#Plan
+
+# Expanded Classes - Context
+http://www.w3.org/ns/prov#Location
+http://www.w3.org/ns/prov#Role
+
+# Core Properties - Entity-Entity Relations
+http://www.w3.org/ns/prov#wasDerivedFrom
+http://www.w3.org/ns/prov#alternateOf
+http://www.w3.org/ns/prov#specializationOf
+http://www.w3.org/ns/prov#hadPrimarySource
+http://www.w3.org/ns/prov#wasQuotedFrom
+http://www.w3.org/ns/prov#wasRevisionOf
+
+# Core Properties - Entity-Activity Relations
+http://www.w3.org/ns/prov#wasGeneratedBy
+http://www.w3.org/ns/prov#used
+http://www.w3.org/ns/prov#wasInvalidatedBy
+
+# Core Properties - Activity-Activity Relations
+http://www.w3.org/ns/prov#wasInformedBy
+
+# Core Properties - Agent Relations
+http://www.w3.org/ns/prov#wasAttributedTo
+http://www.w3.org/ns/prov#wasAssociatedWith
+http://www.w3.org/ns/prov#actedOnBehalfOf
+
+# Temporal Properties
+http://www.w3.org/ns/prov#startedAtTime
+http://www.w3.org/ns/prov#endedAtTime
+http://www.w3.org/ns/prov#generatedAtTime
+http://www.w3.org/ns/prov#invalidatedAtTime
+
+# Qualified Relations - For detailed provenance tracking
+http://www.w3.org/ns/prov#qualifiedGeneration
+http://www.w3.org/ns/prov#qualifiedDerivation
+http://www.w3.org/ns/prov#qualifiedUsage
+http://www.w3.org/ns/prov#qualifiedAssociation
+http://www.w3.org/ns/prov#qualifiedAttribution
+http://www.w3.org/ns/prov#qualifiedInfluence
+http://www.w3.org/ns/prov#qualifiedCommunication
+http://www.w3.org/ns/prov#qualifiedStart
+http://www.w3.org/ns/prov#qualifiedEnd
+http://www.w3.org/ns/prov#qualifiedInvalidation
+http://www.w3.org/ns/prov#qualifiedRevision
+http://www.w3.org/ns/prov#qualifiedQuotation
+http://www.w3.org/ns/prov#qualifiedPrimarySource
+
+# Qualified Classes - For detailed provenance statements
+http://www.w3.org/ns/prov#Generation
+http://www.w3.org/ns/prov#Derivation
+http://www.w3.org/ns/prov#Usage
+http://www.w3.org/ns/prov#Association
+http://www.w3.org/ns/prov#Attribution
+http://www.w3.org/ns/prov#Influence
+http://www.w3.org/ns/prov#Communication
+http://www.w3.org/ns/prov#Start
+http://www.w3.org/ns/prov#End
+http://www.w3.org/ns/prov#Invalidation
+http://www.w3.org/ns/prov#Revision
+http://www.w3.org/ns/prov#Quotation
+http://www.w3.org/ns/prov#PrimarySource
+http://www.w3.org/ns/prov#InstantaneousEvent
+
+# Context Properties
+http://www.w3.org/ns/prov#atLocation
+http://www.w3.org/ns/prov#hadRole
+http://www.w3.org/ns/prov#hadPlan
+http://www.w3.org/ns/prov#hadActivity
+http://www.w3.org/ns/prov#hadUsage
+http://www.w3.org/ns/prov#hadGeneration
+
+# Collection Properties
+http://www.w3.org/ns/prov#hadMember
+
+# Agent Properties
+http://www.w3.org/ns/prov#agent
+http://www.w3.org/ns/prov#entity
+http://www.w3.org/ns/prov#activity
+
+# Time Properties
+http://www.w3.org/ns/prov#atTime
+
+# Value Property
+http://www.w3.org/ns/prov#value
+
+# Influence Properties
+http://www.w3.org/ns/prov#wasInfluencedBy
+http://www.w3.org/ns/prov#influenced
+http://www.w3.org/ns/prov#influencer

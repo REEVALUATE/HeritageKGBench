@@ -1,0 +1,141 @@
+# Gold standard: sound1 – Yangzi haozi rowing songs (Friedrich Weiss / Hornbostel)
+# Source text : txt/sound/sound1.txt
+# Students    : annotator5, annotator6, annotator4
+# Primary     : annotator6 (richest: letters as E33, dated events, E6_Destruction)
+
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+@prefix ex:    <https://example.org/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+
+# PEOPLE
+ex:hornbostel a crm:E21_Person ;
+    rdfs:label "Erich Moritz von Hornbostel"@en ;
+    owl:sameAs wd:Q78975 .
+
+ex:friedrich_weiss a crm:E21_Person ;
+    rdfs:label "Friedrich Weiss (translator/consul, Chongqing)"@en .
+
+ex:hedwig_weiss a crm:E21_Person ;
+    rdfs:label "Hedwig Weiss (wife of Friedrich Weiss)"@en .
+
+# PLACES
+ex:chongqing a crm:E53_Place ;
+    rdfs:label "Chongqing (Chegru/Sichuan)"@en ;
+    owl:sameAs wd:Q11719 .
+
+ex:yangzi_river a crm:E53_Place ;
+    rdfs:label "Yangzi River (with deep gorges and rapids)"@en ;
+    owl:sameAs wd:Q5413 .
+
+ex:berlin a crm:E53_Place ;
+    rdfs:label "Berlin"@en ;
+    owl:sameAs wd:Q64 .
+
+# INSTITUTION
+ex:berlin_phonogramm_archiv a crm:E74_Group ;
+    rdfs:label "Berlin Phonogramm-Archiv"@en ;
+    owl:sameAs wd:Q821680 .
+
+# COLLECTIONS (wax cylinder sets)
+ex:collection_west_china_1912 a crm:E78_Curated_Holding ;
+    rdfs:label "West China 1912 (9 wax cylinders)"@en ;
+    crm:P46_is_composed_of ex:west_china_cylinders ;
+    crm:P50_has_current_keeper ex:berlin_phonogramm_archiv ;
+    crm:P43_has_dimension [
+        a crm:E54_Dimension ;
+        rdfs:label "9 wax cylinders"@en ;
+        crm:P90_has_value "9"^^xsd:integer ;
+        crm:P91_has_unit ex:unit_wax_cylinder ;
+        crm:P2_has_type ex:type_count
+    ] .
+
+ex:collection_south_china_1913 a crm:E78_Curated_Holding ;
+    rdfs:label "South China 1913/14 (40 wax cylinders)"@en ;
+    crm:P50_has_current_keeper ex:berlin_phonogramm_archiv ;
+    crm:P43_has_dimension [
+        a crm:E54_Dimension ;
+        rdfs:label "40 wax cylinders"@en ;
+        crm:P90_has_value "40"^^xsd:integer ;
+        crm:P91_has_unit ex:unit_wax_cylinder ;
+        crm:P2_has_type ex:type_count
+    ] .
+
+ex:collection_aysnia a crm:E78_Curated_Holding ;
+    rdfs:label "Aysnia (35 wax cylinders, 1920s)"@en ;
+    crm:P50_has_current_keeper ex:berlin_phonogramm_archiv ;
+    crm:P43_has_dimension [
+        a crm:E54_Dimension ;
+        rdfs:label "35 wax cylinders"@en ;
+        crm:P90_has_value "35"^^xsd:integer ;
+        crm:P91_has_unit ex:unit_wax_cylinder ;
+        crm:P2_has_type ex:type_count
+    ] .
+
+# LOST CYLINDERS (1911 rowing songs shipment)
+ex:lost_cylinders_1911 a cacao:CACAO_0000023 ;
+    rdfs:label "Lost 1911 wax cylinder shipment (boat crew songs)"@en ;
+    crm:P3_has_note "Sent May 1912; confirmed lost September 1912; shipping agent inquiries fruitless. Weiss: 'The songs of the boat's crew from 1911 seem to have been hopelessly lost.'"@en .
+
+ex:destruction_lost_cylinders a crm:E6_Destruction ;
+    rdfs:label "Loss of 1911 cylinder shipment in transit"@en ;
+    crm:P13_destroyed ex:lost_cylinders_1911 .
+
+# LETTERS (documentary evidence)
+ex:letter_june_1909 a crm:E33_Linguistic_Object ;
+    rdfs:label "Weiss letter to Berlin, June 1909"@en ;
+    crm:P3_has_note "Complaint about defective phonograph."@en ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1909-06-01/1909-06-30" ; crm:P82_at_some_time_within "1909-06-01/1909-06-30" ] ;
+    crm:P14_carried_out_by ex:friedrich_weiss .
+
+ex:letter_may_1912 a crm:E33_Linguistic_Object ;
+    rdfs:label "Weiss letter, May 1912 (first shipment sent)"@en ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1912-05-01/1912-05-31" ; crm:P82_at_some_time_within "1912-05-01/1912-05-31" ] ;
+    crm:P14_carried_out_by ex:friedrich_weiss .
+
+ex:letter_aug_1913 a crm:E33_Linguistic_Object ;
+    rdfs:label "Weiss letter, 16 August 1913 (songs of boat's crew lost)"@en ;
+    crm:P3_has_note "\"The songs of the boat's crew from 1911 seem to have been hopelessly lost. I recorded 7 new roles, and will bring them next year myself.\""@en ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1913-08-16"^^xsd:date ; crm:P82_at_some_time_within "1913-08-16"^^xsd:date ] ;
+    crm:P14_carried_out_by ex:friedrich_weiss .
+
+ex:letter_jan_1914 a crm:E33_Linguistic_Object ;
+    rdfs:label "Weiss letter, 17 January 1914 (rowing songs delivered)"@en ;
+    crm:P3_has_note "\"I hope that you have now finally come into possession of the phonographical recordings of rowing songs, which were entrusted this time to the care of an especially reliable party.\""@en ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1914-01-17"^^xsd:date ; crm:P82_at_some_time_within "1914-01-17"^^xsd:date ] ;
+    crm:P14_carried_out_by ex:friedrich_weiss .
+
+# CONTACT / COLLABORATION EVENT
+ex:contact_weiss_hornbostel_1907 a crm:E7_Activity ;
+    rdfs:label "Initial contact between Hornbostel and Friedrich Weiss (1907)"@en ;
+    crm:P14_carried_out_by ex:hornbostel, ex:friedrich_weiss ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1907-01-01/1907-12-31" ; crm:P82_at_some_time_within "1907-01-01/1907-12-31" ] .
+
+# RECORDING ACTIVITY
+ex:recording_activity_west_china a crm:E65_Creation ;
+    rdfs:label "Recording of rowing songs in West China (Weiss & Hedwig)"@en ;
+    crm:P14_carried_out_by ex:friedrich_weiss, ex:hedwig_weiss ;
+    crm:P7_took_place_at ex:chongqing ;
+    crm:P94_has_created ex:collection_west_china_1912 .
+
+# MUSICAL GENRE
+ex:type_haozi a crm:E55_Type ;
+    rdfs:label "Haozi (laodong haozi) – Chinese rowing/work songs"@en ;
+    crm:P3_has_note "Third group of Chinese folk songs (after shange mountain songs and xiaodiao small melodies); sung by boatsmen rowing through Yangzi gorges."@en .
+
+ex:collection_west_china_1912 crm:P2_has_type ex:type_haozi .
+ex:collection_south_china_1913 crm:P2_has_type ex:type_haozi .
+
+# DIMENSION TYPES & UNITS
+ex:type_count a crm:E55_Type ; rdfs:label "count"@en .
+ex:unit_wax_cylinder a crm:E58_Measurement_Unit ; rdfs:label "wax cylinder"@en .
+
+# ===================================================================
+# gold-v2 enrichment: AAT/Wikidata grounding (curator-accepted)
+# ===================================================================
+
+ex:type_count owl:sameAs aat:300404433 .

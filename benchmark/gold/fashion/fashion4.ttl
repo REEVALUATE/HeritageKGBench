@@ -1,0 +1,143 @@
+# Gold standard — fashion4.txt
+# Source text : "1930s jacket" (beige charmeuse silk, geometric decoration, Vietnamese nón lá button, France)
+# Contributors: annotator3 (E13_Attribute_Assignment for interpretations, nón lá Wikidata),
+#               annotator2/annotator9 (E25 features, E12_Production, France wd:Q142)
+
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ex:   <https://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix wd:   <http://www.wikidata.org/entity/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+
+#################################################################
+# Object
+#################################################################
+
+ex:jacket_1930s a cacao:CACAO_0000023 , cacao:CACAO_0000062 ;
+    crm:P2_has_type        ex:type_jacket ;
+    crm:P45_consists_of    ex:material_charmeuse_silk ;
+    crm:P56_bears_feature  ex:feature_diamond_decoration ,
+                           ex:feature_topstitching ,
+                           ex:feature_v_neckline ,
+                           ex:feature_raglan_sleeves ,
+                           ex:feature_kinked_cuffs ;
+    crm:P46_is_composed_of ex:button_non_la ;
+    crm:P108i_was_produced_by ex:production ;
+    crm:P3_has_note        "Loose jacket in beige charmeuse silk. Button has not been preserved."@en ;
+    rdfs:label             "Loose jacket in beige charmeuse silk (1930s)"@en .
+
+#################################################################
+# Features
+#################################################################
+
+ex:feature_diamond_decoration a crm:E25_Man-Made_Feature ;
+    crm:P2_has_type ex:type_diamond_decoration ;
+    crm:P3_has_note "Four pale pink diamond-shaped decorations on the front panels."@en .
+
+ex:feature_topstitching a crm:E25_Man-Made_Feature ;
+    crm:P2_has_type ex:type_topstitching ;
+    crm:P3_has_note "Spiralling rows of topstitching covering the entire jacket, echoing the geometric decoration."@en .
+
+ex:feature_v_neckline a crm:E25_Man-Made_Feature ;
+    crm:P2_has_type ex:type_v_neckline ;
+    crm:P3_has_note "V-shaped neckline reflecting a predilection for simple geometric forms."@en .
+
+ex:feature_raglan_sleeves a crm:E25_Man-Made_Feature ;
+    crm:P2_has_type ex:type_raglan_sleeves ;
+    crm:P3_has_note "Raglan sleeves cut in one piece with the body of the jacket."@en .
+
+ex:feature_kinked_cuffs a crm:E25_Man-Made_Feature ;
+    crm:P2_has_type ex:type_geometric_cut ;
+    crm:P3_has_note "Cuffs with a slight geometric kink, cut in one piece with the raglan sleeves."@en .
+
+#################################################################
+# Button (original, missing)
+#################################################################
+
+ex:button_non_la a cacao:CACAO_0000023 ;
+    crm:P56_bears_feature ex:feature_non_la_shape ;
+    crm:P3_has_note       "Off-white button with gold accents, shaped like a traditional Vietnamese nón lá. The button has not been preserved."@en ;
+    rdfs:label            "Original button (nón lá shape, now missing)"@en .
+
+ex:feature_non_la_shape a crm:E25_Man-Made_Feature ;
+    crm:P2_has_type wd:Q1052349 ;   # nón lá
+    rdfs:label      "Shape inspired by traditional Vietnamese nón lá"@en .
+
+#################################################################
+# Production
+#################################################################
+
+ex:production a crm:E12_Production ;
+    crm:P108_has_produced ex:jacket_1930s ;
+    crm:P4_has_time-span  ex:timespan_1930s ;
+    crm:P7_took_place_at  ex:france ;
+    crm:P3_has_note       "Created most likely in France during the 1930s."@en ;
+    rdfs:label            "Production of the charmeuse silk jacket (1930s, France)"@en .
+
+ex:timespan_1930s a crm:E52_Time-Span ;
+    crm:P81_ongoing_throughout "1930-01-01/1939-12-31" ; crm:P82_at_some_time_within "1930-01-01/1939-12-31" ;
+    rdfs:label                  "1930s"@en .
+
+ex:france a crm:E53_Place ;
+    rdfs:label "France"@en ;
+    owl:sameAs wd:Q142 .
+
+#################################################################
+# Material
+#################################################################
+
+ex:material_charmeuse_silk a crm:E57_Material ;
+    crm:P2_has_type wd:Q37681 ;  # silk
+    rdfs:label      "beige charmeuse silk"@en .
+
+#################################################################
+# Interpretive attribute assignments (uncertain use / influence)
+#################################################################
+
+ex:interpretation_asian_influence a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to ex:jacket_1930s ;
+    crm:P141_assigned              ex:type_asian_influence ;
+    crm:P3_has_note                "Attributed based on cut and Vietnamese-inspired button design."@en ;
+    rdfs:label                     "Interpretation: Asian influences on Western-European fashion"@en .
+
+ex:interpretation_evening_wear a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to ex:jacket_1930s ;
+    crm:P141_assigned              ex:type_evening_ensemble ;
+    crm:P3_has_note                "Possible use: worn as part of an evening ensemble over a floor-length gown."@en ;
+    rdfs:label                     "Interpretation: possible evening wear"@en .
+
+ex:interpretation_negligee a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to ex:jacket_1930s ;
+    crm:P141_assigned              ex:type_negligee ;
+    crm:P3_has_note                "Alternative interpretation: negligee worn in the privacy of the home."@en ;
+    rdfs:label                     "Interpretation: possible negligee"@en .
+
+#################################################################
+# Types
+#################################################################
+
+ex:type_jacket             a crm:E55_Type ; rdfs:label "jacket"@en  ; owl:sameAs wd:Q849964.
+ex:type_diamond_decoration a crm:E55_Type ; rdfs:label "diamond-shaped decoration"@en .
+ex:type_topstitching       a crm:E55_Type ; rdfs:label "decorative topstitching"@en .
+ex:type_v_neckline         a crm:E55_Type ; rdfs:label "V-shaped neckline"@en .
+ex:type_raglan_sleeves     a crm:E55_Type ; rdfs:label "raglan sleeves"@en .
+ex:type_geometric_cut      a crm:E55_Type ; rdfs:label "geometric cut"@en .
+ex:type_asian_influence    a crm:E55_Type ; rdfs:label "Asian influence on Western-European fashion (early 20th century)"@en .
+ex:type_evening_ensemble   a crm:E55_Type ; rdfs:label "evening ensemble garment"@en .
+ex:type_negligee           a crm:E55_Type ; rdfs:label "negligee"@en  ; owl:sameAs wd:Q1758403 ,
+               aat:300248708.
+
+# ===================================================================
+# gold-v2 enrichment: AAT/Wikidata grounding (curator-accepted)
+# ===================================================================
+
+ex:material_charmeuse_silk crm:P127_has_broader_term aat:300014072 .
+ex:material_charmeuse_silk crm:P127_has_broader_term aat:300417872 .
+ex:material_charmeuse_silk crm:P127_has_broader_term wd:Q3505013 .
+ex:material_charmeuse_silk crm:P127_has_broader_term wd:Q37681 .
+ex:type_jacket owl:sameAs aat:300046167 .
+ex:type_negligee owl:sameAs wd:Q11164286 .
+ex:type_negligee owl:sameAs wd:Q4010399 .

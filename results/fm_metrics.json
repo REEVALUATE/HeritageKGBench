@@ -1,0 +1,5513 @@
+{
+  "summary": {
+    "V1_monolithic": {
+      "variant": "V1_monolithic",
+      "n_total": 30,
+      "n_parsed": 14,
+      "FM1_event_recall_parsed_mean": 0.0238,
+      "FM1_event_recall_all_mean": 0.0111,
+      "FM1_total_gold_events": 78,
+      "FM1_total_pred_events": 8,
+      "FM2_fabricated_namespaces_total": 59,
+      "FM2_invalid_namespaces_total": 18,
+      "FM2_mean_fabricated_per_text": 1.9667,
+      "FM5_pair_substitution_rate_parsed_mean": 0.0,
+      "FM5_total_pair_matched": 0,
+      "FM5_total_pair_substituted": 0,
+      "FM5_predicate_set_divergence_parsed_mean": 0.2551,
+      "FM6_injection_rate_parsed_mean": 0.1986,
+      "FM6_total_injection_triples": 170,
+      "FM6_total_pred_triples": 751,
+      "FM7_detachment_rate_parsed_mean": 0.1429,
+      "FM7_total_timespan_nodes": 5,
+      "FM7_total_detached_timespan": 5
+    },
+    "V2_baseline": {
+      "variant": "V2_baseline",
+      "n_total": 30,
+      "n_parsed": 14,
+      "FM1_event_recall_parsed_mean": 0.1309,
+      "FM1_event_recall_all_mean": 0.0611,
+      "FM1_total_gold_events": 78,
+      "FM1_total_pred_events": 11,
+      "FM2_fabricated_namespaces_total": 31,
+      "FM2_invalid_namespaces_total": 4,
+      "FM2_mean_fabricated_per_text": 1.0333,
+      "FM5_pair_substitution_rate_parsed_mean": 0.0,
+      "FM5_total_pair_matched": 0,
+      "FM5_total_pair_substituted": 0,
+      "FM5_predicate_set_divergence_parsed_mean": 0.5571,
+      "FM6_injection_rate_parsed_mean": 0.0726,
+      "FM6_total_injection_triples": 89,
+      "FM6_total_pred_triples": 958,
+      "FM7_detachment_rate_parsed_mean": 0.1071,
+      "FM7_total_timespan_nodes": 18,
+      "FM7_total_detached_timespan": 6
+    },
+    "V4_shacl": {
+      "variant": "V4_shacl",
+      "n_total": 30,
+      "n_parsed": 27,
+      "FM1_event_recall_parsed_mean": 0.1111,
+      "FM1_event_recall_all_mean": 0.1,
+      "FM1_total_gold_events": 78,
+      "FM1_total_pred_events": 36,
+      "FM2_fabricated_namespaces_total": 28,
+      "FM2_invalid_namespaces_total": 10,
+      "FM2_mean_fabricated_per_text": 0.9333,
+      "FM5_pair_substitution_rate_parsed_mean": 0.0,
+      "FM5_total_pair_matched": 1,
+      "FM5_total_pair_substituted": 0,
+      "FM5_predicate_set_divergence_parsed_mean": 0.4296,
+      "FM6_injection_rate_parsed_mean": 0.0245,
+      "FM6_total_injection_triples": 44,
+      "FM6_total_pred_triples": 1556,
+      "FM7_detachment_rate_parsed_mean": 0.2365,
+      "FM7_total_timespan_nodes": 48,
+      "FM7_total_detached_timespan": 33
+    }
+  },
+  "per_text": [
+    {
+      "text_id": "architecture1",
+      "domain": "architecture",
+      "variant": "V1_monolithic",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E13_Attribute_Assignment",
+          "E15_Identifier_Assignment",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 2,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": [
+          "ns2=ns2:CACAO_00000",
+          "ns3=ns3:"
+        ]
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "architecture1",
+      "domain": "architecture",
+      "variant": "V2_baseline",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E13_Attribute_Assignment",
+          "E15_Identifier_Assignment",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 1,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P127_has_broader_term",
+          "P12_occurred_in_the_presence_of",
+          "P140_assigned_attribute_to",
+          "P141_assigned",
+          "P14_carried_out_by",
+          "P177_assigned_property_of_type",
+          "P190_has_symbolic_content",
+          "P1_is_identified_by",
+          "P2_has_type",
+          "P37_assigned",
+          "P3_has_note",
+          "P43_has_dimension",
+          "P53_has_former_or_current_location",
+          "P67_refers_to",
+          "P7_took_place_at",
+          "P90_has_value",
+          "P91_has_unit"
+        ],
+        "pred_cidoc_predicates": [
+          "P129_is_about",
+          "P129i_is_subject_of",
+          "P14i_performed",
+          "P1_is_identified_by",
+          "P1i_identifies",
+          "P40i_was_observed_in",
+          "P46i_forms_part_of",
+          "P53_has_former_or_current_location"
+        ],
+        "pred_divergent_predicates": [
+          "P129_is_about",
+          "P129i_is_subject_of",
+          "P14i_performed",
+          "P1i_identifies",
+          "P40i_was_observed_in",
+          "P46i_forms_part_of"
+        ],
+        "predicate_set_divergence": 0.75,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 42,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "architecture1",
+      "domain": "architecture",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 1,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E13_Attribute_Assignment",
+          "E15_Identifier_Assignment",
+          "E7_Activity"
+        ],
+        "pred_event_types": [
+          "E5_Event"
+        ]
+      },
+      "fm2": {
+        "fabricated_count": 3,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns2=http://data.cacao.roma.it/vocabularies/cacao/",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 1,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P127_has_broader_term",
+          "P12_occurred_in_the_presence_of",
+          "P140_assigned_attribute_to",
+          "P141_assigned",
+          "P14_carried_out_by",
+          "P177_assigned_property_of_type",
+          "P190_has_symbolic_content",
+          "P1_is_identified_by",
+          "P2_has_type",
+          "P37_assigned",
+          "P3_has_note",
+          "P43_has_dimension",
+          "P53_has_former_or_current_location",
+          "P67_refers_to",
+          "P7_took_place_at",
+          "P90_has_value",
+          "P91_has_unit"
+        ],
+        "pred_cidoc_predicates": [
+          "P11i_participated_in",
+          "P1_is_identified_by",
+          "P1i_identifies",
+          "P40i_was_observed_in",
+          "P53_has_former_or_current_location"
+        ],
+        "pred_divergent_predicates": [
+          "P11i_participated_in",
+          "P1i_identifies",
+          "P40i_was_observed_in"
+        ],
+        "predicate_set_divergence": 0.6,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 31,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "architecture2",
+      "domain": "architecture",
+      "variant": "V1_monolithic",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 1,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E11_Modification"
+        ],
+        "pred_event_types": [
+          "E7_Activity"
+        ]
+      },
+      "fm2": {
+        "fabricated_count": 2,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns2=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P2_has_type",
+          "P31_has_modified",
+          "P32_used_general_technique",
+          "P3_has_note",
+          "P46_is_composed_of",
+          "P55_has_current_location",
+          "P89_falls_within"
+        ],
+        "pred_cidoc_predicates": [
+          "P12_occurred_in_the_presence_of",
+          "P14_carried_out_by",
+          "P55_has_current_location",
+          "P89i_contains"
+        ],
+        "pred_divergent_predicates": [
+          "P12_occurred_in_the_presence_of",
+          "P14_carried_out_by",
+          "P89i_contains"
+        ],
+        "predicate_set_divergence": 0.75,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 21,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "architecture2",
+      "domain": "architecture",
+      "variant": "V2_baseline",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E11_Modification"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 4,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns2=https://data.cacao.tenforce.com/ontology/",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/",
+          "tgn=http://vocab.getty.edu/tgn/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P2_has_type",
+          "P31_has_modified",
+          "P32_used_general_technique",
+          "P3_has_note",
+          "P46_is_composed_of",
+          "P55_has_current_location",
+          "P89_falls_within"
+        ],
+        "pred_cidoc_predicates": [
+          "P1i_identifies",
+          "P46i_forms_part_of",
+          "P55i_currently_holds",
+          "P89_falls_within"
+        ],
+        "pred_divergent_predicates": [
+          "P1i_identifies",
+          "P46i_forms_part_of",
+          "P55i_currently_holds"
+        ],
+        "predicate_set_divergence": 0.75,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 23,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "architecture2",
+      "domain": "architecture",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E11_Modification"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P2_has_type",
+          "P31_has_modified",
+          "P32_used_general_technique",
+          "P3_has_note",
+          "P46_is_composed_of",
+          "P55_has_current_location",
+          "P89_falls_within"
+        ],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 1,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "architecture3",
+      "domain": "architecture",
+      "variant": "V1_monolithic",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 2,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": [
+          "ns2=ns2:",
+          "ns3=ns3:"
+        ]
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P127_has_broader_term",
+          "P16_used_specific_object",
+          "P2_has_type",
+          "P46_is_composed_of",
+          "P55_has_current_location",
+          "P7_took_place_at",
+          "P89_falls_within"
+        ],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 14,
+        "injection_triples": 4,
+        "injection_rate": 0.2857,
+        "injected_predicates": [
+          "ns3:P46i_forms_part_of"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "architecture3",
+      "domain": "architecture",
+      "variant": "V2_baseline",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 2,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns2=http://example.org/ns2/",
+          "ns3=http://example.org/ns3/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P127_has_broader_term",
+          "P16_used_specific_object",
+          "P2_has_type",
+          "P46_is_composed_of",
+          "P55_has_current_location",
+          "P7_took_place_at",
+          "P89_falls_within"
+        ],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 56,
+        "injection_triples": 28,
+        "injection_rate": 0.5,
+        "injected_predicates": [
+          "P129i_is_subject_of",
+          "P12i_was_present_at",
+          "P130i_features_are_also_found_on",
+          "P138i_has_representation",
+          "P190_has_symbolic_content",
+          "P1i_identifies",
+          "P40i_was_observed_in",
+          "P45i_is_incorporated_in",
+          "P53i_is_former_or_current_location_of",
+          "P55i_currently_holds",
+          "P67i_is_referred_to_by",
+          "P7i_witnessed",
+          "P89i_contains",
+          "hasDimension",
+          "locatedWithin",
+          "madeOf",
+          "partOf",
+          "supports",
+          "tookPlaceOn",
+          "usedAs",
+          "usedFor"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "architecture3",
+      "domain": "architecture",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 2,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": [
+          "cacao=cacao:",
+          "cidoc=cidoc:"
+        ]
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P127_has_broader_term",
+          "P16_used_specific_object",
+          "P2_has_type",
+          "P46_is_composed_of",
+          "P55_has_current_location",
+          "P7_took_place_at",
+          "P89_falls_within"
+        ],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 32,
+        "injection_triples": 4,
+        "injection_rate": 0.125,
+        "injected_predicates": [
+          "cidoc:P46_is_composed_of",
+          "cidoc:P53_has_former_or_current_location",
+          "cidoc:P55i_currently_holds"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "architecture4",
+      "domain": "architecture",
+      "variant": "V1_monolithic",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E5_Event",
+          "E69_Death",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 1,
+        "invalid_count": 1,
+        "fabricated_prefixes": [
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": [
+          "ns2=ns2:CACAO_00000"
+        ]
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "architecture4",
+      "domain": "architecture",
+      "variant": "V2_baseline",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E5_Event",
+          "E69_Death",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "architecture4",
+      "domain": "architecture",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E5_Event",
+          "E69_Death",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 1,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "sh=http://www.w3.org/ns/shacl#"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P100i_died_in",
+          "P106_is_composed_of",
+          "P11_had_participant",
+          "P127_has_broader_term",
+          "P12_occurred_in_the_presence_of",
+          "P14_carried_out_by",
+          "P2_has_type",
+          "P3_has_note",
+          "P57_has_number_of_parts",
+          "P62_depicts",
+          "P7_took_place_at"
+        ],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "architecture5",
+      "domain": "architecture",
+      "variant": "V1_monolithic",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 0,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 2,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/",
+          "ns2=https://www.cacao.ugent.be/vocab/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "architecture5",
+      "domain": "architecture",
+      "variant": "V2_baseline",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 0,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 3,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns2=https://data.cacao.ugent.be/vocabularies/cacao/",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P138_represents",
+          "P2_has_type",
+          "P3_has_note",
+          "P55_has_current_location",
+          "P65_shows_visual_item",
+          "P89_falls_within"
+        ],
+        "pred_cidoc_predicates": [
+          "P138_represents",
+          "P55i_currently_holds"
+        ],
+        "pred_divergent_predicates": [
+          "P55i_currently_holds"
+        ],
+        "predicate_set_divergence": 0.5,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 17,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "architecture5",
+      "domain": "architecture",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 0,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 1,
+        "invalid_count": 2,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#"
+        ],
+        "invalid_prefixes": [
+          "ns2=#ns2:",
+          "cidoc=#cidoc:"
+        ]
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P138_represents",
+          "P2_has_type",
+          "P3_has_note",
+          "P55_has_current_location",
+          "P65_shows_visual_item",
+          "P89_falls_within"
+        ],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 13,
+        "injection_triples": 3,
+        "injection_rate": 0.2308,
+        "injected_predicates": [
+          "cidoc:P138_represents",
+          "cidoc:P46i_forms_part_of"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "fashion1",
+      "domain": "fashion",
+      "variant": "V1_monolithic",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 0,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 2,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": [
+          "ns2=ns2:CACAO_00000",
+          "ns3=ns3:"
+        ]
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P127_has_broader_term",
+          "P2_has_type",
+          "P3_has_note",
+          "P43_has_dimension",
+          "P45_consists_of",
+          "P56_bears_feature",
+          "P90_has_value",
+          "P91_has_unit"
+        ],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 6,
+        "injection_triples": 1,
+        "injection_rate": 0.1667,
+        "injected_predicates": [
+          "ns2:CACAO_00000height"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "fashion1",
+      "domain": "fashion",
+      "variant": "V2_baseline",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 0,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 1,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P127_has_broader_term",
+          "P2_has_type",
+          "P3_has_note",
+          "P43_has_dimension",
+          "P45_consists_of",
+          "P56_bears_feature",
+          "P90_has_value",
+          "P91_has_unit"
+        ],
+        "pred_cidoc_predicates": [
+          "P40i_was_observed_in",
+          "P45_consists_of"
+        ],
+        "pred_divergent_predicates": [
+          "P40i_was_observed_in"
+        ],
+        "predicate_set_divergence": 0.5,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 20,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "fashion1",
+      "domain": "fashion",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 0,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 2,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns2=http://www.ontology_agent.org/ontology/",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P127_has_broader_term",
+          "P2_has_type",
+          "P3_has_note",
+          "P43_has_dimension",
+          "P45_consists_of",
+          "P56_bears_feature",
+          "P90_has_value",
+          "P91_has_unit"
+        ],
+        "pred_cidoc_predicates": [
+          "P40i_was_observed_in",
+          "P45_consists_of"
+        ],
+        "pred_divergent_predicates": [
+          "P40i_was_observed_in"
+        ],
+        "predicate_set_divergence": 0.5,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 17,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "fashion2",
+      "domain": "fashion",
+      "variant": "V1_monolithic",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 0,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 1,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P127_has_broader_term",
+          "P2_has_type",
+          "P3_has_note",
+          "P43_has_dimension",
+          "P45_consists_of",
+          "P46_is_composed_of",
+          "P57_has_number_of_parts",
+          "P90_has_value",
+          "P91_has_unit"
+        ],
+        "pred_cidoc_predicates": [
+          "P3_has_note"
+        ],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 6,
+        "injection_triples": 2,
+        "injection_rate": 0.3333,
+        "injected_predicates": [
+          "height",
+          "width"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "fashion2",
+      "domain": "fashion",
+      "variant": "V2_baseline",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 0,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 1,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P127_has_broader_term",
+          "P2_has_type",
+          "P3_has_note",
+          "P43_has_dimension",
+          "P45_consists_of",
+          "P46_is_composed_of",
+          "P57_has_number_of_parts",
+          "P90_has_value",
+          "P91_has_unit"
+        ],
+        "pred_cidoc_predicates": [
+          "P40_observed_dimension",
+          "P40i_was_observed_in",
+          "P45_consists_of",
+          "P46_is_composed_of"
+        ],
+        "pred_divergent_predicates": [
+          "P40_observed_dimension",
+          "P40i_was_observed_in"
+        ],
+        "predicate_set_divergence": 0.5,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 31,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "fashion2",
+      "domain": "fashion",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 0,
+        "pred_event_count": 2,
+        "event_recall": 0.0,
+        "gold_event_types": [],
+        "pred_event_types": [
+          "E16_Measurement"
+        ]
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P127_has_broader_term",
+          "P2_has_type",
+          "P3_has_note",
+          "P43_has_dimension",
+          "P45_consists_of",
+          "P46_is_composed_of",
+          "P57_has_number_of_parts",
+          "P90_has_value",
+          "P91_has_unit"
+        ],
+        "pred_cidoc_predicates": [
+          "P40_observed_dimension",
+          "P40i_was_observed_in",
+          "P45_consists_of",
+          "P46_is_composed_of"
+        ],
+        "pred_divergent_predicates": [
+          "P40_observed_dimension",
+          "P40i_was_observed_in"
+        ],
+        "predicate_set_divergence": 0.5,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 57,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "fashion3",
+      "domain": "fashion",
+      "variant": "V1_monolithic",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 0,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 2,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": [
+          "ns2=ns2:CACAO_00000",
+          "ns3=ns3:"
+        ]
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P127_has_broader_term",
+          "P2_has_type",
+          "P3_has_note",
+          "P45_consists_of",
+          "P46_is_composed_of",
+          "P56_bears_feature"
+        ],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 17,
+        "injection_triples": 9,
+        "injection_rate": 0.5294,
+        "injected_predicates": [
+          "ns3:P1_is_identified_by",
+          "ns3:P45_consists_of"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "fashion3",
+      "domain": "fashion",
+      "variant": "V2_baseline",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 0,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "fashion3",
+      "domain": "fashion",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 0,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 1,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P127_has_broader_term",
+          "P2_has_type",
+          "P3_has_note",
+          "P45_consists_of",
+          "P46_is_composed_of",
+          "P56_bears_feature"
+        ],
+        "pred_cidoc_predicates": [
+          "P45_consists_of",
+          "P46i_forms_part_of"
+        ],
+        "pred_divergent_predicates": [
+          "P46i_forms_part_of"
+        ],
+        "predicate_set_divergence": 0.5,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 26,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "fashion4",
+      "domain": "fashion",
+      "variant": "V1_monolithic",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 4,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E12_Production",
+          "E13_Attribute_Assignment"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 2,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": [
+          "ns2=ns2:CACAO_0000000#",
+          "ns3=ns3:E1_CRM_Entity#"
+        ]
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "fashion4",
+      "domain": "fashion",
+      "variant": "V2_baseline",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 4,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E12_Production",
+          "E13_Attribute_Assignment"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "fashion4",
+      "domain": "fashion",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 4,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E12_Production",
+          "E13_Attribute_Assignment"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 1,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "sh=http://www.w3.org/ns/shacl#"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P108_has_produced",
+          "P108i_was_produced_by",
+          "P127_has_broader_term",
+          "P140_assigned_attribute_to",
+          "P141_assigned",
+          "P2_has_type",
+          "P3_has_note",
+          "P45_consists_of",
+          "P46_is_composed_of",
+          "P4_has_time-span",
+          "P56_bears_feature",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within"
+        ],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 1,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "fashion5",
+      "domain": "fashion",
+      "variant": "V1_monolithic",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 0,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 2,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns2=http://ns.historyforge.eu/cacao#",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P2_has_type",
+          "P45_consists_of",
+          "P46_is_composed_of",
+          "P65_shows_visual_item"
+        ],
+        "pred_cidoc_predicates": [
+          "P45_consists_of"
+        ],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 8,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "fashion5",
+      "domain": "fashion",
+      "variant": "V2_baseline",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 0,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 3,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns2=http://www.cacao.com/",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P2_has_type",
+          "P45_consists_of",
+          "P46_is_composed_of",
+          "P65_shows_visual_item"
+        ],
+        "pred_cidoc_predicates": [
+          "P40_observed_dimension",
+          "P45_consists_of",
+          "P46i_forms_part_of"
+        ],
+        "pred_divergent_predicates": [
+          "P40_observed_dimension",
+          "P46i_forms_part_of"
+        ],
+        "predicate_set_divergence": 0.6667,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 16,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "fashion5",
+      "domain": "fashion",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 0,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 2,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns2=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P2_has_type",
+          "P45_consists_of",
+          "P46_is_composed_of",
+          "P65_shows_visual_item"
+        ],
+        "pred_cidoc_predicates": [
+          "P45_consists_of",
+          "P45i_is_incorporated_in",
+          "P46_is_composed_of",
+          "P46i_forms_part_of"
+        ],
+        "pred_divergent_predicates": [
+          "P45i_is_incorporated_in",
+          "P46i_forms_part_of"
+        ],
+        "predicate_set_divergence": 0.5,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 35,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "olympic1",
+      "domain": "olympic",
+      "variant": "V1_monolithic",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 4,
+        "pred_event_count": 1,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": [
+          "E5_Event"
+        ]
+      },
+      "fm2": {
+        "fabricated_count": 3,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns2=https://w3id.org/cacao/ontology/",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P10_falls_within",
+          "P127_has_broader_term",
+          "P128_carries",
+          "P12_occurred_in_the_presence_of",
+          "P14_carried_out_by",
+          "P2_has_type",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P67_refers_to",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P94_has_created"
+        ],
+        "pred_cidoc_predicates": [
+          "P14_carried_out_by",
+          "P1_is_identified_by",
+          "P3_has_note",
+          "P7_took_place_at"
+        ],
+        "pred_divergent_predicates": [
+          "P1_is_identified_by"
+        ],
+        "predicate_set_divergence": 0.25,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 23,
+        "injection_triples": 2,
+        "injection_rate": 0.087,
+        "injected_predicates": [
+          "dateSent",
+          "startDate"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "olympic1",
+      "domain": "olympic",
+      "variant": "V2_baseline",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 4,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 1,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "olympic1",
+      "domain": "olympic",
+      "variant": "V4_shacl",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 4,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "olympic2",
+      "domain": "olympic",
+      "variant": "V1_monolithic",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 1,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": [
+          "E5_Event"
+        ]
+      },
+      "fm2": {
+        "fabricated_count": 5,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns2=http://www.semanticweb.org/kai/ontologies/2024/cacao#",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/",
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns1=http://ontologi.es/place/ns#",
+          "ns4=http://xmlns.com/foaf/0.1/types#"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P11_had_participant",
+          "P127_has_broader_term",
+          "P128_carries",
+          "P14_carried_out_by",
+          "P190_has_symbolic_content",
+          "P2_has_type",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P67_refers_to",
+          "P72_has_language",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P94_has_created"
+        ],
+        "pred_cidoc_predicates": [
+          "P11_had_participant",
+          "P129_is_about",
+          "P1_is_identified_by",
+          "P3_has_note"
+        ],
+        "pred_divergent_predicates": [
+          "P129_is_about",
+          "P1_is_identified_by"
+        ],
+        "predicate_set_divergence": 0.5,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 52,
+        "injection_triples": 10,
+        "injection_rate": 0.1923,
+        "injected_predicates": [
+          "created",
+          "name",
+          "value"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "olympic2",
+      "domain": "olympic",
+      "variant": "V2_baseline",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 5,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns1=http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#",
+          "ns2=http://www.semanticweb.org/ontologies/2022/1/untitled-ontology-11#",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/",
+          "ns4=http://xmlns.com/foaf/0.1/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "olympic2",
+      "domain": "olympic",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 1,
+        "event_recall": 0.5,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": [
+          "E7_Activity"
+        ]
+      },
+      "fm2": {
+        "fabricated_count": 1,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns2=http://www.w3.org/2003/06/sw-vocab-status/ns#"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P11_had_participant",
+          "P127_has_broader_term",
+          "P128_carries",
+          "P14_carried_out_by",
+          "P190_has_symbolic_content",
+          "P2_has_type",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P67_refers_to",
+          "P72_has_language",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P94_has_created"
+        ],
+        "pred_cidoc_predicates": [
+          "P129_is_about",
+          "P4_has_time-span"
+        ],
+        "pred_divergent_predicates": [
+          "P129_is_about"
+        ],
+        "predicate_set_divergence": 0.5,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 29,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 2,
+        "attached_timespan": 2,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "olympic3",
+      "domain": "olympic",
+      "variant": "V1_monolithic",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 4,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 2,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns2=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "olympic3",
+      "domain": "olympic",
+      "variant": "V2_baseline",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 4,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 3,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/",
+          "ns2=https://w3id.org/cacao/ontology/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P127_has_broader_term",
+          "P128_carries",
+          "P129_is_about",
+          "P14_carried_out_by",
+          "P2_has_type",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P72_has_language",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P94_has_created",
+          "P9_consists_of"
+        ],
+        "pred_cidoc_predicates": [
+          "P106_is_composed_of",
+          "P129_is_about",
+          "P4_has_time-span"
+        ],
+        "pred_divergent_predicates": [
+          "P106_is_composed_of"
+        ],
+        "predicate_set_divergence": 0.3333,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 34,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 1,
+        "attached_timespan": 1,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "olympic3",
+      "domain": "olympic",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 4,
+        "pred_event_count": 2,
+        "event_recall": 0.5,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": [
+          "E5_Event",
+          "E7_Activity"
+        ]
+      },
+      "fm2": {
+        "fabricated_count": 1,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P127_has_broader_term",
+          "P128_carries",
+          "P129_is_about",
+          "P14_carried_out_by",
+          "P2_has_type",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P72_has_language",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P94_has_created",
+          "P9_consists_of"
+        ],
+        "pred_cidoc_predicates": [
+          "P107_has_current_or_former_member",
+          "P14i_performed",
+          "P46_is_composed_of",
+          "P4_has_time-span",
+          "P7_took_place_at"
+        ],
+        "pred_divergent_predicates": [
+          "P107_has_current_or_former_member",
+          "P14i_performed",
+          "P46_is_composed_of",
+          "P7_took_place_at"
+        ],
+        "predicate_set_divergence": 0.8,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 39,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 1,
+        "attached_timespan": 1,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "olympic4",
+      "domain": "olympic",
+      "variant": "V1_monolithic",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 2,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns2=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "olympic4",
+      "domain": "olympic",
+      "variant": "V2_baseline",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 3,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns2=http://www.cacao.org/ontology/",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "olympic4",
+      "domain": "olympic",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 1,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "sh=http://www.w3.org/ns/shacl#"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P10_falls_within",
+          "P128_carries",
+          "P12i_was_present_at",
+          "P14_carried_out_by",
+          "P190_has_symbolic_content",
+          "P2_has_type",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P67_refers_to",
+          "P72_has_language",
+          "P73_has_translation",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within"
+        ],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "olympic5",
+      "domain": "olympic",
+      "variant": "V1_monolithic",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E12_Production",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 2,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns2=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P108_has_produced",
+          "P108i_was_produced_by",
+          "P128_carries",
+          "P129_is_about",
+          "P138_represents",
+          "P14_carried_out_by",
+          "P190_has_symbolic_content",
+          "P2_has_type",
+          "P3_has_note",
+          "P46_is_composed_of",
+          "P4_has_time-span",
+          "P65_shows_visual_item",
+          "P67_refers_to",
+          "P73_has_translation",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within"
+        ],
+        "pred_cidoc_predicates": [
+          "P129i_is_subject_of",
+          "P138_represents",
+          "P1i_identifies"
+        ],
+        "pred_divergent_predicates": [
+          "P129i_is_subject_of",
+          "P1i_identifies"
+        ],
+        "predicate_set_divergence": 0.6667,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 12,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "olympic5",
+      "domain": "olympic",
+      "variant": "V2_baseline",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E12_Production",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "olympic5",
+      "domain": "olympic",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E12_Production",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 2,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns2=http://www.cidoc-crm.org/cidoc-crm/",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P108_has_produced",
+          "P108i_was_produced_by",
+          "P128_carries",
+          "P129_is_about",
+          "P138_represents",
+          "P14_carried_out_by",
+          "P190_has_symbolic_content",
+          "P2_has_type",
+          "P3_has_note",
+          "P46_is_composed_of",
+          "P4_has_time-span",
+          "P65_shows_visual_item",
+          "P67_refers_to",
+          "P73_has_translation",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within"
+        ],
+        "pred_cidoc_predicates": [
+          "P129_is_about",
+          "P12i_was_present_at",
+          "P4_has_time-span"
+        ],
+        "pred_divergent_predicates": [
+          "P12i_was_present_at"
+        ],
+        "predicate_set_divergence": 0.3333,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 24,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 1,
+        "attached_timespan": 1,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound1",
+      "domain": "sound",
+      "variant": "V1_monolithic",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 2,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns2=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound1",
+      "domain": "sound",
+      "variant": "V2_baseline",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound1",
+      "domain": "sound",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 1,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P13_destroyed",
+          "P14_carried_out_by",
+          "P2_has_type",
+          "P3_has_note",
+          "P43_has_dimension",
+          "P46_is_composed_of",
+          "P4_has_time-span",
+          "P50_has_current_keeper",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P90_has_value",
+          "P91_has_unit",
+          "P94_has_created"
+        ],
+        "pred_cidoc_predicates": [
+          "P102i_is_title_of",
+          "P106i_forms_part_of",
+          "P107i_is_current_or_former_member_of",
+          "P129_is_about",
+          "P190_has_symbolic_content",
+          "P49i_is_former_or_current_keeper_of",
+          "P53_has_former_or_current_location"
+        ],
+        "pred_divergent_predicates": [
+          "P102i_is_title_of",
+          "P106i_forms_part_of",
+          "P107i_is_current_or_former_member_of",
+          "P129_is_about",
+          "P190_has_symbolic_content",
+          "P49i_is_former_or_current_keeper_of",
+          "P53_has_former_or_current_location"
+        ],
+        "predicate_set_divergence": 1.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 93,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 7,
+        "attached_timespan": 0,
+        "detached_timespan": 7,
+        "detachment_rate": 1.0
+      }
+    },
+    {
+      "text_id": "sound2",
+      "domain": "sound",
+      "variant": "V1_monolithic",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 3,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns1=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns2=http://cacao.principles.institute/ontology/",
+          "ns3=http://erlangen-crm.org/current/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound2",
+      "domain": "sound",
+      "variant": "V2_baseline",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound2",
+      "domain": "sound",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 8,
+        "event_recall": 0.5,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": [
+          "E5_Event",
+          "E67_Birth",
+          "E7_Activity"
+        ]
+      },
+      "fm2": {
+        "fabricated_count": 2,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns1=http://example.org/ns1/",
+          "ns2=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P14_carried_out_by",
+          "P2_has_type",
+          "P3_has_note",
+          "P43_has_dimension",
+          "P4_has_time-span",
+          "P50_has_current_keeper",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P90_has_value",
+          "P91_has_unit",
+          "P94_has_created"
+        ],
+        "pred_cidoc_predicates": [
+          "CACAO_0000026",
+          "CACAO_0000040",
+          "P107i_is_current_or_former_member_of",
+          "P129_is_about",
+          "P14i_performed",
+          "P4_has_time-span",
+          "P53_has_former_or_current_location",
+          "P98i_was_born"
+        ],
+        "pred_divergent_predicates": [
+          "CACAO_0000026",
+          "CACAO_0000040",
+          "P107i_is_current_or_former_member_of",
+          "P129_is_about",
+          "P14i_performed",
+          "P53_has_former_or_current_location",
+          "P98i_was_born"
+        ],
+        "predicate_set_divergence": 0.875,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 153,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 10,
+        "attached_timespan": 1,
+        "detached_timespan": 9,
+        "detachment_rate": 0.9
+      }
+    },
+    {
+      "text_id": "sound3",
+      "domain": "sound",
+      "variant": "V1_monolithic",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 8,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity",
+          "E8_Acquisition"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 2,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": [
+          "ns2=ns2:",
+          "ns3=ns3:"
+        ]
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound3",
+      "domain": "sound",
+      "variant": "V2_baseline",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 8,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity",
+          "E8_Acquisition"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound3",
+      "domain": "sound",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 8,
+        "pred_event_count": 7,
+        "event_recall": 0.3333,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity",
+          "E8_Acquisition"
+        ],
+        "pred_event_types": [
+          "E16_Measurement",
+          "E5_Event",
+          "E7_Activity"
+        ]
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 1,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": [
+          "cacao=cacao:"
+        ]
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P127_has_broader_term",
+          "P12_occurred_in_the_presence_of",
+          "P14_carried_out_by",
+          "P22_transferred_title_to",
+          "P2_has_type",
+          "P3_has_note",
+          "P43_has_dimension",
+          "P4_has_time-span",
+          "P50_has_current_keeper",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P90_has_value",
+          "P91_has_unit",
+          "P94_has_created",
+          "P9i_forms_part_of"
+        ],
+        "pred_cidoc_predicates": [
+          "P107i_is_current_or_former_member_of",
+          "P109i_is_current_or_former_curator_of",
+          "P129_is_about",
+          "P130_shows_features_of",
+          "P138i_has_representation",
+          "P14i_performed",
+          "P40i_was_observed_in",
+          "P45_consists_of",
+          "P4_has_time-span",
+          "P4i_is_time-span_of",
+          "P50i_is_current_keeper_of",
+          "P53i_is_former_or_current_location_of",
+          "P7_took_place_at",
+          "P89_falls_within"
+        ],
+        "pred_divergent_predicates": [
+          "P107i_is_current_or_former_member_of",
+          "P109i_is_current_or_former_curator_of",
+          "P129_is_about",
+          "P130_shows_features_of",
+          "P138i_has_representation",
+          "P14i_performed",
+          "P40i_was_observed_in",
+          "P45_consists_of",
+          "P4i_is_time-span_of",
+          "P50i_is_current_keeper_of",
+          "P53i_is_former_or_current_location_of",
+          "P89_falls_within"
+        ],
+        "predicate_set_divergence": 0.8571,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 145,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 5,
+        "attached_timespan": 4,
+        "detached_timespan": 1,
+        "detachment_rate": 0.2
+      }
+    },
+    {
+      "text_id": "sound4",
+      "domain": "sound",
+      "variant": "V1_monolithic",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 4,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E13_Attribute_Assignment",
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 3,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns2=https://w3id.org/cacao/ontology/",
+          "ns3=http://erlangen-crm.org/current/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound4",
+      "domain": "sound",
+      "variant": "V2_baseline",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 4,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E13_Attribute_Assignment",
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound4",
+      "domain": "sound",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 4,
+        "pred_event_count": 2,
+        "event_recall": 0.3333,
+        "gold_event_types": [
+          "E13_Attribute_Assignment",
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": [
+          "E7_Activity"
+        ]
+      },
+      "fm2": {
+        "fabricated_count": 3,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/",
+          "ns2=http://cacao.io/ontology/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P128_carries",
+          "P129_is_about",
+          "P140_assigned_attribute_to",
+          "P14_carried_out_by",
+          "P16_used_specific_object",
+          "P2_has_type",
+          "P3_has_note",
+          "P43_has_dimension",
+          "P46i_forms_part_of",
+          "P4_has_time-span",
+          "P50_has_current_keeper",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P90_has_value",
+          "P91_has_unit",
+          "P94_has_created"
+        ],
+        "pred_cidoc_predicates": [
+          "P106_is_composed_of",
+          "P107_has_current_or_former_member",
+          "P129_is_about",
+          "P14_carried_out_by",
+          "P40_observed_dimension",
+          "P49_has_former_or_current_keeper",
+          "P53_has_former_or_current_location",
+          "P7_took_place_at"
+        ],
+        "pred_divergent_predicates": [
+          "P106_is_composed_of",
+          "P107_has_current_or_former_member",
+          "P40_observed_dimension",
+          "P49_has_former_or_current_keeper",
+          "P53_has_former_or_current_location"
+        ],
+        "predicate_set_divergence": 0.625,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 80,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound5",
+      "domain": "sound",
+      "variant": "V1_monolithic",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 3,
+        "event_recall": 0.3333,
+        "gold_event_types": [
+          "E13_Attribute_Assignment",
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": [
+          "E67_Birth",
+          "E69_Death",
+          "E7_Activity"
+        ]
+      },
+      "fm2": {
+        "fabricated_count": 4,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns1=https://data.cacao.ugent.be/vocabularies/cacao/",
+          "ns2=https://data.cacao.ugent.be/vocabularies/cacao/",
+          "ns3=http://erlangen-crm.org/current/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P12_occurred_in_the_presence_of",
+          "P140_assigned_attribute_to",
+          "P14_carried_out_by",
+          "P2_has_type",
+          "P3_has_note",
+          "P43_has_dimension",
+          "P46_is_composed_of",
+          "P4_has_time-span",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P90_has_value",
+          "P91_has_unit",
+          "P94_has_created"
+        ],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 110,
+        "injection_triples": 34,
+        "injection_rate": 0.3091,
+        "injected_predicates": [
+          "P100i_died_in",
+          "P11i_participated_in",
+          "P129_is_about",
+          "P12_occurred_in_the_presence_of",
+          "P12i_was_present_at",
+          "P138i_has_representation",
+          "P140_assigned_attribute_to",
+          "P14_carried_out_by",
+          "P1_is_identified_by",
+          "P4_has_time-span",
+          "P53_has_former_or_current_location",
+          "P67_refers_to",
+          "P7_took_place_at",
+          "P98i_was_born",
+          "alternateName",
+          "description",
+          "fieldOfWork"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 4,
+        "attached_timespan": 0,
+        "detached_timespan": 4,
+        "detachment_rate": 1.0
+      }
+    },
+    {
+      "text_id": "sound5",
+      "domain": "sound",
+      "variant": "V2_baseline",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E13_Attribute_Assignment",
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound5",
+      "domain": "sound",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E13_Attribute_Assignment",
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 3,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": [
+          "cacao=cacao:",
+          "ns2=ns2:",
+          "ns3=ns3:"
+        ]
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P12_occurred_in_the_presence_of",
+          "P140_assigned_attribute_to",
+          "P14_carried_out_by",
+          "P2_has_type",
+          "P3_has_note",
+          "P43_has_dimension",
+          "P46_is_composed_of",
+          "P4_has_time-span",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P90_has_value",
+          "P91_has_unit",
+          "P94_has_created"
+        ],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 119,
+        "injection_triples": 23,
+        "injection_rate": 0.1933,
+        "injected_predicates": [
+          "ns2:CACAO_0000026",
+          "ns3:P11i_participated_in",
+          "ns3:P12_occurred_in_the_presence_of",
+          "ns3:P14i_performed",
+          "ns3:P89i_contains"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 6,
+        "attached_timespan": 0,
+        "detached_timespan": 6,
+        "detachment_rate": 1.0
+      }
+    },
+    {
+      "text_id": "sound6",
+      "domain": "sound",
+      "variant": "V1_monolithic",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E13_Attribute_Assignment",
+          "E65_Creation"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 3,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns2=https://example.com/ns2#",
+          "ns3=https://example.com/ns3#"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound6",
+      "domain": "sound",
+      "variant": "V2_baseline",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E13_Attribute_Assignment",
+          "E65_Creation"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 1,
+        "invalid_count": 1,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#"
+        ],
+        "invalid_prefixes": [
+          "cacao=cacao:"
+        ]
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P129_is_about",
+          "P140_assigned_attribute_to",
+          "P14_carried_out_by",
+          "P16_used_specific_object",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within"
+        ],
+        "pred_cidoc_predicates": [
+          "P107_has_current_or_former_member",
+          "P48_has_preferred_identifier",
+          "P7i_witnessed",
+          "P89_falls_within"
+        ],
+        "pred_divergent_predicates": [
+          "P107_has_current_or_former_member",
+          "P48_has_preferred_identifier",
+          "P7i_witnessed",
+          "P89_falls_within"
+        ],
+        "predicate_set_divergence": 1.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 64,
+        "injection_triples": 1,
+        "injection_rate": 0.0156,
+        "injected_predicates": [
+          "cacao:CACAO_0000026"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 5,
+        "attached_timespan": 0,
+        "detached_timespan": 5,
+        "detachment_rate": 1.0
+      }
+    },
+    {
+      "text_id": "sound6",
+      "domain": "sound",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E13_Attribute_Assignment",
+          "E65_Creation"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P129_is_about",
+          "P140_assigned_attribute_to",
+          "P14_carried_out_by",
+          "P16_used_specific_object",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within"
+        ],
+        "pred_cidoc_predicates": [
+          "P107_has_current_or_former_member",
+          "P107i_is_current_or_former_member_of",
+          "P130_shows_features_of_the_object_or_phenomenon_represented",
+          "P14_carried_out_by",
+          "P14i_performed",
+          "P1_is_identified_by",
+          "P2_has_type",
+          "P67_refers_to",
+          "P89_falls_within",
+          "P89i_contains"
+        ],
+        "pred_divergent_predicates": [
+          "P107_has_current_or_former_member",
+          "P107i_is_current_or_former_member_of",
+          "P130_shows_features_of_the_object_or_phenomenon_represented",
+          "P14i_performed",
+          "P1_is_identified_by",
+          "P2_has_type",
+          "P67_refers_to",
+          "P89_falls_within",
+          "P89i_contains"
+        ],
+        "predicate_set_divergence": 0.9,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 99,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 5,
+        "attached_timespan": 0,
+        "detached_timespan": 5,
+        "detachment_rate": 1.0
+      }
+    },
+    {
+      "text_id": "sound7",
+      "domain": "sound",
+      "variant": "V1_monolithic",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 1,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 3,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns2=http://example.org/cacao/",
+          "ns3=http://erlangen-crm.org/current/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P14_carried_out_by",
+          "P2_has_type",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P94_has_created"
+        ],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 115,
+        "injection_triples": 44,
+        "injection_rate": 0.3826,
+        "injected_predicates": [
+          "CACAO_0000017",
+          "CACAO_0000035",
+          "P11_had_participant",
+          "P14_carried_out_by",
+          "P40_observed_dimension",
+          "P45_consists_of",
+          "P4_has_time-span",
+          "P7_took_place_at",
+          "P89i_contains",
+          "P90_has_value",
+          "P91_has_unit",
+          "birthDate",
+          "created",
+          "deathDate",
+          "name",
+          "subClassOf"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 1,
+        "attached_timespan": 0,
+        "detached_timespan": 1,
+        "detachment_rate": 1.0
+      }
+    },
+    {
+      "text_id": "sound7",
+      "domain": "sound",
+      "variant": "V2_baseline",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 1,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound7",
+      "domain": "sound",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 1,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 2,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns2=http://www.cidoc-crm.org/cidoc-crm/",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P14_carried_out_by",
+          "P2_has_type",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P94_has_created"
+        ],
+        "pred_cidoc_predicates": [
+          "P106_is_composed_of",
+          "P129_is_about",
+          "P130_shows_features_of",
+          "P45_consists_of",
+          "P4_has_time-span",
+          "P7_took_place_at"
+        ],
+        "pred_divergent_predicates": [
+          "P106_is_composed_of",
+          "P129_is_about",
+          "P130_shows_features_of",
+          "P45_consists_of"
+        ],
+        "predicate_set_divergence": 0.6667,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 121,
+        "injection_triples": 5,
+        "injection_rate": 0.0413,
+        "injected_predicates": [
+          "has_occupation",
+          "is_movement_of"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 1,
+        "attached_timespan": 1,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound8",
+      "domain": "sound",
+      "variant": "V1_monolithic",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 3,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns2=https://example.com/ns2#",
+          "ns3=https://example.com/ns3#"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound8",
+      "domain": "sound",
+      "variant": "V2_baseline",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 2,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns3=http://example.org/ns3/",
+          "ns2=http://example.org/ns2/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P11_had_participant",
+          "P128i_is_carried_by",
+          "P14_carried_out_by",
+          "P14i_performed",
+          "P16_used_specific_object",
+          "P2_has_type",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P94_has_created"
+        ],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 114,
+        "injection_triples": 52,
+        "injection_rate": 0.4561,
+        "injected_predicates": [
+          "P102_has_title",
+          "P1i_identifies",
+          "P89i_contains",
+          "about",
+          "agent",
+          "agentOf",
+          "animal",
+          "audience",
+          "availability",
+          "citation",
+          "climate",
+          "creator",
+          "date",
+          "duration",
+          "genre",
+          "habitat",
+          "hasCharacteristic",
+          "hasHerd",
+          "hasRelationship",
+          "heldBy",
+          "instrumentPlayedBy",
+          "learningSource",
+          "location",
+          "mainEntity",
+          "numberOfFingerHoles",
+          "numberOfThumbHoles",
+          "occupant",
+          "occupation",
+          "outcome",
+          "owner",
+          "parent",
+          "participant",
+          "performanceFrequency",
+          "performancePlace",
+          "plot",
+          "preservationStatus",
+          "season",
+          "source",
+          "usedBy"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound8",
+      "domain": "sound",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 1,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "sh=http://www.w3.org/ns/shacl#"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P11_had_participant",
+          "P128i_is_carried_by",
+          "P14_carried_out_by",
+          "P14i_performed",
+          "P16_used_specific_object",
+          "P2_has_type",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P94_has_created"
+        ],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 1,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound9",
+      "domain": "sound",
+      "variant": "V1_monolithic",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 1,
+        "invalid_count": 1,
+        "fabricated_prefixes": [
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": [
+          "ns2=ns2:CACAO_00000"
+        ]
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound9",
+      "domain": "sound",
+      "variant": "V2_baseline",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 1,
+        "event_recall": 0.5,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": [
+          "E7_Activity"
+        ]
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 1,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": [
+          "cacao=cacao:"
+        ]
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P11_had_participant",
+          "P129_is_about",
+          "P14_carried_out_by",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P67_refers_to",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P89_falls_within",
+          "P94_has_created"
+        ],
+        "pred_cidoc_predicates": [
+          "P102i_is_title_of",
+          "P107i_is_current_or_former_member_of",
+          "P11i_participated_in",
+          "P14i_performed",
+          "P1i_identifies",
+          "P40i_was_observed_in",
+          "P45_consists_of",
+          "P45i_is_incorporated_in",
+          "P4i_is_time-span_of",
+          "P53_has_former_or_current_location",
+          "P7i_witnessed",
+          "P89i_contains"
+        ],
+        "pred_divergent_predicates": [
+          "P102i_is_title_of",
+          "P107i_is_current_or_former_member_of",
+          "P11i_participated_in",
+          "P14i_performed",
+          "P1i_identifies",
+          "P40i_was_observed_in",
+          "P45_consists_of",
+          "P45i_is_incorporated_in",
+          "P4i_is_time-span_of",
+          "P53_has_former_or_current_location",
+          "P7i_witnessed",
+          "P89i_contains"
+        ],
+        "predicate_set_divergence": 1.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 155,
+        "injection_triples": 3,
+        "injection_rate": 0.0194,
+        "injected_predicates": [
+          "cacao:genre"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 2,
+        "attached_timespan": 1,
+        "detached_timespan": 1,
+        "detachment_rate": 0.5
+      }
+    },
+    {
+      "text_id": "sound9",
+      "domain": "sound",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 4,
+        "event_recall": 0.5,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": [
+          "E5_Event",
+          "E7_Activity"
+        ]
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 1,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": [
+          "cacao=cacao:"
+        ]
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P11_had_participant",
+          "P129_is_about",
+          "P14_carried_out_by",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P67_refers_to",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P89_falls_within",
+          "P94_has_created"
+        ],
+        "pred_cidoc_predicates": [
+          "P106_is_composed_of",
+          "P107_has_current_or_former_member",
+          "P129_is_about",
+          "P14_carried_out_by",
+          "P53_has_former_or_current_location",
+          "P7_took_place_at",
+          "P89_falls_within",
+          "P89i_contains"
+        ],
+        "pred_divergent_predicates": [
+          "P106_is_composed_of",
+          "P107_has_current_or_former_member",
+          "P53_has_former_or_current_location",
+          "P89i_contains"
+        ],
+        "predicate_set_divergence": 0.5,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 164,
+        "injection_triples": 7,
+        "injection_rate": 0.0427,
+        "injected_predicates": [
+          "hasDimension",
+          "hasInstrumentalist",
+          "hasMaterial"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 2,
+        "attached_timespan": 0,
+        "detached_timespan": 2,
+        "detachment_rate": 1.0
+      }
+    },
+    {
+      "text_id": "sound10",
+      "domain": "sound",
+      "variant": "V1_monolithic",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 1,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": [
+          "E5_Event"
+        ]
+      },
+      "fm2": {
+        "fabricated_count": 3,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns2=http://example.com/ns2#",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P14_carried_out_by",
+          "P16_used_specific_object",
+          "P2_has_type",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P94_has_created"
+        ],
+        "pred_cidoc_predicates": [
+          "P107i_is_current_or_former_member_of",
+          "P11_had_participant",
+          "P129_is_about",
+          "P45_consists_of",
+          "P7_took_place_at",
+          "P89_falls_within"
+        ],
+        "pred_divergent_predicates": [
+          "P107i_is_current_or_former_member_of",
+          "P11_had_participant",
+          "P129_is_about",
+          "P45_consists_of",
+          "P89_falls_within"
+        ],
+        "predicate_set_divergence": 0.8333,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 116,
+        "injection_triples": 21,
+        "injection_rate": 0.181,
+        "injected_predicates": [
+          "CACAO_0000001",
+          "date",
+          "description",
+          "name"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound10",
+      "domain": "sound",
+      "variant": "V2_baseline",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound10",
+      "domain": "sound",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 3,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns2=http://data.cacao.tenkiv.com/ontology/",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P14_carried_out_by",
+          "P16_used_specific_object",
+          "P2_has_type",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P94_has_created"
+        ],
+        "pred_cidoc_predicates": [
+          "P102_has_title",
+          "P107_has_current_or_former_member",
+          "P11i_participated_in",
+          "P14i_performed",
+          "P1i_identifies",
+          "P53_has_former_or_current_location",
+          "P89_falls_within",
+          "P89i_contains"
+        ],
+        "pred_divergent_predicates": [
+          "P102_has_title",
+          "P107_has_current_or_former_member",
+          "P11i_participated_in",
+          "P14i_performed",
+          "P1i_identifies",
+          "P53_has_former_or_current_location",
+          "P89_falls_within",
+          "P89i_contains"
+        ],
+        "predicate_set_divergence": 1.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 69,
+        "injection_triples": 2,
+        "injection_rate": 0.029,
+        "injected_predicates": [
+          "CACAO_0000026"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 1,
+        "attached_timespan": 0,
+        "detached_timespan": 1,
+        "detachment_rate": 1.0
+      }
+    },
+    {
+      "text_id": "sound11",
+      "domain": "sound",
+      "variant": "V1_monolithic",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 3,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns2=https://w3id.org/cacao/ontology/",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound11",
+      "domain": "sound",
+      "variant": "V2_baseline",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound11",
+      "domain": "sound",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 2,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P129_is_about",
+          "P14_carried_out_by",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P70_documents",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P94_has_created"
+        ],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 1,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound12",
+      "domain": "sound",
+      "variant": "V1_monolithic",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E13_Attribute_Assignment",
+          "E5_Event",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 2,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns2=http://ns.example.com/cacao/",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound12",
+      "domain": "sound",
+      "variant": "V2_baseline",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 3,
+        "event_recall": 0.3333,
+        "gold_event_types": [
+          "E13_Attribute_Assignment",
+          "E5_Event",
+          "E7_Activity"
+        ],
+        "pred_event_types": [
+          "E5_Event"
+        ]
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 2,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": [
+          "ns2=ns2:",
+          "ns3=ns3:"
+        ]
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P11_had_participant",
+          "P12_occurred_in_the_presence_of",
+          "P140_assigned_attribute_to",
+          "P141_assigned",
+          "P14_carried_out_by",
+          "P2_has_type",
+          "P3_has_note",
+          "P43_has_dimension",
+          "P4_has_time-span",
+          "P67_refers_to",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P90_has_value",
+          "P91_has_unit"
+        ],
+        "pred_cidoc_predicates": [
+          "P106i_forms_part_of",
+          "P107i_is_current_or_former_member_of",
+          "P11i_participated_in",
+          "P129_is_about",
+          "P14_carried_out_by",
+          "P1_is_identified_by",
+          "P46_is_composed_of",
+          "P4_has_time-span",
+          "P53_has_former_or_current_location",
+          "P89i_contains"
+        ],
+        "pred_divergent_predicates": [
+          "P106i_forms_part_of",
+          "P107i_is_current_or_former_member_of",
+          "P11i_participated_in",
+          "P129_is_about",
+          "P1_is_identified_by",
+          "P46_is_composed_of",
+          "P53_has_former_or_current_location",
+          "P89i_contains"
+        ],
+        "predicate_set_divergence": 0.8,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 202,
+        "injection_triples": 5,
+        "injection_rate": 0.0248,
+        "injected_predicates": [
+          "ns3:P7_took_place_at",
+          "ns3:P94_has_created"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 6,
+        "attached_timespan": 6,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound12",
+      "domain": "sound",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 9,
+        "event_recall": 0.3333,
+        "gold_event_types": [
+          "E13_Attribute_Assignment",
+          "E5_Event",
+          "E7_Activity"
+        ],
+        "pred_event_types": [
+          "E7_Activity"
+        ]
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 1,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": [
+          "cacao=cacao:"
+        ]
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P11_had_participant",
+          "P12_occurred_in_the_presence_of",
+          "P140_assigned_attribute_to",
+          "P141_assigned",
+          "P14_carried_out_by",
+          "P2_has_type",
+          "P3_has_note",
+          "P43_has_dimension",
+          "P4_has_time-span",
+          "P67_refers_to",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P90_has_value",
+          "P91_has_unit"
+        ],
+        "pred_cidoc_predicates": [
+          "P107i_is_current_or_former_member_of",
+          "P129_is_about",
+          "P129i_is_subject_of",
+          "P12i_was_present_at",
+          "P130_shows_features_of",
+          "P138_represents",
+          "P14i_performed",
+          "P1_is_identified_by",
+          "P1i_identifies",
+          "P45i_is_incorporated_in",
+          "P46_is_composed_of",
+          "P46i_forms_part_of",
+          "P49i_is_former_or_current_keeper_of",
+          "P4_has_time-span",
+          "P4i_is_time-span_of",
+          "P53i_is_former_or_current_location_of",
+          "P89i_contains"
+        ],
+        "pred_divergent_predicates": [
+          "P107i_is_current_or_former_member_of",
+          "P129_is_about",
+          "P129i_is_subject_of",
+          "P12i_was_present_at",
+          "P130_shows_features_of",
+          "P138_represents",
+          "P14i_performed",
+          "P1_is_identified_by",
+          "P1i_identifies",
+          "P45i_is_incorporated_in",
+          "P46_is_composed_of",
+          "P46i_forms_part_of",
+          "P49i_is_former_or_current_keeper_of",
+          "P4i_is_time-span_of",
+          "P53i_is_former_or_current_location_of",
+          "P89i_contains"
+        ],
+        "predicate_set_divergence": 0.9412,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 206,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 7,
+        "attached_timespan": 5,
+        "detached_timespan": 2,
+        "detachment_rate": 0.2857
+      }
+    },
+    {
+      "text_id": "sound13",
+      "domain": "sound",
+      "variant": "V1_monolithic",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 3,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns2=http://example.org/ns2/",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound13",
+      "domain": "sound",
+      "variant": "V2_baseline",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound13",
+      "domain": "sound",
+      "variant": "V4_shacl",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound14",
+      "domain": "sound",
+      "variant": "V1_monolithic",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 1,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E7_Activity"
+        ],
+        "pred_event_types": [
+          "E5_Event"
+        ]
+      },
+      "fm2": {
+        "fabricated_count": 3,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#",
+          "ns2=https://example.org/ns2/",
+          "ns3=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P11_had_participant",
+          "P127_has_broader_term",
+          "P129_is_about",
+          "P14_carried_out_by",
+          "P2_has_type",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P67_refers_to",
+          "P70_documents",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P89_falls_within",
+          "P9_consists_of"
+        ],
+        "pred_cidoc_predicates": [
+          "P107i_is_current_or_former_member_of",
+          "P11i_participated_in",
+          "P129_is_about",
+          "P129i_is_subject_of",
+          "P14_carried_out_by",
+          "P46i_forms_part_of",
+          "P7_took_place_at"
+        ],
+        "pred_divergent_predicates": [
+          "P107i_is_current_or_former_member_of",
+          "P11i_participated_in",
+          "P129i_is_subject_of",
+          "P46i_forms_part_of"
+        ],
+        "predicate_set_divergence": 0.5714,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 111,
+        "injection_triples": 3,
+        "injection_rate": 0.027,
+        "injected_predicates": [
+          "age",
+          "date"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound14",
+      "domain": "sound",
+      "variant": "V2_baseline",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 7,
+        "event_recall": 1.0,
+        "gold_event_types": [
+          "E7_Activity"
+        ],
+        "pred_event_types": [
+          "E5_Event",
+          "E7_Activity"
+        ]
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P11_had_participant",
+          "P127_has_broader_term",
+          "P129_is_about",
+          "P14_carried_out_by",
+          "P2_has_type",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P67_refers_to",
+          "P70_documents",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P89_falls_within",
+          "P9_consists_of"
+        ],
+        "pred_cidoc_predicates": [
+          "P129i_is_subject_of",
+          "P14_carried_out_by",
+          "P14i_performed",
+          "P45_consists_of",
+          "P46_is_composed_of",
+          "P4_has_time-span",
+          "P7_took_place_at"
+        ],
+        "pred_divergent_predicates": [
+          "P129i_is_subject_of",
+          "P14i_performed",
+          "P45_consists_of",
+          "P46_is_composed_of"
+        ],
+        "predicate_set_divergence": 0.5714,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 113,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 1,
+        "attached_timespan": 1,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound14",
+      "domain": "sound",
+      "variant": "V4_shacl",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 3,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P11_had_participant",
+          "P127_has_broader_term",
+          "P129_is_about",
+          "P14_carried_out_by",
+          "P2_has_type",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P67_refers_to",
+          "P70_documents",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P89_falls_within",
+          "P9_consists_of"
+        ],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound15",
+      "domain": "sound",
+      "variant": "V1_monolithic",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 7,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E12_Production",
+          "E5_Event",
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 1,
+        "invalid_count": 4,
+        "fabricated_prefixes": [
+          "ns=http://www.w3.org/2003/06/sw-vocab-status/ns#"
+        ],
+        "invalid_prefixes": [
+          "ns1=ns1:",
+          "ns2=ns2:",
+          "ns3=ns3:",
+          "ns4=ns4:"
+        ]
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P108_has_produced",
+          "P11_had_participant",
+          "P128_carries",
+          "P129_is_about",
+          "P14_carried_out_by",
+          "P16_used_specific_object",
+          "P2_has_type",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P50_has_current_keeper",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P89_falls_within",
+          "P94_has_created"
+        ],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 140,
+        "injection_triples": 40,
+        "injection_rate": 0.2857,
+        "injected_predicates": [
+          "created",
+          "date",
+          "ns2:fieldOfWork",
+          "ns2:hasEconomicRelevance",
+          "ns3:P109i_is_current_or_former_curator_of",
+          "ns3:P129_is_about",
+          "ns3:P129i_is_subject_of",
+          "ns3:P12_occurred_in_the_presence_of",
+          "ns3:P14_carried_out_by",
+          "ns3:P14i_performed",
+          "ns3:P1_is_identified_by",
+          "ns3:P45_consists_of",
+          "ns3:P55i_currently_holds",
+          "ns3:P7_took_place_at",
+          "ns3:P94_has_created"
+        ]
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound15",
+      "domain": "sound",
+      "variant": "V2_baseline",
+      "parsed": true,
+      "fm1": {
+        "gold_event_count": 7,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E12_Production",
+          "E5_Event",
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 1,
+        "invalid_count": 0,
+        "fabricated_prefixes": [
+          "ns2=http://www.cidoc-crm.org/cidoc-crm/"
+        ],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [
+          "P108_has_produced",
+          "P11_had_participant",
+          "P128_carries",
+          "P129_is_about",
+          "P14_carried_out_by",
+          "P16_used_specific_object",
+          "P2_has_type",
+          "P3_has_note",
+          "P4_has_time-span",
+          "P50_has_current_keeper",
+          "P7_took_place_at",
+          "P81_ongoing_throughout",
+          "P82_at_some_time_within",
+          "P89_falls_within",
+          "P94_has_created"
+        ],
+        "pred_cidoc_predicates": [
+          "P109i_is_current_or_former_curator_of",
+          "P129_is_about",
+          "P14_carried_out_by",
+          "P4_has_time-span",
+          "P53_has_former_or_current_location",
+          "P53i_is_former_or_current_location_of",
+          "P7_took_place_at"
+        ],
+        "pred_divergent_predicates": [
+          "P109i_is_current_or_former_curator_of",
+          "P53_has_former_or_current_location",
+          "P53i_is_former_or_current_location_of"
+        ],
+        "predicate_set_divergence": 0.4286,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 71,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 3,
+        "attached_timespan": 3,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    },
+    {
+      "text_id": "sound15",
+      "domain": "sound",
+      "variant": "V4_shacl",
+      "parsed": false,
+      "fm1": {
+        "gold_event_count": 7,
+        "pred_event_count": 0,
+        "event_recall": 0.0,
+        "gold_event_types": [
+          "E12_Production",
+          "E5_Event",
+          "E65_Creation",
+          "E7_Activity"
+        ],
+        "pred_event_types": []
+      },
+      "fm2": {
+        "fabricated_count": 0,
+        "invalid_count": 0,
+        "fabricated_prefixes": [],
+        "invalid_prefixes": []
+      },
+      "fm5": {
+        "pair_matched": 0,
+        "pair_substituted": 0,
+        "pair_substitution_rate": 0.0,
+        "gold_cidoc_predicates": [],
+        "pred_cidoc_predicates": [],
+        "pred_divergent_predicates": [],
+        "predicate_set_divergence": 0.0,
+        "examples": []
+      },
+      "fm6": {
+        "total_triples": 0,
+        "injection_triples": 0,
+        "injection_rate": 0.0,
+        "injected_predicates": []
+      },
+      "fm7": {
+        "total_timespan": 0,
+        "attached_timespan": 0,
+        "detached_timespan": 0,
+        "detachment_rate": 0.0
+      }
+    }
+  ]
+}

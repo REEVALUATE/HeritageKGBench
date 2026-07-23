@@ -1,0 +1,96 @@
+# Gold standard: sound13 – Konbaung dynasty praise song / pat pyo (Burma)
+# Source text : txt/sound/sound13.txt
+# Students    : annotator4 (only)
+# Primary     : annotator4
+
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+@prefix ex:    <https://example.org/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+# PEOPLE
+ex:myawaddy a crm:E21_Person ;
+    rdfs:label "Myawaddy Mingyi U Sa (1766–1839)"@en ;
+    owl:sameAs wd:Q265499 ;
+    crm:P3_has_note "Poet, musician, intellectual, statesman, and military expert; spanned reign of 8 of 11 Konbaung dynasty kings."@en .
+
+ex:pyin_si a crm:E21_Person ;
+    rdfs:label "Pyin Si (pat pyo representative)"@en .
+
+ex:u_kyin_u a crm:E21_Person ;
+    rdfs:label "U Kyin U (pat pyo representative)"@en ;
+    owl:sameAs wd:Q13062718 .
+
+ex:alaungpaya a crm:E21_Person ;
+    rdfs:label "Alaungpaya (first Konbaung king, 1752–1760)"@en ;
+    owl:sameAs wd:Q470978 .
+
+ex:bagyidaw a crm:E21_Person ;
+    rdfs:label "King Bagyidaw (seventh Konbaung king, 1819–1837)"@en ;
+    owl:sameAs wd:Q38422 .
+
+ex:tharrawaddy a crm:E21_Person ;
+    rdfs:label "King Tharrawaddy (successor, 1837–1846)"@en ;
+    owl:sameAs wd:Q38167 .
+
+ex:king_thibaw a crm:E21_Person ;
+    rdfs:label "King Thibaw (last Konbaung king, 1878–1885)"@en ;
+    owl:sameAs wd:Q470986 .
+
+# GROUPS
+ex:konbaung_dynasty a crm:E74_Group ;
+    rdfs:label "Konbaung Dynasty (last Burmese monarchy, 1752–1885)"@en ;
+    owl:sameAs wd:Q1062422 ;
+    crm:P3_has_note "Also named after its first king Alaungpaya. 11 kings total. Ended when British colonial powers sent King Thibaw into exile in India in 1885."@en .
+
+# PLACES
+ex:amarapura a crm:E53_Place ;
+    rdfs:label "Amarapura (king's court)"@en ;
+    owl:sameAs wd:Q454949 .
+
+ex:india a crm:E53_Place ;
+    rdfs:label "India (exile of King Thibaw)"@en ;
+    owl:sameAs wd:Q668 .
+
+# COMPOSITION
+ex:bon_daw_bwe a crm:E73_Information_Object ;
+    rdfs:label "Bon Daw Bwe Pat Pyo 'Konbaung Parame' / 'Fame of the Konbaung Dynasty'"@en ;
+    crm:P2_has_type ex:pat_pyo ;
+    crm:P3_has_note "Almost hour-long composition; first stanzas repeated with small variations. 'Glory, sevenfold' in second line indicates composition for seventh king (Bagyidaw). Part of the most complex and virtuosic pieces in the classical Burmese repertoire."@en .
+
+# GENRE: PAT PYO
+ex:pat_pyo a crm:E55_Type ;
+    rdfs:label "Pat pyo (classical Burmese court genre)"@en ;
+    crm:P3_has_note "Heyday toward end of 18th century. Performance requires grasp of large part of old court songs. Most important representatives: Pyin Si, U Kyin U, and Myawaddy Mingyi U Sa."@en .
+
+# COMPOSITION EVENT
+ex:composition_event a crm:E65_Creation ;
+    rdfs:label "Myawaddy Mingyi U Sa composes 'Bon Daw Bwe' for King Bagyidaw at Amarapura court"@en ;
+    crm:P14_carried_out_by ex:myawaddy ;
+    crm:P7_took_place_at ex:amarapura ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1819-01-01/1837-12-31" ; crm:P82_at_some_time_within "1819-01-01/1837-12-31" ] ;
+    crm:P94_has_created ex:bon_daw_bwe .
+
+# IMPRISONMENT
+ex:imprisonment_myawaddy a crm:E7_Activity ;
+    rdfs:label "Myawaddy Mingyi U Sa thrown into prison by King Tharrawaddy"@en ;
+    crm:P14_carried_out_by ex:tharrawaddy ;
+    crm:P11_had_participant ex:myawaddy ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1837-01-01/1846-12-31" ; crm:P82_at_some_time_within "1837-01-01/1846-12-31" ] .
+
+# END OF DYNASTY: King Thibaw's exile (1885)
+ex:exile_thibaw a crm:E7_Activity ;
+    rdfs:label "British colonial powers send King Thibaw into exile in India (1885)"@en ;
+    crm:P14_carried_out_by wd:Q842438 ;
+    crm:P11_had_participant ex:king_thibaw ;
+    crm:P7_took_place_at ex:india ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1885-01-01/1885-12-31" ; crm:P82_at_some_time_within "1885-01-01/1885-12-31" ] .
+
+# FIRST STANZAS (textual content)
+ex:first_stanzas a crm:E33_Linguistic_Object ;
+    rdfs:label "First stanzas of 'Bon Daw Bwe' (almost hour-long, repeated with small variations)"@en ;
+    crm:P46i_forms_part_of ex:bon_daw_bwe ;
+    crm:P3_has_note "'Glory, sevenfold' in second line indicates composition for seventh king (Bagyidaw)."@en .

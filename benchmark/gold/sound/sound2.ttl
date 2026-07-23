@@ -1,0 +1,103 @@
+# Gold standard: sound2 – Kuadinkro/Baule music (Hans Himmelheber, 1935)
+# Source text : txt/sound/sound2.txt
+# Students    : annotator8 (only)
+# Primary     : annotator8
+
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+@prefix ex:    <https://example.org/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+
+# PEOPLE
+ex:hans_himmelheber a crm:E21_Person ;
+    rdfs:label "Hans Himmelheber (1908–1990, art ethnologist, Heidelberg)"@en ;
+    crm:P3_has_note "Born Karlsruhe 1908; studied ethnology and art history in Munich and Berlin; PhD on Baule sculptors."@en .
+
+ex:martin_lippmann a crm:E21_Person ;
+    rdfs:label "Martin Lippmann (photographer, assistant)"@en .
+
+# GROUPS
+ex:baule_people a crm:E74_Group ;
+    rdfs:label "Baule (Atutu) people, central Ivory Coast"@en .
+
+# PLACES
+ex:abigui a crm:E53_Place ;
+    rdfs:label "Village of Abigui, Ivory Coast"@en .
+
+ex:ivory_coast a crm:E53_Place ;
+    rdfs:label "Ivory Coast"@en ;
+    owl:sameAs wd:Q1008 .
+
+# INSTITUTION
+ex:berlin_phonogramm_archiv a crm:E74_Group ;
+    rdfs:label "Berlin Phonogramm-Archiv / Museum für Völkerkunde"@en ;
+    owl:sameAs wd:Q821680 .
+
+# BOOK (1933 first trip results)
+ex:book_negerkunstler a crm:E31_Document ;
+    rdfs:label "Negerkunstler – ethnographische Studien über die Schnitzkunstler bei den Stammen der Atutu und Guro"@en ;
+    crm:P14_carried_out_by ex:hans_himmelheber ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1933-01-01/1933-12-31" ; crm:P82_at_some_time_within "1933-01-01/1933-12-31" ] ;
+    crm:P3_has_note "Results of first trip 1933; on circumstances and style of African wood-carvers."@en .
+
+# FIRST TRIP (1933)
+ex:trip_ivory_coast_1933 a crm:E7_Activity ;
+    rdfs:label "Hans Himmelheber first trip to Ivory Coast (1933)"@en ;
+    crm:P14_carried_out_by ex:hans_himmelheber ;
+    crm:P7_took_place_at ex:ivory_coast ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1933-01-01/1933-12-31" ; crm:P82_at_some_time_within "1933-01-01/1933-12-31" ] ;
+    crm:P94_has_created ex:book_negerkunstler .
+
+# SECOND TRIP (1934–35) – main recording trip
+ex:trip_ivory_coast_1934 a crm:E7_Activity ;
+    rdfs:label "Hans Himmelheber second trip to Ivory Coast (1934–35)"@en ;
+    crm:P14_carried_out_by ex:hans_himmelheber, ex:martin_lippmann ;
+    crm:P7_took_place_at ex:ivory_coast ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1934-01-01/1935-12-31" ; crm:P82_at_some_time_within "1934-01-01/1935-12-31" ] ;
+    crm:P3_has_note "Planned anthropological monograph of Baule culture; most descriptions destroyed in WWII bombing; photo negatives survived; sound recordings returned to Berlin Phonogramm-Archiv in 1991."@en .
+
+# RECORDING EVENT (January 27, 1935)
+ex:recording_abigui_1935 a crm:E65_Creation ;
+    rdfs:label "Recording of 'Kuadinkro bessueba' in Abigui, 27 January 1935"@en ;
+    crm:P14_carried_out_by ex:hans_himmelheber ;
+    crm:P7_took_place_at ex:abigui ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1935-01-27"^^xsd:date ; crm:P82_at_some_time_within "1935-01-27"^^xsd:date ] ;
+    crm:P94_has_created ex:recording_kuadinkro .
+
+# RECORDING OBJECT
+ex:recording_kuadinkro a cacao:CACAO_0000089 ;
+    rdfs:label "Kuadinkro bessueba – 'The People of the Village Kuadinkro Want to Arrive'"@en ;
+    crm:P3_has_note "Three flute players and a singer among the Atutu (Baule)."@en ;
+    crm:P50_has_current_keeper ex:berlin_phonogramm_archiv .
+
+# FULL WAX CYLINDER COLLECTION (65 cylinders)
+ex:collection_baule_1935 a crm:E78_Curated_Holding ;
+    rdfs:label "65 wax cylinder recordings of Baule music (1934/35)"@en ;
+    crm:P50_has_current_keeper ex:berlin_phonogramm_archiv ;
+    crm:P43_has_dimension [
+        a crm:E54_Dimension ;
+        rdfs:label "65 wax cylinders"@en ;
+        crm:P90_has_value "65"^^xsd:integer ;
+        crm:P91_has_unit ex:unit_wax_cylinder ;
+        crm:P2_has_type ex:type_count
+    ] ;
+    crm:P3_has_note "Believed missing after 1945; returned to archive in 1991."@en .
+
+# FATE: descriptions destroyed in WWII
+ex:destruction_baule_descriptions a crm:E6_Destruction ;
+    rdfs:label "Destruction of Baule monograph descriptions in WWII bombing"@en ;
+    crm:P3_has_note "Almost all textual descriptions (except religion chapter) destroyed in bombings; photo negatives survived."@en .
+
+# DIMENSION TYPES & UNITS
+ex:type_count a crm:E55_Type ; rdfs:label "count"@en .
+ex:unit_wax_cylinder a crm:E58_Measurement_Unit ; rdfs:label "wax cylinder"@en .
+
+# ===================================================================
+# gold-v2 enrichment: AAT/Wikidata grounding (curator-accepted)
+# ===================================================================
+
+ex:type_count owl:sameAs aat:300404433 .

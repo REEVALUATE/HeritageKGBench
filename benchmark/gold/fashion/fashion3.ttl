@@ -1,0 +1,133 @@
+# Gold standard — fashion3.txt
+# Source text : "Black coat suit" (black wool jacket + calf-length skirt, plastic buttons, press-studs)
+# Contributors: annotator2/annotator9 (base structure, E25 features), annotator8 (AAT types)
+
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ex:   <https://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix wd:   <http://www.wikidata.org/entity/> .
+@prefix aat:  <http://vocab.getty.edu/aat/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+
+#################################################################
+# Composite object
+#################################################################
+
+ex:coat_suit a cacao:CACAO_0000023 , cacao:CACAO_0000062 ;
+    crm:P2_has_type        ex:type_coat_suit ;
+    crm:P46_is_composed_of ex:jacket , ex:skirt ;
+    crm:P3_has_note        "Black coat suit consisting of a jacket and a calf-length skirt."@en ;
+    rdfs:label             "Black coat suit"@en .
+
+#################################################################
+# Jacket
+#################################################################
+
+ex:jacket a cacao:CACAO_0000023 ;
+    crm:P2_has_type        ex:type_jacket ;
+    crm:P45_consists_of    ex:material_black_wool ;
+    crm:P56_bears_feature  ex:feature_button_closure ,
+                           ex:feature_block_pattern_accents ,
+                           ex:feature_shawl_collar ,
+                           ex:feature_pocket_turn_ups ,
+                           ex:feature_sleeve_cuffs ,
+                           ex:feature_neckline_flaps ,
+                           ex:feature_slanted_pockets ,
+                           ex:feature_no_lining ;
+    crm:P3_has_note        "Black wool jacket with decorative accents emphasising the shape of the hips. No lining."@en ;
+    rdfs:label             "Black wool jacket (part of coat suit)"@en .
+
+ex:feature_button_closure a crm:E25_Man-Made_Feature ;
+    crm:P2_has_type ex:type_central_front_closure ;
+    crm:P3_has_note "Closes in the centre front with plastic buttons."@en .
+
+ex:feature_block_pattern_accents a crm:E25_Man-Made_Feature ;
+    crm:P2_has_type ex:type_interwoven_block_pattern ;
+    crm:P3_has_note "Accents of black fabric with an interwoven block pattern."@en .
+
+ex:feature_shawl_collar a crm:E25_Man-Made_Feature ;
+    crm:P2_has_type ex:type_shawl_collar ;
+    crm:P3_has_note "Small shawl collar made of patterned fabric."@en .
+
+ex:feature_pocket_turn_ups a crm:E25_Man-Made_Feature ;
+    crm:P2_has_type ex:type_pocket_turn_ups ;
+    crm:P3_has_note "Pocket turn-ups made of patterned fabric."@en .
+
+ex:feature_sleeve_cuffs a crm:E25_Man-Made_Feature ;
+    crm:P2_has_type ex:type_sleeve_cuffs ;
+    crm:P3_has_note "Sleeve cuffs made of patterned fabric."@en .
+
+ex:feature_neckline_flaps a crm:E25_Man-Made_Feature ;
+    crm:P2_has_type ex:type_neckline_flaps ;
+    crm:P3_has_note "Two flaps at neckline level resembling the optical ends of a scarf or tie."@en .
+
+ex:feature_slanted_pockets a crm:E25_Man-Made_Feature ;
+    crm:P2_has_type ex:type_slanted_side_pockets ;
+    crm:P3_has_note "Slanted side pockets partially incorporated into a seam, emphasising the hips."@en .
+
+ex:feature_no_lining a crm:E25_Man-Made_Feature ;
+    crm:P2_has_type ex:type_unlined_garment ;
+    crm:P3_has_note "Jacket has no lining."@en .
+
+#################################################################
+# Skirt
+#################################################################
+
+ex:skirt a cacao:CACAO_0000023 ;
+    crm:P2_has_type       ex:type_calf_length_skirt ;
+    crm:P45_consists_of   ex:material_black_wool ;
+    crm:P56_bears_feature ex:feature_waistband ,
+                          ex:feature_back_pleats ,
+                          ex:feature_press_stud_closure ;
+    crm:P3_has_note       "Black wool calf-length skirt with waistband. Two pleats at the back bottom turned inwards. Closes with press-studs."@en ;
+    rdfs:label            "Black wool calf-length skirt (part of coat suit)"@en .
+
+ex:feature_waistband a crm:E25_Man-Made_Feature ;
+    crm:P2_has_type ex:type_waistband ;
+    crm:P3_has_note "Skirt has a waistband."@en .
+
+ex:feature_back_pleats a crm:E25_Man-Made_Feature ;
+    crm:P2_has_type ex:type_inward_pleats ;
+    crm:P3_has_note "Two pleats at the back bottom turned inwards."@en .
+
+ex:feature_press_stud_closure a crm:E25_Man-Made_Feature ;
+    crm:P2_has_type ex:type_press_stud_closure ;
+    crm:P3_has_note "Skirt closes with press-studs."@en .
+
+#################################################################
+# Materials
+#################################################################
+
+ex:material_black_wool a crm:E57_Material ;
+    crm:P2_has_type aat:300243430 , aat:300130920 ;
+    rdfs:label      "black wool"@en .
+
+#################################################################
+# Types
+#################################################################
+
+ex:type_coat_suit           a crm:E55_Type ; rdfs:label "coat suit"@en ; owl:sameAs aat:300411730 .
+ex:type_jacket              a crm:E55_Type ; rdfs:label "jacket"@en   ; owl:sameAs aat:300046167 .
+ex:type_calf_length_skirt   a crm:E55_Type ; rdfs:label "calf-length skirt"@en .
+ex:type_central_front_closure a crm:E55_Type ; rdfs:label "central front closure"@en .
+ex:type_interwoven_block_pattern a crm:E55_Type ; rdfs:label "interwoven block pattern"@en .
+ex:type_shawl_collar        a crm:E55_Type ; rdfs:label "shawl collar"@en  ; owl:sameAs wd:Q29473093.
+ex:type_pocket_turn_ups     a crm:E55_Type ; rdfs:label "pocket turn-ups"@en .
+ex:type_sleeve_cuffs        a crm:E55_Type ; rdfs:label "sleeve cuffs"@en .
+ex:type_neckline_flaps      a crm:E55_Type ; rdfs:label "neckline flaps"@en .
+ex:type_slanted_side_pockets a crm:E55_Type ; rdfs:label "slanted side pockets"@en .
+ex:type_unlined_garment     a crm:E55_Type ; rdfs:label "unlined garment"@en .
+ex:type_waistband           a crm:E55_Type ; rdfs:label "waistband"@en  ; owl:sameAs aat:300224244 ,
+               wd:Q1004976.
+ex:type_inward_pleats       a crm:E55_Type ; rdfs:label "inward pleats"@en .
+ex:type_press_stud_closure  a crm:E55_Type ; rdfs:label "press-stud closure"@en .
+
+# ===================================================================
+# gold-v2 enrichment: AAT/Wikidata grounding (curator-accepted)
+# ===================================================================
+
+ex:type_coat_suit owl:sameAs aat:300434093 .
+ex:type_jacket owl:sameAs wd:Q849964 .
+ex:type_neckline_flaps crm:P127_has_broader_term wd:Q18407944 .

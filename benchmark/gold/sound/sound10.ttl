@@ -1,0 +1,97 @@
+# Gold standard: sound10 – Xinjiang/Uigur music, Istanbul camp – dombra & zibizga (1955)
+# Source text : txt/sound/sound10.txt  [same text as sound9.txt]
+# Students    : annotator4, annotator1, annotator3
+# Primary     : annotator1 (richest: instrument details, two pieces, performers, Wikidata)
+
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+@prefix ex:    <https://example.org/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+# PEOPLE
+ex:reinhard a crm:E21_Person ;
+    rdfs:label "Kurt Reinhard (ethnomusicologist)"@en ;
+    owl:sameAs wd:Q1794002 .
+
+ex:christensen a crm:E21_Person ;
+    rdfs:label "Dieter Christensen (ethnomusicologist)"@en ;
+    owl:sameAs wd:Q131442946 .
+
+ex:toktagan a crm:E21_Person ;
+    rdfs:label "Toktagan (dombra player)"@en .
+
+ex:sarkat a crm:E21_Person ;
+    rdfs:label "Sarkat (zibizga player)"@en .
+
+ex:edey a crm:E21_Person ;
+    rdfs:label "Edey (folk musician; 'Moving Caravans' originator)"@en ;
+    crm:P3_has_note "Brought the piece 'Moving Caravans' from his home in Bar Kol, south of the Altai Mountains."@en .
+
+# PLACES
+ex:istanbul_camp a crm:E53_Place ;
+    rdfs:label "Istanbul camp for immigrants from Eastern Turkestan (1955)"@en .
+
+ex:bar_kol a crm:E53_Place ;
+    rdfs:label "Bar Kol (south of the Altai Mountains)"@en .
+
+# INSTRUMENTS
+ex:dombra a cacao:CACAO_0000023 ;
+    rdfs:label "Dombra (long-necked lute)"@en ;
+    crm:P2_has_type ex:type_dombra ;
+    owl:sameAs wd:Q1236973 ;
+    crm:P3_has_note "Pear-shaped body (flattened bottom); neck with 9 frets; 2 metal strings; tuned in fourths or fifths (depending on melody); strings plucked with fingers. Played at weddings and parties."@en .
+
+ex:type_dombra a crm:E55_Type ;
+    rdfs:label "Dombra (long-necked lute type)"@en ;
+    owl:sameAs wd:Q1236973 .
+
+ex:zibizga a cacao:CACAO_0000023 ;
+    rdfs:label "Zibizga (end-blown flute; also 'sibizga')"@en ;
+    crm:P2_has_type ex:type_zibizga ;
+    owl:sameAs wd:Q1879241 ;
+    crm:P3_has_note "End-blown with open end; wood wrapped in string to prevent tearing. 3 finger holes. Player holds tipped sideways; moves lower lip constantly while playing. Played at weddings and parties."@en .
+
+ex:type_zibizga a crm:E55_Type ;
+    rdfs:label "Zibizga / Sibizga (end-blown flute, Uigur)"@en ;
+    owl:sameAs wd:Q1879241 .
+
+# DRONE-SINGING TECHNIQUE
+ex:drone_voice_line a crm:E29_Design_or_Procedure ;
+    rdfs:label "Simultaneous drone singing with flute (zibizga technique)"@en ;
+    crm:P3_has_note "Sarkat sang a guttural drone while blowing the zibizga: 'otherwise no melody would come out.' Multi-part thinking: drone-voice line."@en .
+
+# PIECE 1: The Prince (Bi)
+ex:piece_the_prince a cacao:CACAO_0000089 ;
+    rdfs:label "The Prince (Bi) – dombra piece, Istanbul camp 1955"@en ;
+    crm:P3_has_note "Very limited range of tones; melodic phrase with simultaneous drone on lower string; people danced lively during recording."@en .
+
+ex:performance_prince a crm:E7_Activity ;
+    rdfs:label "Performance of 'The Prince' by Toktagan (dombra)"@en ;
+    crm:P14_carried_out_by ex:toktagan ;
+    crm:P7_took_place_at ex:istanbul_camp ;
+    crm:P16_used_specific_object ex:dombra ;
+    crm:P94_has_created ex:piece_the_prince .
+
+# PIECE 2: Moving Caravans (Kervan yörys)
+ex:piece_moving_caravans a cacao:CACAO_0000089 ;
+    rdfs:label "Moving Caravans (Kervan yörys) – zibizga piece, Istanbul camp 1955"@en ;
+    crm:P3_has_note "Introduced by guttural drone; simultaneous drone singing while playing; descriptive/narrative character; originated with folk musician Edey from Bar Kol, south of Altai."@en .
+
+ex:performance_moving_caravans a crm:E7_Activity ;
+    rdfs:label "Performance of 'Moving Caravans' by Sarkat (zibizga)"@en ;
+    crm:P14_carried_out_by ex:sarkat ;
+    crm:P7_took_place_at ex:istanbul_camp ;
+    crm:P16_used_specific_object ex:zibizga ;
+    crm:P2_has_type ex:drone_voice_line ;
+    crm:P94_has_created ex:piece_moving_caravans .
+
+# RECORDING SESSION
+ex:recording_session_camp a crm:E65_Creation ;
+    rdfs:label "Recording session at Istanbul emigrant camp (1955)"@en ;
+    crm:P14_carried_out_by ex:reinhard, ex:christensen ;
+    crm:P7_took_place_at ex:istanbul_camp ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1955-01-01/1955-12-31" ; crm:P82_at_some_time_within "1955-01-01/1955-12-31" ] ;
+    crm:P94_has_created ex:piece_the_prince, ex:piece_moving_caravans .

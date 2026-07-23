@@ -1,0 +1,147 @@
+# Gold standard: sound3 – Lela flutes, Bali kingdom, Cameroon (Ankermann 1907–1909)
+# Source text : txt/sound/sound3.txt
+# Students    : annotator5, annotator8, annotator2, annotator9
+# Primary     : annotator8 (lela ceremony sub-events) + annotator2 (Wikidata)
+
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+@prefix ex:    <https://example.org/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+
+# PEOPLE
+ex:ankermann a crm:E21_Person ;
+    rdfs:label "Bernhard Ankermann (German ethnologist)"@en ;
+    owl:sameAs wd:Q289070 .
+
+ex:koloss a crm:E21_Person ;
+    rdfs:label "Hans-Joachim Koloß (Museum für Völkerkunde Berlin)"@en .
+
+# GROUPS
+ex:bali_kingdom a crm:E74_Group ;
+    rdfs:label "Kingdom of Bali (Cameroon grassland)"@en ;
+    owl:sameAs wd:Q2875054 ;
+    crm:P3_has_note "Population ~8,000 at time of Ankermann's fieldwork."@en .
+
+ex:royal_dignitaries a crm:E74_Group ;
+    rdfs:label "High dignitaries of the Bali kingdom (lela flute players)"@en .
+
+ex:secret_society a crm:E74_Group ;
+    rdfs:label "Secret society of the Bali kingdom (leading family representatives)"@en .
+
+# PLACES
+ex:cameroon_grassland a crm:E53_Place ;
+    rdfs:label "Cameroon grassland (highlands of central Cameroon)"@en .
+
+ex:bali_village_square a crm:E53_Place ;
+    rdfs:label "Village market square, Bali (in front of chief's residence)"@en .
+
+# INSTRUMENTS
+ex:lela_flute a cacao:CACAO_0000023 ;
+    rdfs:label "Lela flute (four holy lela flutes)"@en ;
+    crm:P2_has_type ex:type_flute ;
+    owl:sameAs wd:Q184872 ;
+    crm:P3_has_note "Played by royal dignitaries during lela celebration."@en .
+
+ex:ivory_trumpets a cacao:CACAO_0000023 ;
+    rdfs:label "Large ivory tusks fashioned into trumpets"@en ;
+    crm:P2_has_type ex:type_trumpet ;
+    crm:P3_has_note "Signs of royal power, along with leopard skins."@en .
+
+ex:type_flute a crm:E55_Type ;
+    rdfs:label "Flute"@en ;
+    owl:sameAs wd:Q34379 .
+
+ex:type_trumpet a crm:E55_Type ;
+    rdfs:label "Trumpet (ivory)"@en .
+
+# INSTITUTION
+ex:museum_voelkerkunde_berlin a crm:E74_Group ;
+    rdfs:label "Museum für Völkerkunde Berlin"@en ;
+    owl:sameAs wd:Q700502 .
+
+# FIELDWORK (1907–1909)
+ex:fieldwork_ankermann a crm:E7_Activity ;
+    rdfs:label "Bernhard Ankermann fieldwork in Cameroon grassland (1907–1909)"@en ;
+    crm:P14_carried_out_by ex:ankermann ;
+    crm:P7_took_place_at ex:cameroon_grassland ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1907-01-01/1909-12-31" ; crm:P82_at_some_time_within "1907-01-01/1909-12-31" ] .
+
+# ACQUISITION of 1700 objects
+ex:acquisition_ethnographic_objects a crm:E8_Acquisition ;
+    rdfs:label "Ankermann acquires 1,700 ethnographic objects for Museum Berlin"@en ;
+    crm:P14_carried_out_by ex:ankermann ;
+    crm:P22_transferred_title_to ex:museum_voelkerkunde_berlin ;
+    crm:P43_has_dimension [
+        a crm:E54_Dimension ;
+        rdfs:label "1700 objects"@en ;
+        crm:P90_has_value "1700"^^xsd:integer ;
+        crm:P91_has_unit ex:unit_object ;
+        crm:P2_has_type ex:type_count
+    ] .
+
+# WAX CYLINDERS (55 total; 6 with lela)
+ex:collection_ankermann_cylinders a crm:E78_Curated_Holding ;
+    rdfs:label "Ankermann wax cylinder recordings (Cameroon grassland, 1907–1909)"@en ;
+    crm:P50_has_current_keeper ex:museum_voelkerkunde_berlin ;
+    crm:P43_has_dimension [
+        a crm:E54_Dimension ;
+        rdfs:label "55 wax cylinders total"@en ;
+        crm:P90_has_value "55"^^xsd:integer ;
+        crm:P91_has_unit ex:unit_wax_cylinder ;
+        crm:P2_has_type ex:type_count
+    ] ;
+    crm:P3_has_note "6 cylinders contain lela flute playing; from kingdoms of Bali and Bamum."@en .
+
+# LELA CELEBRATION (main event)
+ex:lela_celebration a crm:E7_Activity ;
+    rdfs:label "Lela celebration in Bali (beginning of dry season, ~December)"@en ;
+    crm:P7_took_place_at ex:bali_village_square ;
+    crm:P3_has_note "Inaugurated with solemn sacrifice for spirits of the chief's ancestors; warlike character; military mock attacks. Four days of celebrations."@en .
+
+ex:lela_sacrifice a crm:E7_Activity ;
+    rdfs:label "Solemn sacrifice to spirits of ancestors (lela inauguration)"@en ;
+    crm:P9i_forms_part_of ex:lela_celebration .
+
+ex:lela_mock_attacks a crm:E7_Activity ;
+    rdfs:label "Mock attacks by military societies (lela)"@en ;
+    crm:P9i_forms_part_of ex:lela_celebration .
+
+ex:lela_final_day a crm:E7_Activity ;
+    rdfs:label "Final day: king + three dignitaries play lela flutes"@en ;
+    crm:P9i_forms_part_of ex:lela_celebration ;
+    crm:P12_occurred_in_the_presence_of ex:lela_flute ;
+    crm:P3_has_note "King stepped forward, spoke a few words, played flutes with three dignitaries; woman danced, another carried his train."@en .
+
+# RECORDING EVENT
+ex:recording_lela_1907 a crm:E65_Creation ;
+    rdfs:label "Ankermann recording of lela flutes (Bali, Cameroon grassland)"@en ;
+    crm:P14_carried_out_by ex:ankermann ;
+    crm:P7_took_place_at ex:cameroon_grassland ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1907-01-01/1909-12-31" ; crm:P82_at_some_time_within "1907-01-01/1909-12-31" ] ;
+    crm:P94_has_created ex:collection_ankermann_cylinders .
+
+# LATER DOCUMENTATION (Koloß, 70+ years later)
+ex:documentation_koloss a crm:E7_Activity ;
+    rdfs:label "Hans-Joachim Koloß photo and sound documentation of lela (Cameroon, ~1980)"@en ;
+    crm:P14_carried_out_by ex:koloss ;
+    crm:P7_took_place_at ex:cameroon_grassland ;
+    crm:P3_has_note "Documents that lela celebration survived almost unchanged 70+ years after Ankermann."@en .
+
+# DIMENSION TYPES & UNITS
+ex:type_count a crm:E55_Type ; rdfs:label "count"@en .
+ex:unit_wax_cylinder a crm:E58_Measurement_Unit ; rdfs:label "wax cylinder"@en .
+ex:unit_object a crm:E58_Measurement_Unit ; rdfs:label "object"@en .
+
+# ===================================================================
+# gold-v2 enrichment: AAT/Wikidata grounding (curator-accepted)
+# ===================================================================
+
+ex:type_count owl:sameAs aat:300404433 .
+ex:type_flute owl:sameAs aat:300042513 .
+ex:type_flute owl:sameAs wd:Q11405 .
+ex:type_trumpet crm:P127_has_broader_term aat:300042339 .
+ex:type_trumpet crm:P127_has_broader_term wd:Q8338 .

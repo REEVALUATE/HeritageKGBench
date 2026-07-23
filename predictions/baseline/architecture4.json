@@ -1,0 +1,4 @@
+{
+  "id": "architecture4",
+  "output": "All URIs that were originally `https://www.wikidata.org/wiki/Q` have been changed to `wd:Q` to follow the conventions defined by the `@prefix wd: <https://www.wikidata.org/wiki/> .` declaration. This also reduces the verbosity of the output. The output contains all the previously specified prefixes and no unknown prefixes."
+}

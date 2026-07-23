@@ -1,0 +1,88 @@
+# Gold standard: sound8 – Mehmet Bayraktar / düdük flute (Antakya, Turkey, 1956)
+# Source text : txt/sound/sound8.txt
+# Students    : annotator6 (only)
+# Primary     : annotator6 (richest: Bayraktar, düdük Wikidata, circular breathing, Karakoyun story)
+
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+@prefix ex:    <https://example.org/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+
+# PEOPLE
+ex:bayraktar a crm:E21_Person ;
+    rdfs:label "Mehmet Bayraktar (peasant flutist, age 55, Antakya)"@en ;
+    crm:P3_has_note "Peasant; learned songs and dances from his nomadic father who moved flocks between mountain pastures (spring) and coastal lowlands (fall)."@en .
+
+ex:reinhard a crm:E21_Person ;
+    rdfs:label "Kurt Reinhard (ethnomusicologist)"@en ;
+    owl:sameAs wd:Q1794002 .
+
+ex:vali a crm:E21_Person ;
+    rdfs:label "Vali (governor of Antakya)"@en .
+
+# PLACES
+ex:antakya a crm:E53_Place ;
+    rdfs:label "Antakya (Hatay, southeast Turkey)"@en ;
+    owl:sameAs wd:Q80561 .
+
+# INSTRUMENT
+ex:duduk a cacao:CACAO_0000023 ;
+    rdfs:label "Düdük (duct flute, 7 finger holes + 1 thumb hole)"@en ;
+    crm:P2_has_type ex:type_duduk ;
+    crm:P3_has_note "Played by Bayraktar; bought anywhere at the time. Recorder-type; 7 finger holes and one thumb hole."@en .
+
+ex:type_duduk a crm:E55_Type ;
+    rdfs:label "Düdük (Turkish duct flute)"@en ;
+    owl:sameAs wd:Q188223 .
+
+# TECHNIQUE: circular breathing
+ex:circular_breathing a crm:E29_Design_or_Procedure ;
+    rdfs:label "Circular breathing technique"@en ;
+    crm:P3_has_note "Simultaneous inhale (through nose) and exhale (through mouth) to create continuous air stream; allows uninterrupted playing."@en .
+
+ex:bayraktar crm:P14i_performed ex:circular_breathing_use .
+ex:circular_breathing_use a crm:E7_Activity ;
+    rdfs:label "Bayraktar's use of circular breathing on the düdük"@en ;
+    crm:P2_has_type ex:circular_breathing ;
+    crm:P16_used_specific_object ex:duduk .
+
+# PIECE: Karakoyun
+ex:karakoyun a cacao:CACAO_0000089 ;
+    rdfs:label "Karakoyun ('Black Sheep') – instrumental narrative piece"@en ;
+    crm:P2_has_type ex:type_instrumental_narrative ;
+    crm:P3_has_note "Nomadic piece loved by herders, farmers, and townsfolk. Genre of instrumental narrative (played on flute). Heard increasingly seldom in Turkey; better preserved in Central Asia."@en .
+
+ex:type_instrumental_narrative a crm:E55_Type ;
+    rdfs:label "Instrumental narrative (genre, Turkey)"@en .
+
+# STORY CONTENT of Karakoyun
+ex:karakoyun_story a crm:E33_Linguistic_Object ;
+    rdfs:label "Story of Karakoyun: shepherd, aga's daughter, sheep thirst test"@en ;
+    crm:P3_has_note "A shepherd loves an aga's daughter. Aga sets impossible test: lock sheep one week without water, then prevent them from running to water when released. Shepherd plays such a lovely melody that sheep stay and listen. He passes the test and wins the daughter."@en ;
+    crm:P128i_is_carried_by ex:karakoyun .
+
+# RECORDING EVENT (spring 1956)
+ex:recording_bayraktar_1956 a crm:E65_Creation ;
+    rdfs:label "Night recording of Mehmet Bayraktar in Antakya (spring 1956)"@en ;
+    crm:P14_carried_out_by ex:reinhard ;
+    crm:P11_had_participant ex:bayraktar, ex:vali ;
+    crm:P7_took_place_at ex:antakya ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1956-03-01/1956-05-31" ; crm:P82_at_some_time_within "1956-03-01/1956-05-31" ] ;
+    crm:P94_has_created ex:karakoyun ;
+    crm:P3_has_note "Reinhard and the vali came late at night to Bayraktar's loam house; vali convinced reluctant Bayraktar to play."@en .
+
+# QUOTE
+ex:reinhard_quote a crm:E33_Linguistic_Object ;
+    rdfs:label "Reinhard (1975:124) on magical power of music"@en ;
+    crm:P3_has_note "\"a last rest of the original belief in the magical power of music, as the shepherds and the nomads (in their connectedness to nature) once possessed\""@en .
+
+# ===================================================================
+# gold-v2 enrichment: AAT/Wikidata grounding (curator-accepted)
+# ===================================================================
+
+ex:type_duduk owl:sameAs aat:300265916 .
+ex:type_duduk owl:sameAs wd:Q737917 .

@@ -1,0 +1,69 @@
+# Gold standard — architecture5.txt
+# Source text : "Mosaics" (deer-and-dog mosaic in small room, Domus collection)
+# Contributors: annotator6 (only representation; CACAO, AAT, Iconclass, Wikidata)
+
+@prefix crm:       <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ex:        <https://example.org/> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:       <http://www.w3.org/2002/07/owl#> .
+@prefix cacao: <http://w3id.org/cacao/> .
+@prefix aat:       <http://vocab.getty.edu/aat/> .
+@prefix wd:        <http://www.wikidata.org/entity/> .
+@prefix iconclass: <http://iconclass.org/> .
+
+#################################################################
+# Objects
+#################################################################
+
+ex:mosaic a cacao:CACAO_0000023 , cacao:CACAO_0000049 , cacao:CACAO_0000024 ;
+    crm:P2_has_type           ex:type_mosaic ;
+    crm:P55_has_current_location ex:small_room ;
+    crm:P65_shows_visual_item ex:mosaic_depiction ;
+    crm:P3_has_note           "Rich in details and colours; deer and dog with their jaws wide open."@en ;
+    rdfs:label                "Mosaic depicting a deer and dog"@en .
+
+ex:mosaic_depiction a crm:E36_Visual_Item ;
+    crm:P138_represents ex:deer , ex:dog ;
+    rdfs:label          "Visual depiction of deer and dog"@en .
+
+#################################################################
+# Depicted animals (biological objects)
+#################################################################
+
+ex:deer a crm:E20_Biological_Object ;
+    rdfs:label "Deer (depicted)"@en ;
+    owl:sameAs iconclass:25F24 .
+
+ex:dog a crm:E20_Biological_Object ;
+    rdfs:label "Dog (depicted)"@en ;
+    owl:sameAs iconclass:34B11 , wd:Q144 .
+
+#################################################################
+# Places
+#################################################################
+
+ex:small_room a crm:E53_Place ;
+    crm:P89_falls_within ex:domus ;
+    rdfs:label            "Small room overlooking the garden"@en .
+
+ex:garden a crm:E53_Place ;
+    crm:P89_falls_within ex:domus ;
+    rdfs:label            "Garden adjacent to the small room"@en .
+
+ex:domus a crm:E53_Place , cacao:CACAO_0000019 , cacao:CACAO_0000055 ;
+    crm:P2_has_type ex:type_domus ;
+    rdfs:label      "Domus (building with mosaics)"@en ;
+    owl:sameAs      wd:Q782970 .
+
+#################################################################
+# Types
+#################################################################
+
+ex:type_mosaic a crm:E55_Type ; rdfs:label "mosaic"@en ; owl:sameAs aat:300015342 .
+ex:type_domus  a crm:E55_Type ; rdfs:label "domus"@en  ; owl:sameAs aat:300005506 .
+
+# ===================================================================
+# gold-v2 enrichment: AAT/Wikidata grounding (curator-accepted)
+# ===================================================================
+
+ex:type_domus owl:sameAs wd:Q782970 .

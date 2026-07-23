@@ -1,0 +1,129 @@
+# Gold standard — olympic1.txt
+# Source text : "Vikelas telegram" (telegram clipping, Paris to Athens, June 23 1894)
+# Contributors: annotator2/annotator9 (base structure, Wikidata), annotator3 (E65_Creation, 1896 Games link)
+
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ex:   <https://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix wd:   <http://www.wikidata.org/entity/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+
+#################################################################
+# Physical object
+#################################################################
+
+ex:telegram_clipping a cacao:CACAO_0000023 ;
+    crm:P2_has_type    ex:type_telegram_clipping ;
+    crm:P128_carries   ex:telegram_text ;
+    crm:P3_has_note    "Clipping of a handwritten telegram announcing the hope that the first International Olympic Games would take place in Athens in 1896."@en ;
+    rdfs:label         "Clipping of Dimitrios Vikelas' telegram"@en .
+
+#################################################################
+# Linguistic object (content)
+#################################################################
+
+ex:telegram_text a crm:E33_Linguistic_Object ;
+    crm:P2_has_type  ex:type_telegram_text ;
+    crm:P67_refers_to ex:event_olympics_1896 , wd:Q5389 ;
+    crm:P3_has_note  "Announcement that the Paris Congress expresses the hope that the celebration of the first International Olympic Games will take place in Athens in 1896. Addressed to the Panhellenic Gymnastic Association."@en ;
+    rdfs:label       "Text of Vikelas' telegram (June 23, 1894)"@en .
+
+#################################################################
+# Creation (writing of the telegram)
+#################################################################
+
+ex:telegram_writing a crm:E65_Creation ;
+    crm:P94_has_created    ex:telegram_clipping ;
+    crm:P14_carried_out_by ex:dimitrios_vikelas ;
+    crm:P7_took_place_at   ex:paris ;
+    crm:P4_has_time-span   ex:timespan_1894_06_23 ;
+    rdfs:label             "Writing of the telegram (June 23, 1894)"@en .
+
+#################################################################
+# Sending event
+#################################################################
+
+ex:telegram_sending a crm:E7_Activity ;
+    crm:P2_has_type                      ex:type_telegram_sending ;
+    crm:P14_carried_out_by               ex:dimitrios_vikelas ;
+    crm:P10_falls_within                 ex:paris_congress_1894 ;
+    crm:P4_has_time-span                 ex:timespan_1894_06_23 ;
+    crm:P7_took_place_at                 ex:paris ;
+    crm:P12_occurred_in_the_presence_of  ex:telegram_clipping ;
+    crm:P3_has_note                      "Handwritten telegram sent from Paris to Athens."@en ;
+    rdfs:label                           "Sending of Vikelas' telegram (June 23, 1894)"@en .
+
+#################################################################
+# Actors
+#################################################################
+
+ex:dimitrios_vikelas a crm:E21_Person ;
+    rdfs:label "Dimitrios Vikelas"@en ;
+    owl:sameAs wd:Q297024 .
+
+ex:panhellenic_gymnastic_association a crm:E74_Group ;
+    rdfs:label "Panhellenic Gymnastic Association"@en ;
+    owl:sameAs wd:Q2057177 .
+
+#################################################################
+# Places
+#################################################################
+
+ex:paris a crm:E53_Place ;
+    rdfs:label "Paris"@en ;
+    owl:sameAs wd:Q90 .
+
+ex:athens a crm:E53_Place ;
+    rdfs:label "Athens"@en ;
+    owl:sameAs wd:Q1524 .
+
+#################################################################
+# Events
+#################################################################
+
+ex:paris_congress_1894 a crm:E7_Activity ;
+    crm:P2_has_type    ex:type_international_congress ;
+    crm:P7_took_place_at ex:paris ;
+    crm:P3_has_note    "Paris Congress at which the hope for the first International Olympic Games in Athens was expressed."@en ;
+    rdfs:label         "Paris Congress (1894)"@en .
+
+ex:event_olympics_1896 a crm:E7_Activity ;
+    crm:P7_took_place_at ex:athens ;
+    crm:P4_has_time-span ex:timespan_1896 ;
+    rdfs:label           "First International Olympic Games, Athens 1896 (proposed)"@en ;
+    owl:sameAs           wd:Q8080 .
+
+#################################################################
+# Time-spans
+#################################################################
+
+ex:timespan_1894_06_23 a crm:E52_Time-Span ;
+    crm:P81_ongoing_throughout "1894-06-23"^^xsd:date ; crm:P82_at_some_time_within "1894-06-23"^^xsd:date ;
+    rdfs:label                  "June 23, 1894"@en .
+
+ex:timespan_1896 a crm:E52_Time-Span ;
+    crm:P81_ongoing_throughout "1896-01-01/1896-12-31" ; crm:P82_at_some_time_within "1896-01-01/1896-12-31" ;
+    rdfs:label                  "1896"@en .
+
+#################################################################
+# Types
+#################################################################
+
+ex:type_telegram_clipping  a crm:E55_Type ; rdfs:label "telegram clipping"@en .
+ex:type_telegram_text      a crm:E55_Type ; rdfs:label "telegram text"@en .
+ex:type_telegram_sending   a crm:E55_Type ; rdfs:label "telegram sending"@en .
+ex:type_international_congress a crm:E55_Type ; rdfs:label "international congress"@en  ; owl:sameAs wd:Q105592411.
+
+# ===================================================================
+# gold-v2 enrichment: AAT/Wikidata grounding (curator-accepted)
+# ===================================================================
+
+ex:type_telegram_clipping crm:P127_has_broader_term aat:300026909 .
+ex:type_telegram_clipping crm:P127_has_broader_term wd:Q1522225 .
+ex:type_telegram_sending crm:P127_has_broader_term aat:300026909 .
+ex:type_telegram_sending crm:P127_has_broader_term wd:Q1522225 .
+ex:type_telegram_text crm:P127_has_broader_term aat:300026909 .
+ex:type_telegram_text crm:P127_has_broader_term wd:Q1522225 .

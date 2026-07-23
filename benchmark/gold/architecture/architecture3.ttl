@@ -1,0 +1,80 @@
+# Gold standard — architecture3.txt
+# Source text : "The oven / bakery" (southernmost shop, millstone, bread counter, eastern cardo)
+# Contributors: annotator3 (base structure), annotator4 (Wikidata links)
+
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+@prefix ex:   <https://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix wd:   <http://www.wikidata.org/entity/> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+
+#################################################################
+# Places
+#################################################################
+
+ex:domus a crm:E53_Place , cacao:CACAO_0000055 ;
+    rdfs:label "Domus"@en ;
+    owl:sameAs aat:300005506 ,
+               wd:Q104604649 ,
+               wd:Q782970.
+
+ex:southern_shop a crm:E53_Place ;
+    crm:P2_has_type      ex:type_bakery ;
+    crm:P89_falls_within ex:domus ;
+    rdfs:label           "Southernmost shop of the domus"@en .
+
+ex:eastern_cardo a crm:E53_Place ;
+    rdfs:label "Eastern cardo"@en .
+
+#################################################################
+# Objects
+#################################################################
+
+ex:oven a cacao:CACAO_0000023 ;
+    crm:P2_has_type              ex:type_oven ;
+    crm:P46_is_composed_of       ex:oven_lower_part ;
+    crm:P55_has_current_location ex:southern_shop ;
+    rdfs:label                   "Oven"@en ;
+    owl:sameAs aat:300195511.
+
+ex:oven_lower_part a cacao:CACAO_0000023 ;
+    crm:P2_has_type ex:type_circular_interior ;
+    rdfs:label      "Lower circular interior part of the oven"@en .
+
+ex:millstone_base a cacao:CACAO_0000023 ;
+    crm:P55_has_current_location ex:southern_shop ;
+    rdfs:label                   "Brick base for millstone"@en .
+
+ex:bread_counter a cacao:CACAO_0000023 ;
+    crm:P55_has_current_location ex:southern_shop ;
+    rdfs:label                   "Counter for preparing bread"@en .
+
+#################################################################
+# Activities
+#################################################################
+
+ex:grain_grinding a crm:E7_Activity ;
+    crm:P7_took_place_at         ex:southern_shop ;
+    crm:P16_used_specific_object ex:millstone_base ;
+    rdfs:label                   "Grinding wheat"@en .
+
+ex:bread_sale a crm:E7_Activity ;
+    crm:P7_took_place_at ex:eastern_cardo ;
+    rdfs:label           "Bread sale on the eastern cardo"@en .
+
+#################################################################
+# Types
+#################################################################
+
+ex:type_bakery            a crm:E55_Type ; rdfs:label "bakery"@en  ; owl:sameAs aat:300005291 ,
+               wd:Q274393.
+ex:type_oven              a crm:E55_Type ; rdfs:label "oven"@en ; owl:sameAs wd:Q36539 .
+ex:type_circular_interior a crm:E55_Type ; rdfs:label "circular interior shape"@en .
+
+# ===================================================================
+# gold-v2 enrichment: AAT/Wikidata grounding (curator-accepted)
+# ===================================================================
+
+ex:type_circular_interior crm:P127_has_broader_term wd:Q107436866 .

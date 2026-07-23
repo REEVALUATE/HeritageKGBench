@@ -1,0 +1,4 @@
+{
+  "id": "architecture5",
+  "output": "@prefix ns3: <http://www.cidoc-crm.org/cidoc-crm/> .\n@prefix ns2: <https://www.cacao.ugent.be/vocab/> .\n\n<http://example.org/mosaic1> a ns2:CACAO_0000049, ns3:E19_Physical_Object ;\n    ns3:P138 <http://example.org/deer>, <http://example.org/dog> ;\n    ns3:P53 \"small room overlooking the garden\" ;\n    ns3:P45i \"details and colours\" .\n\n<http://example.org/deer> a ns3:E20_Biological_Object ;\n    ns3:P190 \"jaws wide open\" .\n\n<http://example.org/dog> a ns3:E20_Biological\n    Object ;\n    ns3:P190 \"jaws wide open\" .\n\n<http://example.org/domus> a ns2:CACAO_0000055 ;\n    ns3:P89i <http://example.org/mosaic1> .\n\n<http://example.org/mosaic_decoration_tastes> a ns3:E28_Conceptual_Object ;\n    ns3:P129i <http://example.org/domus> ."
+}

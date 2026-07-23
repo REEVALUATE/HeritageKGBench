@@ -1,0 +1,87 @@
+# Gold standard — fashion1.txt
+# Source text : "Evening dress" (beige silk muslin, sequins, calf-height, V-neck)
+# Contributors: annotator1 (base structure), annotator4 (Wikidata material links)
+
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ex:   <https://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix wd:   <http://www.wikidata.org/entity/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+
+#################################################################
+# Object
+#################################################################
+
+ex:evening_dress a cacao:CACAO_0000023 ;
+    crm:P2_has_type          ex:type_evening_dress ;
+    crm:P45_consists_of      ex:material_silk_muslin , ex:material_sequins ;
+    crm:P56_bears_feature    ex:feature_diagonal_stripe_pattern ;
+    crm:P43_has_dimension    ex:dim_height_125 , ex:dim_waist_84 , ex:dim_shoulder_34 ;
+    crm:P3_has_note          "Straight and wide cut to approximately calf height, without sleeves. V-neckline at front and back. At the front and back, the dress ends in a point. Unlined; no fastening."@en ;
+    rdfs:label               "Evening dress of beige silk muslin"@en .
+
+#################################################################
+# Materials
+#################################################################
+
+ex:material_silk_muslin a crm:E57_Material ;
+    rdfs:label "silk muslin"@en ;
+    owl:sameAs wd:Q37681 .        # silk
+
+ex:material_sequins a crm:E57_Material ;
+    rdfs:label "sequins (translucent grey and white)"@en ;
+    owl:sameAs wd:Q674273 .       # sequins
+
+#################################################################
+# Features
+#################################################################
+
+ex:feature_diagonal_stripe_pattern a crm:E25_Man-Made_Feature ;
+    crm:P2_has_type ex:type_diagonal_stripe ;
+    rdfs:label      "Translucent grey and white sequins in diagonal stripe pattern"@en .
+
+#################################################################
+# Dimensions
+#################################################################
+
+ex:dim_height_125 a crm:E54_Dimension ;
+    crm:P2_has_type  ex:type_height ;
+    crm:P90_has_value "125"^^xsd:decimal ;
+    crm:P91_has_unit  ex:unit_cm ;
+    rdfs:label        "Height: 125 cm"@en .
+
+ex:dim_waist_84 a crm:E54_Dimension ;
+    crm:P2_has_type  ex:type_waist_circumference ;
+    crm:P90_has_value "84"^^xsd:decimal ;
+    crm:P91_has_unit  ex:unit_cm ;
+    rdfs:label        "Waist circumference: 84 cm"@en .
+
+ex:dim_shoulder_34 a crm:E54_Dimension ;
+    crm:P2_has_type  ex:type_shoulder_width ;
+    crm:P90_has_value "34"^^xsd:decimal ;
+    crm:P91_has_unit  ex:unit_cm ;
+    rdfs:label        "Shoulder width: 34 cm"@en .
+
+#################################################################
+# Types and units
+#################################################################
+
+ex:type_evening_dress      a crm:E55_Type         ; rdfs:label "evening dress"@en  ; owl:sameAs wd:Q2144456 ,
+               aat:300243843.
+ex:type_diagonal_stripe    a crm:E55_Type         ; rdfs:label "diagonal stripe pattern"@en .
+ex:type_height             a crm:E55_Type         ; rdfs:label "height"@en  ; owl:sameAs aat:300055644 ,
+               wd:Q208826.
+ex:type_waist_circumference a crm:E55_Type        ; rdfs:label "waist circumference"@en  ; owl:sameAs wd:Q811148.
+ex:type_shoulder_width     a crm:E55_Type         ; rdfs:label "shoulder width"@en .
+ex:unit_cm                 a crm:E58_Measurement_Unit ; rdfs:label "cm"@en .
+
+# ===================================================================
+# gold-v2 enrichment: AAT/Wikidata grounding (curator-accepted)
+# ===================================================================
+
+ex:material_silk_muslin crm:P127_has_broader_term aat:300014072 .
+ex:material_silk_muslin crm:P127_has_broader_term aat:300014087 .
+ex:material_silk_muslin crm:P127_has_broader_term wd:Q725457 .

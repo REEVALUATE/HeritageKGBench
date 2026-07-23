@@ -1,0 +1,112 @@
+# Gold standard — fashion2.txt
+# Source text : "Child's apron" (grey-white cotton ticking, broderie anglaise, school-age child ~7 yrs)
+# Contributors: annotator3 (component decomposition, material), annotator1 (Wikidata broderie anglaise link)
+
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ex:   <https://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix wd:   <http://www.wikidata.org/entity/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+
+#################################################################
+# Object
+#################################################################
+
+ex:child_apron a cacao:CACAO_0000023 , cacao:CACAO_0000062 ;
+    crm:P2_has_type          ex:type_childs_apron ;
+    crm:P45_consists_of      ex:material_cotton_ticking ;
+    crm:P46_is_composed_of   ex:collar ,
+                             ex:sleeves ,
+                             ex:front_pleats ,
+                             ex:patch_pockets ,
+                             ex:button ,
+                             ex:ties ;
+    crm:P43_has_dimension    ex:dim_height_62 , ex:dim_shoulder_29 ;
+    crm:P3_has_note          "Child's apron or overgown for a school-aged child of about seven years. Closes centre back with two mother-of-pearl buttons and tied at side."@en ;
+    rdfs:label               "Child's apron / overgown"@en .
+
+#################################################################
+# Components
+#################################################################
+
+ex:collar a cacao:CACAO_0000023 ;
+    crm:P2_has_type ex:type_embroidered_trim ;
+    rdfs:label      "Wide square flat collar with broderie anglaise"@en .
+
+ex:sleeves a cacao:CACAO_0000023 ;
+    crm:P2_has_type ex:type_broderie_anglaise ;
+    rdfs:label      "Inset long sleeves tapering towards the wrist, trimmed with broderie anglaise"@en .
+
+ex:front_pleats a cacao:CACAO_0000023 ;
+    rdfs:label "Three wide flat pleats at centre front"@en .
+
+ex:patch_pockets a cacao:CACAO_0000023 ;
+    crm:P2_has_type      ex:type_broderie_anglaise ;
+    crm:P57_has_number_of_parts "2"^^xsd:integer ;
+    rdfs:label           "Two patch pockets at hip height with broderie anglaise"@en .
+
+ex:button a cacao:CACAO_0000023 ;
+    rdfs:label "White mother-of-pearl button"@en .
+
+ex:ties a cacao:CACAO_0000023 ;
+    crm:P45_consists_of ex:material_cotton_ticking ;
+    rdfs:label           "Side ties of grey-white cotton ticking"@en .
+
+#################################################################
+# Materials
+#################################################################
+
+ex:material_cotton_ticking a crm:E57_Material ;
+    rdfs:label "grey-white cotton ticking"@en .
+
+#################################################################
+# Features (broderie anglaise as named feature)
+#################################################################
+
+ex:feature_broderie_anglaise a crm:E25_Man-Made_Feature ;
+    crm:P2_has_type ex:type_broderie_anglaise ;
+    rdfs:label      "Broderie anglaise trim"@en .
+
+#################################################################
+# Dimensions
+#################################################################
+
+ex:dim_height_62 a crm:E54_Dimension ;
+    crm:P2_has_type   ex:type_height ;
+    crm:P90_has_value "62"^^xsd:decimal ;
+    crm:P91_has_unit  ex:unit_cm ;
+    rdfs:label        "Height: 62 cm"@en .
+
+ex:dim_shoulder_29 a crm:E54_Dimension ;
+    crm:P2_has_type   ex:type_shoulder_width ;
+    crm:P90_has_value "29"^^xsd:decimal ;
+    crm:P91_has_unit  ex:unit_cm ;
+    rdfs:label        "Shoulder width: 29 cm"@en .
+
+#################################################################
+# Types and units
+#################################################################
+
+ex:type_childs_apron    a crm:E55_Type         ; rdfs:label "child's apron / overgown"@en .
+ex:type_embroidered_trim a crm:E55_Type        ; rdfs:label "machine embroidery anglaise"@en .
+ex:type_broderie_anglaise a crm:E55_Type       ; rdfs:label "broderie anglaise"@en ; owl:sameAs wd:Q4972970 .
+ex:type_height          a crm:E55_Type         ; rdfs:label "height"@en .
+ex:type_shoulder_width  a crm:E55_Type         ; rdfs:label "shoulder width"@en .
+ex:unit_cm              a crm:E58_Measurement_Unit ; rdfs:label "cm"@en .
+
+# ===================================================================
+# gold-v2 enrichment: AAT/Wikidata grounding (curator-accepted)
+# ===================================================================
+
+ex:material_cotton_ticking crm:P127_has_broader_term aat:300014067 .
+ex:material_cotton_ticking crm:P127_has_broader_term aat:300227910 .
+ex:material_cotton_ticking crm:P127_has_broader_term wd:Q7800690 .
+ex:material_cotton_ticking crm:P127_has_broader_term wd:Q8231603 .
+ex:type_broderie_anglaise owl:sameAs aat:300264695 .
+ex:type_childs_apron crm:P127_has_broader_term aat:300046131 .
+ex:type_childs_apron crm:P127_has_broader_term wd:Q273831 .
+ex:type_height owl:sameAs aat:300055644 .
+ex:type_height owl:sameAs wd:Q208826 .

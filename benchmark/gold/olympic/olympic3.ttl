@@ -1,0 +1,118 @@
+# Gold standard — olympic3.txt
+# Source text : "Vikelas letter to Fokianos" (4 pages, June 18 1894, election as president, Athens proposal)
+# Contributors: annotator1 (base, Wikidata for both persons), annotator8 (richer content: election, committee, typed caption),
+#               annotator5 (E65_Creation with typed date)
+
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ex:   <https://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix wd:   <http://www.wikidata.org/entity/> .
+@prefix aat:  <http://vocab.getty.edu/aat/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+
+#################################################################
+# Physical object
+#################################################################
+
+ex:letter_vikelas a cacao:CACAO_0000023 ;
+    crm:P2_has_type  ex:type_handwritten_letter ;
+    crm:P128_carries ex:letter_content , ex:typed_caption ;
+    crm:P3_has_note  "Four-page handwritten letter. Typed caption available in Greek, English, and French below the letter."@en ;
+    rdfs:label       "Letter from D. Vikelas to Ioannis Fokianos (18 June 1894)"@en .
+
+#################################################################
+# Linguistic objects
+#################################################################
+
+ex:letter_content a crm:E33_Linguistic_Object ;
+    crm:P2_has_type   ex:type_letter_text ;
+    crm:P129_is_about ex:congress_session , ex:election_as_president , ex:athens_proposal ;
+    crm:P3_has_note   "Informing Fokianos of the work of the Congress, announcing his election as President of the revival committee, and his intention to propose Athens for the first International Olympic Games."@en ;
+    rdfs:label        "Content of Vikelas' letter to Fokianos"@en .
+
+ex:typed_caption a crm:E33_Linguistic_Object ;
+    crm:P2_has_type      ex:type_typed_caption ;
+    crm:P72_has_language ex:lang_greek , ex:lang_english , ex:lang_french ;
+    rdfs:label           "Multilingual typed caption (Greek, English, French)"@en .
+
+#################################################################
+# Creation event
+#################################################################
+
+ex:letter_creation a crm:E65_Creation ;
+    crm:P94_has_created    ex:letter_vikelas ;
+    crm:P14_carried_out_by ex:dimitrios_vikelas ;
+    crm:P4_has_time-span   ex:timespan_1894_06_18 ;
+    rdfs:label             "Writing of the letter (18 June 1894)"@en .
+
+#################################################################
+# Activities described in the letter
+#################################################################
+
+ex:congress_session a crm:E7_Activity ;
+    crm:P2_has_type    ex:type_congress ;
+    crm:P9_consists_of ex:election_as_president ;
+    rdfs:label         "Congress for the revival of the Olympic Games (1894)"@en .
+
+ex:election_as_president a crm:E7_Activity ;
+    crm:P2_has_type        ex:type_election ;
+    crm:P14_carried_out_by ex:olympic_revival_committee ;
+    crm:P3_has_note        "Unanimous decision of the plenary session; D. Vikelas elected as President of the committee in charge of the revival of the Olympic Games."@en ;
+    rdfs:label             "Election of D. Vikelas as President of the revival committee"@en .
+
+ex:athens_proposal a crm:E7_Activity ;
+    crm:P14_carried_out_by ex:dimitrios_vikelas ;
+    crm:P3_has_note        "Vikelas announces his intention to propose Athens for the holding of the First International Olympic Games."@en ;
+    rdfs:label             "Proposal of Athens for the First International Olympic Games"@en .
+
+#################################################################
+# Actors
+#################################################################
+
+ex:dimitrios_vikelas a crm:E21_Person ;
+    rdfs:label "Dimitrios Vikelas"@en ;
+    owl:sameAs wd:Q297024 .
+
+ex:fokianos a crm:E21_Person ;
+    rdfs:label "Ioannis Fokianos"@en ;
+    owl:sameAs wd:Q970955 .
+
+ex:olympic_revival_committee a crm:E74_Group ;
+    crm:P2_has_type aat:300025980 ;  # committee
+    rdfs:label      "Committee in charge of the revival of the Olympic Games"@en .
+
+#################################################################
+# Time-spans
+#################################################################
+
+ex:timespan_1894_06_18 a crm:E52_Time-Span ;
+    crm:P81_ongoing_throughout "1894-06-18"^^xsd:date ; crm:P82_at_some_time_within "1894-06-18"^^xsd:date ;
+    rdfs:label                  "18 June 1894"@en .
+
+#################################################################
+# Languages
+#################################################################
+
+ex:lang_greek   a crm:E56_Language ; rdfs:label "Greek"@en .
+ex:lang_english a crm:E56_Language ; rdfs:label "English"@en .
+ex:lang_french  a crm:E56_Language ; rdfs:label "French"@en .
+
+#################################################################
+# Types
+#################################################################
+
+ex:type_handwritten_letter a crm:E55_Type ; rdfs:label "handwritten letter"@en ; owl:sameAs aat:300026879 .
+ex:type_letter_text        a crm:E55_Type ; rdfs:label "letter text"@en .
+ex:type_typed_caption      a crm:E55_Type ; rdfs:label "typed caption"@en .
+ex:type_congress           a crm:E55_Type ; rdfs:label "congress"@en  ; owl:sameAs wd:Q2495862.
+ex:type_election           a crm:E55_Type ; rdfs:label "election"@en ; owl:sameAs aat:300069260 .
+
+# ===================================================================
+# gold-v2 enrichment: AAT/Wikidata grounding (curator-accepted)
+# ===================================================================
+
+ex:type_election owl:sameAs wd:Q40231 .
+ex:type_typed_caption crm:P127_has_broader_term aat:300191074 .
+ex:type_typed_caption crm:P127_has_broader_term wd:Q18585177 .

@@ -1,0 +1,4 @@
+{
+  "id": "architecture2",
+  "output": "@prefix ex: <http://example.org/> .\n\nex:ExampleResource a ex:ExampleClass ."
+}

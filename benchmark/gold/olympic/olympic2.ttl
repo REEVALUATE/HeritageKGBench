@@ -1,0 +1,139 @@
+# Gold standard — olympic2.txt
+# Source text : "Coubertin letter to Fokianos" (handwritten, June 14 1894, multilingual caption, letterhead)
+# Contributors: annotator2/annotator9 (full structure, multilingual caption, Wikidata), annotator6 (E65_Creation, letterhead as E34_Inscription)
+
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ex:   <https://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix wd:   <http://www.wikidata.org/entity/> .
+@prefix aat:  <http://vocab.getty.edu/aat/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+
+#################################################################
+# Physical object
+#################################################################
+
+ex:letter_coubertin a cacao:CACAO_0000023 ;
+    crm:P2_has_type  ex:type_handwritten_letter ;
+    crm:P128_carries ex:letter_text , ex:typed_caption , ex:letterhead_inscription ;
+    crm:P3_has_note  "Handwritten letter from Baron Pierre de Coubertin dated 14 June 1894. Typed caption available in Greek, English, and French below the letter."@en ;
+    rdfs:label       "Letter from Baron Pierre de Coubertin to I. Fokianos (14 June 1894)"@en .
+
+#################################################################
+# Linguistic objects
+#################################################################
+
+ex:letter_text a crm:E33_Linguistic_Object ;
+    crm:P2_has_type   ex:type_letter_text ;
+    crm:P67_refers_to ex:panhellenic_gymnastic_association , ex:dimitrios_vikelas ,
+                      ex:paris_congress_1894 , wd:Q5389 , wd:Q622543 ;
+    crm:P3_has_note   "Expression of joy and gratitude for honorary P.G.S. membership, and for the presence of D. Vikelas at the conference."@en ;
+    rdfs:label        "Text of Coubertin's letter"@en .
+
+ex:typed_caption a crm:E33_Linguistic_Object ;
+    crm:P2_has_type    ex:type_typed_caption ;
+    crm:P72_has_language ex:lang_greek , ex:lang_english , ex:lang_french ;
+    crm:P3_has_note    "Typed caption below the handwritten letter available in Greek, English, and French."@en ;
+    rdfs:label         "Multilingual typed caption"@en .
+
+ex:letterhead_inscription a crm:E34_Inscription ;
+    crm:P2_has_type                 ex:type_letterhead ;
+    crm:P190_has_symbolic_content   "CONGRES INTERNATIONAL ATHLETIQUE DE PARIS — 16-24 JUIN 1894" ;
+    crm:P67_refers_to               ex:paris_congress_1894 ;
+    rdfs:label                      "Letterhead inscription"@en .
+
+#################################################################
+# Creation event
+#################################################################
+
+ex:letter_creation a crm:E65_Creation ;
+    crm:P94_has_created    ex:letter_coubertin ;
+    crm:P14_carried_out_by ex:pierre_de_coubertin ;
+    crm:P7_took_place_at   ex:paris ;
+    crm:P4_has_time-span   ex:timespan_1894_06_14 ;
+    rdfs:label             "Writing of Coubertin's letter (14 June 1894)"@en .
+
+#################################################################
+# Actors
+#################################################################
+
+ex:pierre_de_coubertin a crm:E21_Person ;
+    crm:P2_has_type ex:type_honorary_pgs_member ;
+    rdfs:label      "Baron Pierre de Coubertin"@en ;
+    owl:sameAs      wd:Q7106 .
+
+ex:fokianos a crm:E21_Person ;
+    rdfs:label "Ioannis Fokianos"@en ;
+    owl:sameAs wd:Q970955 .
+
+ex:dimitrios_vikelas a crm:E21_Person ;
+    rdfs:label "Dimitrios Vikelas"@en ;
+    owl:sameAs wd:Q297024 .
+
+ex:panhellenic_gymnastic_association a crm:E74_Group ;
+    rdfs:label "Panhellenic Gymnastic Association (P.G.S.)"@en ;
+    owl:sameAs wd:Q2057177 .
+
+#################################################################
+# Places
+#################################################################
+
+ex:paris a crm:E53_Place ;
+    rdfs:label "Paris"@en ;
+    owl:sameAs wd:Q90 .
+
+ex:athens a crm:E53_Place ;
+    rdfs:label "Athens"@en ;
+    owl:sameAs wd:Q1524 .
+
+#################################################################
+# Events
+#################################################################
+
+ex:paris_congress_1894 a crm:E7_Activity ;
+    crm:P2_has_type      ex:type_international_congress ;
+    crm:P7_took_place_at ex:paris ;
+    crm:P4_has_time-span ex:timespan_congress ;
+    crm:P11_had_participant ex:pierre_de_coubertin , ex:dimitrios_vikelas ;
+    rdfs:label           "Paris International Athletic Congress (16–24 June 1894)"@en ;
+    owl:sameAs           wd:Q622543 .
+
+#################################################################
+# Time-spans
+#################################################################
+
+ex:timespan_1894_06_14 a crm:E52_Time-Span ;
+    crm:P81_ongoing_throughout "1894-06-14"^^xsd:date ; crm:P82_at_some_time_within "1894-06-14"^^xsd:date ;
+    rdfs:label                  "14 June 1894"@en .
+
+ex:timespan_congress a crm:E52_Time-Span ;
+    crm:P81_ongoing_throughout "1894-06-16/1894-06-24" ; crm:P82_at_some_time_within "1894-06-16/1894-06-24" ;
+    rdfs:label                  "16–24 June 1894"@en .
+
+#################################################################
+# Languages
+#################################################################
+
+ex:lang_greek   a crm:E56_Language ; rdfs:label "Greek"@en .
+ex:lang_english a crm:E56_Language ; rdfs:label "English"@en .
+ex:lang_french  a crm:E56_Language ; rdfs:label "French"@en .
+
+#################################################################
+# Types
+#################################################################
+
+ex:type_handwritten_letter    a crm:E55_Type ; rdfs:label "handwritten letter"@en ; owl:sameAs aat:300200661 .
+ex:type_letter_text           a crm:E55_Type ; rdfs:label "letter text"@en .
+ex:type_typed_caption         a crm:E55_Type ; rdfs:label "typed caption"@en .
+ex:type_letterhead            a crm:E55_Type ; rdfs:label "letterhead inscription"@en .
+ex:type_honorary_pgs_member   a crm:E55_Type ; rdfs:label "honorary member of the Panhellenic Gymnastic Society"@en .
+ex:type_international_congress a crm:E55_Type ; rdfs:label "international congress"@en .
+
+# ===================================================================
+# gold-v2 enrichment: AAT/Wikidata grounding (curator-accepted)
+# ===================================================================
+
+ex:type_typed_caption crm:P127_has_broader_term aat:300191074 .
+ex:type_typed_caption crm:P127_has_broader_term wd:Q18585177 .

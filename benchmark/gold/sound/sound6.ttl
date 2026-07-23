@@ -1,0 +1,69 @@
+# Gold standard: sound6 – Thompson River Indian songs (Fewkes 1890, cylinder recordings)
+# Source text : txt/sound/sound6.txt
+# Students    : annotator8 (only)
+# Note        : Source text contains mixed content (starts with Thompson River Indians /
+#               Fewkes 1890, then merges into sound5 vilangwi content – likely OCR artefact).
+#               Gold standard captures the unique Thompson River / Fewkes section.
+
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+@prefix ex:    <https://example.org/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+
+# PEOPLE
+ex:fewkes a crm:E21_Person ;
+    rdfs:label "Dr. W. Fewkes (American ethnomusicologist)"@en .
+
+ex:gilman a crm:E21_Person ;
+    rdfs:label "Gilman (tonometric pitch analysis, 1892)"@en .
+
+# GROUPS
+ex:thompson_river_indians a crm:E74_Group ;
+    rdfs:label "Thompson River Indians (Salish tribe, interior of British Columbia)"@en .
+
+# PLACES
+ex:british_columbia a crm:E53_Place ;
+    rdfs:label "Interior of British Columbia (Canada)"@en .
+
+ex:indian_reservations a crm:E53_Place ;
+    rdfs:label "American Indian reservations"@en ;
+    owl:sameAs aat:300008506.
+
+# INSTRUMENT / DEVICE
+ex:cylinder_phonograph a cacao:CACAO_0000023 ;
+    rdfs:label "Cylinder phonograph (used for field recordings)"@en .
+
+# FIRST RECORDING EVENT (1890)
+ex:recording_american_indian_1890 a crm:E65_Creation ;
+    rdfs:label "First cylinder recording of American Indian songs by Fewkes (1890)"@en ;
+    crm:P14_carried_out_by ex:fewkes ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1890-01-01/1890-12-31" ; crm:P82_at_some_time_within "1890-01-01/1890-12-31" ] ;
+    crm:P16_used_specific_object ex:cylinder_phonograph ;
+    crm:P3_has_note "Cited as Fewkes (1890a); first use of phonograph for ethnomusicological field recording."@en .
+
+# THOMPSON RIVER SONGS
+ex:thompson_river_songs a cacao:CACAO_0000089 ;
+    rdfs:label "Songs of the Thompson River Indians (Salish, British Columbia)"@en ;
+    crm:P3_has_note "Recorded on cylinders. Analyzed tonometrically using Gilman (1892) procedure."@en .
+
+# ANALYTICAL METHOD
+ex:tonometric_analysis a crm:E13_Attribute_Assignment ;
+    rdfs:label "Tonometric pitch analysis of Thompson River songs (Gilman method, 1892)"@en ;
+    crm:P14_carried_out_by ex:gilman ;
+    crm:P140_assigned_attribute_to ex:thompson_river_songs ;
+    crm:P3_has_note "Pitches analyzed tonometrically in accordance with procedure developed by Gilman (1892)."@en .
+
+# PRESERVATION RATIONALE
+ex:preservation_rationale a crm:E73_Information_Object ;
+    rdfs:label "Rationale for recording Indian music on reservations"@en ;
+    crm:P3_has_note "American scholars collected valuable examples of primitive music from Indian reservations, saving the music from extinction."@en ;
+    crm:P129_is_about ex:thompson_river_indians .
+
+# PHONOGRAPH AS RESEARCH TOOL
+ex:phonograph_as_tool a crm:E73_Information_Object ;
+    rdfs:label "The phonograph as ethnomusicological research tool"@en ;
+    crm:P3_has_note "Since first recordings by Fewkes in 1890, the phonograph became an important tool of ethnomusicological research."@en .

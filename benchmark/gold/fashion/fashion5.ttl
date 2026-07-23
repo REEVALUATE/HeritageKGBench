@@ -1,0 +1,80 @@
+# Gold standard — fashion5.txt
+# Source text : "Corsage/jacket" (blue taffeta, zigzag motifs, white warp, square neckline, hooks-and-eyes)
+# Contributors: annotator6 (base structure, CACAO, AAT material types), annotator4 (Wikidata corsage/jacket links)
+
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ex:   <https://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix wd:   <http://www.wikidata.org/entity/> .
+@prefix aat:  <http://vocab.getty.edu/aat/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+
+#################################################################
+# Object
+#################################################################
+
+ex:corsage_jacket a cacao:CACAO_0000023 , cacao:CACAO_0000062 ;
+    crm:P2_has_type        ex:type_corsage , ex:type_jacket ;
+    crm:P45_consists_of    ex:material_blue_taffeta , ex:material_white_warp , ex:material_blue_striped_linen_lining ;
+    crm:P65_shows_visual_item ex:visual_zigzag_motif , ex:visual_square_neckline ,
+                              ex:visual_elbow_sleeves , ex:visual_long_lapels ;
+    crm:P46_is_composed_of ex:hook_eye_closure ;
+    rdfs:label             "Corsage / jacket in blue taffeta"@en .
+
+#################################################################
+# Closure component
+#################################################################
+
+ex:hook_eye_closure a cacao:CACAO_0000023 ;
+    crm:P2_has_type ex:type_hooks_and_eyes ;
+    rdfs:label      "Hooks-and-eyes closure"@en .
+
+#################################################################
+# Visual features
+#################################################################
+
+ex:visual_zigzag_motif a crm:E36_Visual_Item ;
+    rdfs:label "Zigzag motifs formed by raft motifs of a white warp"@en .
+
+ex:visual_square_neckline a crm:E36_Visual_Item ;
+    rdfs:label "Square neckline"@en .
+
+ex:visual_elbow_sleeves a crm:E36_Visual_Item ;
+    rdfs:label "Elbow-length sleeves"@en .
+
+ex:visual_long_lapels a crm:E36_Visual_Item ;
+    rdfs:label "Long lapels"@en .
+
+#################################################################
+# Materials
+#################################################################
+
+ex:material_blue_taffeta a crm:E57_Material ;
+    crm:P2_has_type aat:300249434 ;  # taffeta
+    rdfs:label      "blue taffeta"@en ;
+    owl:sameAs      wd:Q909391 .     # taffeta
+
+ex:material_white_warp a crm:E57_Material ;
+    crm:P2_has_type aat:300227930 ;  # warp (textile)
+    rdfs:label      "white warp threads"@en .
+
+ex:material_blue_striped_linen_lining a crm:E57_Material ;
+    crm:P2_has_type aat:300183635 ;  # linen
+    rdfs:label      "blue striped linen lining"@en .
+
+#################################################################
+# Types
+#################################################################
+
+ex:type_corsage        a crm:E55_Type ; rdfs:label "corsage"@en ; owl:sameAs wd:Q1076431 .
+ex:type_jacket         a crm:E55_Type ; rdfs:label "jacket"@en  ; owl:sameAs wd:Q849964 .
+ex:type_hooks_and_eyes a crm:E55_Type ; rdfs:label "hooks and eyes closure"@en ; owl:sameAs aat:300051508 .
+
+# ===================================================================
+# gold-v2 enrichment: AAT/Wikidata grounding (curator-accepted)
+# ===================================================================
+
+ex:type_corsage owl:sameAs aat:300220744 .
+ex:type_corsage owl:sameAs wd:Q3335066 .
+ex:type_jacket owl:sameAs aat:300046167 .

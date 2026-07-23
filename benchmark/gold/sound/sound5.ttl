@@ -1,0 +1,107 @@
+# Gold standard: sound5 – Carl Meinhof / vilangwi xylophone (Bondei, Tanganyika, 1902–1903)
+# Source text : txt/sound/sound5.txt
+# Students    : annotator6 (only)
+# Primary     : annotator6 (richest: Meinhof Wikidata, hexatonic tuning, interlocking style)
+
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+@prefix ex:    <https://example.org/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+
+# PEOPLE
+ex:meinhof a crm:E21_Person ;
+    rdfs:label "Carl Meinhof (1857–1944)"@en ;
+    owl:sameAs wd:Q66484 ;
+    crm:P3_has_note "Founder of modern African linguistics; Professor Ordinarius for African languages, University of Hamburg (from 1919); field-worker using wax cylinder recording."@en .
+
+ex:player_i a crm:E21_Person ;
+    rdfs:label "Vilangwi Player I (teacher; Bondei)"@en .
+
+ex:player_ii a crm:E21_Person ;
+    rdfs:label "Vilangwi Player II (learner; Bondei)"@en .
+
+# PLACES
+ex:tanganyika a crm:E53_Place ;
+    rdfs:label "Tanganyika (German East Africa)"@en ;
+    owl:sameAs wd:Q158725 .
+
+# INSTRUMENT
+ex:vilangwi a cacao:CACAO_0000023 ;
+    rdfs:label "Vilangwi 11-note xylophone (probably with box-resonator)"@en ;
+    crm:P2_has_type ex:type_xylophone ;
+    owl:sameAs wd:Q165666 ;
+    crm:P43_has_dimension [
+        a crm:E54_Dimension ;
+        rdfs:label "11 notes (keys)"@en ;
+        crm:P90_has_value "11"^^xsd:integer ;
+        crm:P91_has_unit ex:unit_note ;
+        crm:P2_has_type ex:type_count
+    ] ;
+    crm:P3_has_note "Hexatonic tuning (7th note deliberately absent: 'Das muss so sein'). Second scalar pattern in parallel fourths."@en .
+
+ex:type_xylophone a crm:E55_Type ;
+    rdfs:label "Xylophone"@en ;
+    owl:sameAs wd:Q165666 .
+
+# TUNING
+ex:hexatonic_tuning a crm:E13_Attribute_Assignment ;
+    rdfs:label "Meinhof's documentation of hexatonic tuning"@en ;
+    crm:P14_carried_out_by ex:meinhof ;
+    crm:P140_assigned_attribute_to ex:vilangwi ;
+    crm:P3_has_note "Hexatonic; 7th note missing deliberately. Tuning possibly derived from selective use of remote partials (6 to 11). Player asked to demonstrate scale in own conceptualization ('wie sie von den Leuten selbst als Skala gespielt werden')."@en .
+
+# INTERLOCKING STYLE
+ex:interlocking_style a crm:E55_Type ;
+    rdfs:label "Interlocking style (duple-division)"@en ;
+    owl:sameAs wd:Q994621 ;
+    crm:P3_has_note "Each performer plays at half the speed of total auditory impression; phrases combine like a cog-wheel. Common in xylophone traditions from Uganda to southern Tanzania and Mozambique."@en .
+
+# TEACHER-LEARNER CONTEXT
+ex:teacher_learner_event a crm:E7_Activity ;
+    rdfs:label "Vilangwi performance with teacher-learner dynamic (Bondei)"@en ;
+    crm:P14_carried_out_by ex:player_i, ex:player_ii ;
+    crm:P12_occurred_in_the_presence_of ex:vilangwi ;
+    crm:P3_has_note "In one piece player II made a mistake and was reprimanded by his superior (player I) with a long 'Ach!'."@en .
+
+# RECORDING (90 cylinders total)
+ex:collection_meinhof a crm:E78_Curated_Holding ;
+    rdfs:label "90 wax cylinder recordings by Carl Meinhof (Tanganyika, 1902–1903)"@en ;
+    crm:P43_has_dimension [
+        a crm:E54_Dimension ;
+        rdfs:label "90 cylinders"@en ;
+        crm:P90_has_value "90"^^xsd:integer ;
+        crm:P91_has_unit ex:unit_wax_cylinder ;
+        crm:P2_has_type ex:type_count
+    ] ;
+    crm:P3_has_note "Covers languages, folktales, oral history, Qur'an recitation, songs, musical instruments. Including languages from interior (Cinyanja, Luganda) and Gujarati-speaking immigrants in Dar es Salaam."@en .
+
+ex:recording_vilangwi a crm:E65_Creation ;
+    rdfs:label "Meinhof recording of vilangwi xylophone (Bondei, Tanganyika)"@en ;
+    crm:P14_carried_out_by ex:meinhof ;
+    crm:P7_took_place_at ex:tanganyika ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1902-01-01/1903-12-31" ; crm:P82_at_some_time_within "1902-01-01/1903-12-31" ] ;
+    crm:P94_has_created ex:collection_meinhof .
+
+# FIRST PIECE
+ex:first_piece_vilangwi a crm:E73_Information_Object ;
+    rdfs:label "First vilangwi piece (9 equispatial strokes motif, then transposition one step down)"@en ;
+    crm:P2_has_type ex:interlocking_style ;
+    crm:P3_has_note "Theme: series of 9 equispatial strokes by player I; motif continues in transposition one step down to form basic theme of 18 strokes; player II enters between notes of player I."@en .
+
+ex:collection_meinhof crm:P46_is_composed_of ex:first_piece_vilangwi .
+
+# DIMENSION TYPES & UNITS
+ex:type_count a crm:E55_Type ; rdfs:label "count"@en .
+ex:unit_note a crm:E58_Measurement_Unit ; rdfs:label "note"@en .
+ex:unit_wax_cylinder a crm:E58_Measurement_Unit ; rdfs:label "wax cylinder"@en .
+
+# ===================================================================
+# gold-v2 enrichment: AAT/Wikidata grounding (curator-accepted)
+# ===================================================================
+
+ex:type_count owl:sameAs aat:300404433 .
+ex:type_xylophone owl:sameAs aat:300041976 .

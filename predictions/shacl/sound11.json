@@ -1,0 +1,4 @@
+{
+  "id": "sound11",
+  "output": "@prefix ex: <http://example.org/> .\n\nex:SomeResource a ex:SomeClass ."
+}

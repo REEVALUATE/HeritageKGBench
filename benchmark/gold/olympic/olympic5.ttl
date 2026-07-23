@@ -1,0 +1,129 @@
+# Gold standard — olympic5.txt
+# Source text : "Zappian Games medal 1870" (reproduction, George I portrait, olive wreath, Evangelos Zappas)
+# Contributors: annotator6 (obverse/reverse parts, E36_Visual_Item, symbolism, E12_Production, Panathenaic Stadium),
+#               annotator2/annotator9 (E25 features, Wikidata for persons/event/wreath)
+
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ex:   <https://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix wd:   <http://www.wikidata.org/entity/> .
+@prefix aat:  <http://vocab.getty.edu/aat/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+
+#################################################################
+# Physical object
+#################################################################
+
+ex:medal_zappian_1870 a cacao:CACAO_0000023 ;
+    crm:P2_has_type        ex:type_reproduction_medal ;
+    crm:P46_is_composed_of ex:obverse , ex:reverse ;
+    crm:P108i_was_produced_by ex:production_1870 ;
+    crm:P67_refers_to      ex:zappian_games_1870 , wd:Q131557 ;  # medal (concept)
+    crm:P3_has_note        "Reproduction of a medal from the Zappian Games of 1870."@en ;
+    rdfs:label             "Reproduction of medal from the Zappian Games of 1870"@en .
+
+#################################################################
+# Parts: obverse and reverse
+#################################################################
+
+ex:obverse a cacao:CACAO_0000023 ;
+    crm:P65_shows_visual_item ex:portrait_george_I ;
+    crm:P128_carries          ex:inscription_front ;
+    rdfs:label                "Obverse (front) of the medal"@en .
+
+ex:reverse a cacao:CACAO_0000023 ;
+    crm:P65_shows_visual_item ex:olive_wreath_image ;
+    crm:P128_carries          ex:inscription_reverse ;
+    rdfs:label                "Reverse (back) of the medal"@en .
+
+#################################################################
+# Visual items
+#################################################################
+
+ex:portrait_george_I a crm:E36_Visual_Item ;
+    crm:P138_represents ex:george_I ;
+    rdfs:label          "Portrait of George I of Greece"@en .
+
+ex:olive_wreath_image a crm:E36_Visual_Item ;
+    crm:P138_represents wd:Q111531 ;  # kotinos (olive wreath)
+    rdfs:label          "Olive wreath motif"@en .
+
+#################################################################
+# Inscriptions
+#################################################################
+
+ex:inscription_front a crm:E34_Inscription ;
+    crm:P190_has_symbolic_content "ΓΕΩΡΓΙΟΣ Α! ΒΑΣΙΛΕΥΣ ΤΩΝ ΕΛΛΗΝΩΝ"@el ;
+    crm:P73_has_translation       ex:inscription_front_translation ;
+    crm:P129_is_about             ex:george_I ;
+    rdfs:label                    "Front inscription"@en .
+
+ex:inscription_front_translation a crm:E33_Linguistic_Object ;
+    crm:P190_has_symbolic_content "GEORGE A! KING OF THE GREEKS"@en .
+
+ex:inscription_reverse a crm:E34_Inscription ;
+    crm:P190_has_symbolic_content "ΑΓΩΝΟΘΕΤΗΣ ΕΥΑΓΓΕΛΗΣ ΖΑΠΠΑΣ, ΟΛΥΜΠΙΑ ΑΘΗΝΗΣΙ ΑΩΟ΄ (ΖΑΠΠΕΙΑ ΟΛΥΜΠΙΑ)"@el ;
+    crm:P73_has_translation       ex:inscription_reverse_translation ;
+    crm:P129_is_about             ex:evangelis_zappas , ex:zappian_games_1870 ;
+    rdfs:label                    "Reverse inscription"@en .
+
+ex:inscription_reverse_translation a crm:E33_Linguistic_Object ;
+    crm:P190_has_symbolic_content "GAMES SETTER EVANGELOS ZAPPAS, ZAPPIAN GAMES, OLYMPIA ATHENS 1870"@en .
+
+#################################################################
+# Persons
+#################################################################
+
+ex:george_I a crm:E21_Person ;
+    rdfs:label "George I of Greece"@en ;
+    owl:sameAs wd:Q150215 .
+
+ex:evangelis_zappas a crm:E21_Person ;
+    rdfs:label "Evangelos Zappas"@en ;
+    owl:sameAs wd:Q463901 .
+
+#################################################################
+# Event
+#################################################################
+
+ex:zappian_games_1870 a crm:E7_Activity ;
+    crm:P2_has_type      ex:type_zappian_games ;
+    crm:P14_carried_out_by ex:evangelis_zappas ;
+    crm:P7_took_place_at ex:panathenaic_stadium ;
+    crm:P4_has_time-span ex:timespan_1870 ;
+    rdfs:label           "Zappian (Zappeian) Games of 1870"@en ;
+    owl:sameAs           wd:Q1598735 .
+
+#################################################################
+# Production
+#################################################################
+
+ex:production_1870 a crm:E12_Production ;
+    crm:P108_has_produced ex:medal_zappian_1870 ;
+    crm:P4_has_time-span  ex:timespan_1870 ;
+    rdfs:label            "Production of the Zappian Games medal (circa 1870)"@en .
+
+#################################################################
+# Places
+#################################################################
+
+ex:panathenaic_stadium a crm:E53_Place ;
+    rdfs:label "Panathenaic Stadium, Athens"@en ;
+    owl:sameAs wd:Q208811 .
+
+#################################################################
+# Time-spans
+#################################################################
+
+ex:timespan_1870 a crm:E52_Time-Span ;
+    crm:P81_ongoing_throughout "1870-01-01/1870-12-31" ; crm:P82_at_some_time_within "1870-01-01/1870-12-31" ;
+    rdfs:label                  "1870"@en .
+
+#################################################################
+# Types
+#################################################################
+
+ex:type_reproduction_medal a crm:E55_Type ; rdfs:label "reproduction medal"@en ; owl:sameAs aat:300046025 .
+ex:type_zappian_games      a crm:E55_Type ; rdfs:label "Zappian Games"@en .

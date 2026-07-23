@@ -1,0 +1,73 @@
+# Gold standard — architecture2.txt
+# Source text : "The well in the atrium of the domus" (impluvium, wellhead, 3D printing, Aquileia)
+# Contributors: annotator1 (Wikidata links), annotator3 (E11_Modification, cacao:Domus)
+
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+@prefix ex:   <https://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix wd:   <http://www.wikidata.org/entity/> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+
+#################################################################
+# Places
+#################################################################
+
+ex:domus a crm:E53_Place , cacao:CACAO_0000055 ;
+    rdfs:label "Domus"@en ;
+    owl:sameAs wd:Q782970 .
+
+ex:atrium a crm:E53_Place ;
+    crm:P2_has_type      ex:type_public_space ;
+    crm:P89_falls_within ex:domus ;
+    rdfs:label           "Atrium of the domus"@en .
+
+ex:aquileia a crm:E53_Place ;
+    rdfs:label "Aquileia"@en ;
+    owl:sameAs wd:Q53216 .
+
+#################################################################
+# Objects
+#################################################################
+
+ex:well a cacao:CACAO_0000023 ;
+    crm:P2_has_type                        ex:type_shallow_well ;
+    crm:P46_is_composed_of                 ex:wellhead ;
+    crm:P55_has_current_location           ex:atrium ;
+    crm:P3_has_note                        "Not very deep; the aquifer in Aquileia is almost at ground level."@en ;
+    rdfs:label                             "Well"@en ;
+    owl:sameAs wd:Q43483 ,
+               aat:300152334.
+
+ex:wellhead a cacao:CACAO_0000023 ;
+    crm:P2_has_type  ex:type_wellhead ;
+    crm:P3_has_note  "Protective balustrade around the well opening; partially found."@en ;
+    rdfs:label       "Wellhead (protective balustrade)"@en .
+
+ex:impluvium a cacao:CACAO_0000023 ;
+    crm:P55_has_current_location ex:atrium ;
+    rdfs:label                   "Impluvium basin"@en .
+
+#################################################################
+# Modification events (reconstruction)
+#################################################################
+
+ex:wellhead_reconstruction a crm:E11_Modification ;
+    crm:P31_has_modified          ex:wellhead ;
+    crm:P32_used_general_technique ex:technique_3d_printing ;
+    crm:P3_has_note               "Missing part reconstructed with 3D printing techniques."@en ;
+    rdfs:label                    "3D reconstruction of the wellhead"@en .
+
+ex:impluvium_reconstruction a crm:E11_Modification ;
+    crm:P31_has_modified ex:impluvium ;
+    rdfs:label           "Reconstruction of the impluvium basin"@en .
+
+#################################################################
+# Types & techniques
+#################################################################
+
+ex:type_public_space      a crm:E55_Type              ; rdfs:label "public part of the house"@en .
+ex:type_shallow_well      a crm:E55_Type              ; rdfs:label "shallow well"@en .
+ex:type_wellhead          a crm:E55_Type              ; rdfs:label "wellhead"@en  ; owl:sameAs wd:Q7981274.
+ex:technique_3d_printing  a crm:E29_Design_or_Procedure ; rdfs:label "3D printing"@en .

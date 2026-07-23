@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use HeritageKGBench, please cite the accompanying paper."
+title: "HeritageKGBench"
+type: dataset
+authors:
+  - family-names: Peeters
+    given-names: Ruben
+    orcid: "https://orcid.org/0000-0002-0905-7033"
+  - family-names: Duan
+    given-names: Xuemin
+    orcid: "https://orcid.org/0000-0002-3256-8341"
+  - family-names: Dimou
+    given-names: Anastasia
+    orcid: "https://orcid.org/0000-0003-2138-7972"
+license: MIT
+repository-code: "https://github.com/REEVALUATE/HeritageKGBench"
+preferred-citation:
+  type: conference-paper
+  title: "LLM-based Knowledge Graph Construction for Cultural Heritage: An Extraction-Failure Diagnostic and CIDOC-CRM Benchmark"
+  authors:
+    - family-names: Peeters
+      given-names: Ruben
+      orcid: "https://orcid.org/0000-0002-0905-7033"
+    - family-names: Duan
+      given-names: Xuemin
+      orcid: "https://orcid.org/0000-0002-3256-8341"
+    - family-names: Dimou
+      given-names: Anastasia
+      orcid: "https://orcid.org/0000-0003-2138-7972"
+  year: 2026
+  status: in-press
+  conference:
+    name: "EKAW 2026 — 25th International Conference on Knowledge Engineering and Knowledge Management"
+    date-start: 2026-09-29
+    date-end: 2026-10-01

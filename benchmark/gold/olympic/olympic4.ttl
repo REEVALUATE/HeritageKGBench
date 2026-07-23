@@ -1,0 +1,136 @@
+# Gold standard — olympic4.txt
+# Source text : "Marathon Cup 1906" (prize cup, Athens 1906 Intercalated Games; 2024 Louvre exhibition)
+# Contributors: annotator2 (richest structure, Wikidata), annotator5 (inscription texts, exhibition dates),
+#               annotator8 (inscription languages, Louvre wd:Q19675)
+
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ex:   <https://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix wd:   <http://www.wikidata.org/entity/> .
+@prefix aat:  <http://vocab.getty.edu/aat/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+
+#################################################################
+# Physical object
+#################################################################
+
+ex:cup_marathon_1906 a cacao:CACAO_0000023 ;
+    crm:P2_has_type    ex:type_prize_cup ;
+    crm:P128_carries   ex:inscription_front , ex:inscription_back ;
+    crm:P67_refers_to  ex:marathon_race_1906 , ex:intercalated_games_1906 ;
+    crm:P12i_was_present_at ex:exhibition_olympism_2024 ;
+    crm:P3_has_note    "Cup awarded as a prize in the Marathon Race of the Athens 1906 Intercalated Games."@en ;
+    rdfs:label         "Cup — Marathon Race Commemorative (Athens 1906)"@en .
+
+#################################################################
+# Inscriptions
+#################################################################
+
+ex:inscription_front a crm:E34_Inscription ;
+    crm:P2_has_type               ex:type_front_inscription ;
+    crm:P190_has_symbolic_content "INTERNATIONAL OLYMPIC GAMES IN ATHENS 1906" ;
+    crm:P72_has_language          ex:lang_english ;
+    rdfs:label                    "Front inscription"@en .
+
+ex:inscription_back a crm:E34_Inscription ;
+    crm:P2_has_type               ex:type_back_inscription ;
+    crm:P190_has_symbolic_content "ENTHYMEMA MARATHONIOU"@el ;
+    crm:P73_has_translation       ex:inscription_back_translation ;
+    crm:P72_has_language          ex:lang_greek ;
+    rdfs:label                    "Back inscription (ENTHYMEMA MARATHONIOU)"@en .
+
+ex:inscription_back_translation a crm:E33_Linguistic_Object ;
+    crm:P190_has_symbolic_content "SOUVENIR OF THE MARATHON RUN" ;
+    crm:P72_has_language          ex:lang_english ;
+    rdfs:label                    "Translation of back inscription"@en .
+
+#################################################################
+# Events — 1906
+#################################################################
+
+ex:marathon_race_1906 a crm:E7_Activity ;
+    crm:P2_has_type    ex:type_marathon_race ;
+    crm:P10_falls_within ex:intercalated_games_1906 ;
+    crm:P7_took_place_at ex:athens ;
+    crm:P67_refers_to  wd:Q2049 ;  # marathon (sport)
+    rdfs:label         "Marathon Race, Athens 1906"@en .
+
+ex:intercalated_games_1906 a crm:E7_Activity ;
+    crm:P2_has_type    ex:type_intercalated_games ;
+    crm:P7_took_place_at ex:athens ;
+    crm:P4_has_time-span ex:timespan_1906 ;
+    crm:P67_refers_to  wd:Q5389 ;  # Olympic Games (concept)
+    rdfs:label         "Athens 1906 Intercalated Games"@en ;
+    owl:sameAs         wd:Q1874 .
+
+#################################################################
+# Exhibition — 2024
+#################################################################
+
+ex:exhibition_olympism_2024 a crm:E7_Activity ;
+    crm:P2_has_type      ex:type_exhibition ;
+    crm:P14_carried_out_by ex:louvre_museum , ex:french_school_athens ;
+    crm:P7_took_place_at ex:louvre_museum ;
+    crm:P4_has_time-span ex:timespan_exhibition_2024 ;
+    crm:P67_refers_to    wd:Q1144660 ;  # Paris 2024 Olympics
+    crm:P3_has_note      "Exhibition 'Olympism. A Modern Invention, an Ancient Heritage' in the framework of the Paris 2024 Olympic and Paralympic Games."@en ;
+    rdfs:label           "Exhibition: Olympism. A Modern Invention, an Ancient Heritage (2024)"@en .
+
+#################################################################
+# Actors
+#################################################################
+
+ex:louvre_museum a crm:E74_Group ;
+    rdfs:label "Louvre Museum"@en ;
+    owl:sameAs wd:Q19675 .
+
+ex:french_school_athens a crm:E74_Group ;
+    rdfs:label "French School of Athens"@en ;
+    owl:sameAs wd:Q1373403 .
+
+#################################################################
+# Places
+#################################################################
+
+ex:athens a crm:E53_Place ;
+    rdfs:label "Athens"@en ;
+    owl:sameAs wd:Q1524 .
+
+#################################################################
+# Time-spans
+#################################################################
+
+ex:timespan_1906 a crm:E52_Time-Span ;
+    crm:P81_ongoing_throughout "1906-01-01/1906-12-31" ; crm:P82_at_some_time_within "1906-01-01/1906-12-31" ;
+    rdfs:label                  "1906"@en .
+
+ex:timespan_exhibition_2024 a crm:E52_Time-Span ;
+    crm:P81_ongoing_throughout "2024-04-24/2024-09-16" ; crm:P82_at_some_time_within "2024-04-24/2024-09-16" ;
+    rdfs:label                  "24 April – 16 September 2024"@en .
+
+#################################################################
+# Languages
+#################################################################
+
+ex:lang_english a crm:E56_Language ; rdfs:label "English"@en .
+ex:lang_greek   a crm:E56_Language ; rdfs:label "Greek"@en .
+
+#################################################################
+# Types
+#################################################################
+
+ex:type_prize_cup          a crm:E55_Type ; rdfs:label "prize cup"@en  ; owl:sameAs wd:Q107196942.
+ex:type_front_inscription  a crm:E55_Type ; rdfs:label "front inscription"@en .
+ex:type_back_inscription   a crm:E55_Type ; rdfs:label "back inscription"@en .
+ex:type_marathon_race      a crm:E55_Type ; rdfs:label "marathon race"@en  ; owl:sameAs wd:Q40244.
+ex:type_intercalated_games a crm:E55_Type ; rdfs:label "Intercalated Olympic Games"@en  ; owl:sameAs wd:Q6045582.
+ex:type_exhibition         a crm:E55_Type ; rdfs:label "exhibition"@en ; owl:sameAs aat:300054766 .
+
+# ===================================================================
+# gold-v2 enrichment: AAT/Wikidata grounding (curator-accepted)
+# ===================================================================
+
+ex:type_exhibition owl:sameAs aat:300417531 .
+ex:type_front_inscription owl:sameAs aat:300435414 .

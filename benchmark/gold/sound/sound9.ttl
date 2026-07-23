@@ -1,0 +1,87 @@
+# Gold standard: sound9 – Xinjiang/Uigur music, Istanbul camp (Reinhard & Christensen, 1955)
+# Source text : txt/sound/sound9.txt  [same text as sound10.txt; both describe the Istanbul 1955 fieldwork]
+# Students    : annotator3 (only; contains Konbaung dynasty content – extraction mismatch)
+# Note        : sound9 source text = same as sound10 source text (Xinjiang/Uigur).
+#               Gold standard created directly from source text.
+#               Focuses on migration context and collection overview (complementary to sound10).
+
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+@prefix ex:    <https://example.org/> .
+@prefix wd:    <http://www.wikidata.org/entity/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+# PEOPLE
+ex:reinhard a crm:E21_Person ;
+    rdfs:label "Kurt Reinhard (ethnomusicologist)"@en ;
+    owl:sameAs wd:Q1794002 .
+
+ex:christensen a crm:E21_Person ;
+    rdfs:label "Dieter Christensen (ethnomusicologist)"@en ;
+    owl:sameAs wd:Q131442946 .
+
+# GROUPS
+ex:uigurs a crm:E74_Group ;
+    rdfs:label "Uigurs (Eastern Turkestan immigrants)"@en ;
+    owl:sameAs wd:Q46118 ;
+    crm:P3_has_note "In 1990s: 7 million Uigurs and 1 million Cossacks in Xinjiang; 500,000 Uigurs in Kazakhstan and Uzbekistan."@en .
+
+ex:cossacks a crm:E74_Group ;
+    rdfs:label "Cossacks (Kazakhs, also in Istanbul camp)"@en ;
+    owl:sameAs wd:Q80040 .
+
+# PLACES
+ex:istanbul a crm:E53_Place ;
+    rdfs:label "Istanbul"@en ;
+    owl:sameAs wd:Q406 .
+
+ex:istanbul_camp a crm:E53_Place ;
+    rdfs:label "Istanbul camp for Turk immigrants from Eastern Turkestan (1955)"@en ;
+    crm:P89_falls_within ex:istanbul .
+
+ex:xinjiang a crm:E53_Place ;
+    rdfs:label "Xinjiang (Eastern/Chinese Turkestan, autonomous province)"@en ;
+    owl:sameAs wd:Q34800 .
+
+ex:altai_mountains a crm:E53_Place ;
+    rdfs:label "Altai Mountains"@en ;
+    owl:sameAs wd:Q5955 .
+
+# MIGRATION CONTEXT
+ex:migration_to_turkey a crm:E7_Activity ;
+    rdfs:label "Migration of Uigurs and Cossacks from Xinjiang via Altai to Istanbul"@en ;
+    crm:P3_has_note "Caused by influx of Chinese immigrants to Eastern Turkestan; Turk inhabitants escaped on economic/political grounds to Soviet Union and further to Turkey. Informants: 'We took off from Altai to Istanbul like birds.'"@en ;
+    crm:P11_had_participant ex:uigurs, ex:cossacks ;
+    crm:P7_took_place_at ex:xinjiang, ex:altai_mountains, ex:istanbul .
+
+# SILK ROADS CULTURAL CONTEXT
+ex:silk_roads_context a crm:E73_Information_Object ;
+    rdfs:label "Silk Roads as cultural bridge: instruments traveling from culture to culture"@en ;
+    crm:P3_has_note "End-blown flute zibizga traveled into China; dombra adopted by many caravan-route cultures. Uigur music mediates Near Eastern and East Asian elements."@en ;
+    crm:P67_refers_to wd:Q36288 .
+
+# CHINESE POLICY CONTEXT
+ex:chinese_music_policy a crm:E73_Information_Object ;
+    rdfs:label "Chinese government policy: collect, rewrite, and re-disseminate traditional Xinjiang music"@en ;
+    crm:P3_has_note "Music rewritten in form more aligned with Han-Chinese political and aesthetic ideologies. Many traditional elements lost."@en ;
+    crm:P129_is_about ex:xinjiang .
+
+# FIELDWORK AND COLLECTION
+ex:fieldwork_istanbul_1955 a crm:E7_Activity ;
+    rdfs:label "Reinhard & Christensen fieldwork trip to Turkey (1955)"@en ;
+    crm:P14_carried_out_by ex:reinhard, ex:christensen ;
+    crm:P7_took_place_at ex:istanbul ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1955-01-01/1955-12-31" ; crm:P82_at_some_time_within "1955-01-01/1955-12-31" ] .
+
+ex:collection_istanbul_1955 a crm:E78_Curated_Holding ;
+    rdfs:label "Sound collection from Istanbul camp (1955): Uigur and Cossack music"@en ;
+    crm:P3_has_note "Equally songs and instrumental pieces: love songs, hero praise, reflections on life, horse-milk-on-alpine-pasture songs; dombra and zibizga instrumental pieces (descriptive/narrative character)."@en .
+
+ex:recording_session_camp a crm:E65_Creation ;
+    rdfs:label "Recording session at Istanbul emigrant camp (1955)"@en ;
+    crm:P14_carried_out_by ex:reinhard, ex:christensen ;
+    crm:P7_took_place_at ex:istanbul_camp ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ; crm:P81_ongoing_throughout "1955-01-01/1955-12-31" ; crm:P82_at_some_time_within "1955-01-01/1955-12-31" ] ;
+    crm:P94_has_created ex:collection_istanbul_1955 .

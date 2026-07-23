@@ -1,0 +1,4 @@
+https://schema.org/nationality
+https://schema.org/description
+https://schema.org/roleName
+https://schema.org/specialty

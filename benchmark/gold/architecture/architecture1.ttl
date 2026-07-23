@@ -1,0 +1,100 @@
+# Gold standard — architecture1.txt
+# Source text : "Titus Macer's house" (stone weight, Cossàr Fund, University of Padua)
+# Contributors: annotator5 (base), annotator1 (Wikidata links), annotator8 (AAT/CACAO hints)
+
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ex:   <https://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix wd:   <http://www.wikidata.org/entity/> .
+
+@prefix cacao: <http://w3id.org/cacao/> .
+@prefix aat: <http://vocab.getty.edu/aat/> .
+
+#################################################################
+# Objects
+#################################################################
+
+ex:stone_weight a cacao:CACAO_0000023 ;
+    crm:P2_has_type          ex:type_stone_weight ;
+    crm:P1_is_identified_by  ex:inscription_t_macr ;
+    rdfs:label               "Stone weight with inscription 'T. MACR'"@en .
+
+ex:inscription_t_macr a crm:E41_Appellation ;
+    crm:P190_has_symbolic_content "T. MACR" ;
+    crm:P67_refers_to             ex:person_titus_macer ;
+    rdfs:label                    "Inscription 'T. MACR' (Titi Macri)"@en .
+
+ex:house_titus_macer a cacao:CACAO_0000023 ;
+    crm:P1_is_identified_by              ex:appellation_house ;
+    crm:P43_has_dimension                ex:dim_area_1500sqm ;
+    crm:P53_has_former_or_current_location ex:place_cossar_fund ;
+    rdfs:label                           "Titus Macer's house"@en ;
+    owl:sameAs wd:Q55686163.
+
+ex:appellation_house a crm:E41_Appellation ;
+    crm:P190_has_symbolic_content "Titus Macer's house" ;
+    rdfs:label                    "House name appellation"@en .
+
+ex:dim_area_1500sqm a crm:E54_Dimension ;
+    crm:P2_has_type   ex:type_area ;
+    crm:P90_has_value "1500"^^xsd:decimal ;
+    crm:P91_has_unit  ex:unit_sqm ;
+    rdfs:label        "Area: 1,500 m²"@en .
+
+#################################################################
+# Activities & assignments
+#################################################################
+
+ex:discovery a crm:E7_Activity ;
+    crm:P2_has_type                      ex:type_excavation ;
+    crm:P7_took_place_at                 ex:place_cossar_fund ;
+    crm:P12_occurred_in_the_presence_of  ex:stone_weight ;
+    crm:P14_carried_out_by               ex:university_padua ;
+    rdfs:label                           "Archaeological excavation — discovery of stone weight"@en .
+
+ex:naming_house a crm:E15_Identifier_Assignment ;
+    crm:P14_carried_out_by         ex:university_padua ;
+    crm:P37_assigned               ex:appellation_house ;
+    crm:P140_assigned_attribute_to ex:house_titus_macer ;
+    crm:P3_has_note                "Named using the method applied in Pompeii: based on the inscription found on the stone weight."@en ;
+    rdfs:label                     "Naming of the house as 'Titus Macer's house'"@en .
+
+ex:hypothesis_merchant a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to ex:person_titus_macer ;
+    crm:P177_assigned_property_of_type crm:P2_has_type ;
+    crm:P141_assigned              ex:type_wealthy_merchant ;
+    crm:P3_has_note                "Assumption stated in the source; not independently verified."@en ;
+    rdfs:label                     "Hypothesis: Titus Macer was a wealthy merchant"@en .
+
+#################################################################
+# Actors & places
+#################################################################
+
+ex:person_titus_macer a crm:E21_Person ;
+    rdfs:label "Titus Macer"@en .
+
+ex:university_padua a crm:E74_Group ;
+    rdfs:label "University of Padua"@en ;
+    owl:sameAs wd:Q193510 .
+
+ex:place_cossar_fund a crm:E53_Place ;
+    rdfs:label "Cossàr Fund"@en .
+
+#################################################################
+# Types
+#################################################################
+
+ex:type_stone_weight     a crm:E55_Type         ; rdfs:label "stone weight"@en .
+ex:type_excavation       a crm:E55_Type         ; rdfs:label "archaeological excavation"@en  ; owl:sameAs wd:Q959782.
+ex:type_area             a crm:E55_Type         ; rdfs:label "area"@en  ; owl:sameAs aat:300055621.
+ex:type_wealthy_merchant a crm:E55_Type         ; rdfs:label "wealthy merchant (hypothesized)"@en  ; owl:sameAs wd:Q11500.
+ex:unit_sqm              a crm:E58_Measurement_Unit ; rdfs:label "m²"@en .
+crm:P2_has_type a crm:E55_Type .
+
+# ===================================================================
+# gold-v2 enrichment: AAT/Wikidata grounding (curator-accepted)
+# ===================================================================
+
+ex:type_excavation crm:P127_has_broader_term aat:300108265 .

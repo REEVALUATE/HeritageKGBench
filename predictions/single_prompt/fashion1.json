@@ -1,0 +1,4 @@
+{
+  "id": "fashion1",
+  "output": "@prefix ns2: <ns2:CACAO_00000> .\n@prefix ns3: <ns3:> .\n@prefix schema: <https://schema.org/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<http://example.com/EveningDress> a ns2:Dresses, ns2:Clothing, ns3:E22_Human-Made_Object, ns3:E19_Physical_Object ;\n    schema:description \"Evening dress of beige silk muslin set with translucent grey and white sequins in diagonal stripe pattern. Straight and wide cut to approximately calf height, without sleeves. V-neckline at front and back. At the front and back, the dress ends in a point. The dress is unlined and has no fastening.\" ;\n    ns2:height \"125\"^^xsd:float ."
+}

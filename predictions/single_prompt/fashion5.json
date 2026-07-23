@@ -1,0 +1,4 @@
+{
+  "id": "fashion5",
+  "output": "@prefix ns2: <http://ns.historyforge.eu/cacao#> .\n@prefix ns3: <http://www.cidoc-crm.org/cidoc-crm/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix schema: <https://schema.org/> .\n\n<http://example.com/corsage_jacket_001> rdf:type ns2:Coats ;\n    schema:description \"Corsage, jacket in blue taffeta with zigzag motifs formed by raft motifs of a white warp; model with square neckline, elbow-length sleeves and long lapels; closes with hooks and eyes; lining in blue striped linen.\" ;\n    ns3:P45_consists_of <http://example.com/taffeta>,\n        <http://example.com/linen> .\n\n<http://example.com/taffeta> rdf:type ns3:E57_Material ;\n    schema:description \"blue taffeta with zigzag motifs formed by raft motifs of a white warp\" .\n\n<http://example.com/linen> rdf:type ns3:E57_Material ;\n    schema:description \"blue striped linen\" ."
+}

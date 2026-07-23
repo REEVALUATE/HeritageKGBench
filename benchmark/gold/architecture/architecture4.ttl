@@ -1,0 +1,90 @@
+# Gold standard — architecture4.txt
+# Source text : "Coins" (1200 coins, sestertius of Maximinus Thrax, siege of Aquileia)
+# Contributors: annotator8 (only representation; AAT coin types, Wikidata)
+
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ex:   <https://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix wd:   <http://www.wikidata.org/entity/> .
+@prefix aat:  <http://vocab.getty.edu/aat/> .
+@prefix cacao: <http://w3id.org/cacao/> .
+
+#################################################################
+# Objects
+#################################################################
+
+ex:coin_collection a crm:E78_Collection ;
+    crm:P2_has_type           ex:type_coin ;
+    crm:P57_has_number_of_parts "1200"^^xsd:integer ;
+    crm:P106_is_composed_of   ex:sestertius_maximinus ;
+    rdfs:label                "Coin collection from excavations"@en .
+
+ex:sestertius_maximinus a cacao:CACAO_0000023 ;
+    crm:P2_has_type  ex:type_coin ;
+    crm:P2_has_type  ex:type_sestertius ;
+    crm:P62_depicts  ex:emperor_maximinus_thrax ;
+    rdfs:label       "Sestertius of Maximinus Thrax"@en .
+
+#################################################################
+# Actors
+#################################################################
+
+ex:emperor_maximinus_thrax a crm:E21_Person ;
+    crm:P100i_died_in ex:death_of_maximinus ;
+    rdfs:label        "Maximinus Thrax"@en ;
+    owl:sameAs        wd:Q185006 .
+
+ex:soldiers_of_maximinus a crm:E74_Group ;
+    rdfs:label "Soldiers of Maximinus Thrax"@en .
+
+ex:university_padua a crm:E74_Group ;
+    rdfs:label "University of Padua"@en ;
+    owl:sameAs wd:Q193510 .
+
+#################################################################
+# Places
+#################################################################
+
+ex:aquileia a crm:E53_Place ;
+    rdfs:label "Aquileia"@en ;
+    owl:sameAs wd:Q53216 .
+
+#################################################################
+# Events
+#################################################################
+
+ex:excavation a crm:E7_Activity ;
+    crm:P2_has_type                      ex:type_excavation ;
+    crm:P14_carried_out_by               ex:university_padua ;
+    crm:P7_took_place_at                 ex:aquileia ;
+    crm:P12_occurred_in_the_presence_of  ex:coin_collection ;
+    rdfs:label                           "Archaeological excavation (University of Padua)"@en .
+
+ex:siege_of_aquileia a crm:E5_Event ;
+    crm:P11_had_participant ex:emperor_maximinus_thrax , ex:soldiers_of_maximinus ;
+    crm:P7_took_place_at    ex:aquileia ;
+    crm:P3_has_note         "City remained loyal to Rome and resisted the siege successfully."@en ;
+    rdfs:label              "Siege of Aquileia"@en .
+
+ex:death_of_maximinus a crm:E69_Death ;
+    crm:P14_carried_out_by ex:soldiers_of_maximinus ;
+    crm:P7_took_place_at   ex:aquileia ;
+    rdfs:label             "Death of Maximinus Thrax at the hands of his own soldiers"@en .
+
+#################################################################
+# Types
+#################################################################
+
+ex:type_coin       a crm:E55_Type ; rdfs:label "coin"@en      ; owl:sameAs aat:300037241 .
+ex:type_sestertius a crm:E55_Type ; rdfs:label "sestertius"@en ; owl:sameAs aat:300037270 .
+ex:type_excavation a crm:E55_Type ; rdfs:label "archaeological excavation"@en .
+
+# ===================================================================
+# gold-v2 enrichment: AAT/Wikidata grounding (curator-accepted)
+# ===================================================================
+
+ex:type_coin owl:sameAs aat:300037222 .
+ex:type_coin owl:sameAs wd:Q41207 .
+ex:type_excavation crm:P127_has_broader_term aat:300108265 .
