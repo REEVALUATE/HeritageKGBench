@@ -8,6 +8,7 @@ Subcommands:
                 shipped V1/V2/V4 predictions.
   significance  Bootstrap 95% CIs on per-text F1 from the shipped score files.
   el-sensitivity  F1 with vs without owl:sameAs links (entity-linking floor).
+  paper-tables  Rebuild paper Tables 4/5 as CSVs, checked against the PDF.
 """
 
 import argparse
@@ -53,6 +54,9 @@ def main(argv=None) -> int:
                    help="Bootstrap CIs (delegates to heritagekgbench.significance_tests)")
     sub.add_parser("el-sensitivity", add_help=False,
                    help="sameAs sensitivity (delegates to heritagekgbench.el_sensitivity)")
+    sub.add_parser("paper-tables", add_help=False,
+                   help="Reproduce paper Tables 4 & 5 as CSVs (delegates to "
+                        "heritagekgbench.paper_tables)")
 
     # Split known args so delegated subcommands keep their own flags.
     args, rest = parser.parse_known_args(argv)
@@ -145,6 +149,12 @@ def main(argv=None) -> int:
         from heritagekgbench.el_sensitivity import main as el_main
         sys.argv = ["el-sensitivity"] + rest
         el_main()
+        return 0
+
+    if args.command == "paper-tables":
+        from heritagekgbench.paper_tables import main as pt_main
+        sys.argv = ["paper-tables"] + rest
+        pt_main()
         return 0
 
     parser.error(f"Unknown command {args.command}")

@@ -1,0 +1,10 @@
+Metric,V1,V2,V4
+FM1 event-type recall (all 30),0.011,0.061,0.1
+FM2 fabricated prefixes / text,1.97,1.03,0.93
+of which malformed URI,18,4,10
+FM3 owl:sameAs statements (gold 190),0,0,6
+FM4 parsed (pipeline / rdflib-strict),30 / 14,18 / 14,27 / 27
+FM5 CIDOC predicate-set divergence (parsed),0.255,0.557,0.43
+FM6 vocab-injection rate (parsed),0.199,0.073,0.025
+FM7 E52 detachment (parsed),0.143,0.107,0.236
+FM3 owl:sameAs triples (gold 199),0,0,14

@@ -1,0 +1,57 @@
+Cell,Reproduced,Paper,Match
+T4 Gold F1_p,1.0,1.0,PASS
+T4 Gold F1_30,1.0,1.0,PASS
+T4 Gold OC,1.0,1.0,PASS
+T4 Gold RH,0.0,0.0,PASS
+T4 Gold ER,1.0,1.0,PASS
+T4 Gold TF1,1.0,1.0,PASS
+T4 Gold PC,1.0,1.0,PASS
+T4 Gold Parsed,30 / 30,30 / 30,PASS
+T4 V1 F1_p,0.025,0.025,PASS
+T4 V1 F1_30,0.025,0.025,PASS
+T4 V1 OC,0.416,0.416,PASS
+T4 V1 RH,0.051,0.051,PASS
+T4 V1 ER,0.362,0.362,PASS
+T4 V1 TF1,0.076,0.076,PASS
+T4 V1 PC,0.106,0.106,PASS
+T4 V1 Parsed,30 / 30,30 / 30,PASS
+T4 V2 F1_p,0.038,0.038,PASS
+T4 V2 F1_30,0.023,0.023,PASS
+T4 V2 OC,0.715,0.715,PASS
+T4 V2 RH,0.062,0.062,PASS
+T4 V2 ER,0.72,0.72,PASS
+T4 V2 TF1,0.173,0.173,PASS
+T4 V2 PC,0.104,0.104,PASS
+T4 V2 Parsed,18 / 30,18 / 30,PASS
+T4 V4 F1_p,0.052,0.052,PASS
+T4 V4 F1_30,0.047,0.047,PASS
+T4 V4 OC,0.725,0.725,PASS
+T4 V4 RH,0.016,0.016,PASS
+T4 V4 ER,0.606,0.606,PASS
+T4 V4 TF1,0.138,0.138,PASS
+T4 V4 PC,0.096,0.096,PASS
+T4 V4 Parsed,27 / 30,27 / 30,PASS
+T5 FM1 event-type recall (all 30) V1,0.011,0.011,PASS
+T5 FM1 event-type recall (all 30) V2,0.061,0.061,PASS
+T5 FM1 event-type recall (all 30) V4,0.1,0.1,PASS
+T5 FM2 fabricated prefixes / text V1,1.97,1.97,PASS
+T5 FM2 fabricated prefixes / text V2,1.03,1.03,PASS
+T5 FM2 fabricated prefixes / text V4,0.93,0.93,PASS
+T5 of which malformed URI V1,18,18,PASS
+T5 of which malformed URI V2,4,4,PASS
+T5 of which malformed URI V4,10,10,PASS
+T5 FM3 owl:sameAs statements (gold 190) V1,0,0,PASS
+T5 FM3 owl:sameAs statements (gold 190) V2,0,0,PASS
+T5 FM3 owl:sameAs statements (gold 190) V4,6,6,PASS
+T5 FM4 parsed (pipeline / rdflib-strict) V1,30 / 14,30 / 14,PASS
+T5 FM4 parsed (pipeline / rdflib-strict) V2,18 / 14,18 / 14,PASS
+T5 FM4 parsed (pipeline / rdflib-strict) V4,27 / 27,27 / 27,PASS
+T5 FM5 CIDOC predicate-set divergence (parsed) V1,0.255,0.255,PASS
+T5 FM5 CIDOC predicate-set divergence (parsed) V2,0.557,0.557,PASS
+T5 FM5 CIDOC predicate-set divergence (parsed) V4,0.43,0.43,PASS
+T5 FM6 vocab-injection rate (parsed) V1,0.199,0.199,PASS
+T5 FM6 vocab-injection rate (parsed) V2,0.073,0.073,PASS
+T5 FM6 vocab-injection rate (parsed) V4,0.025,0.025,PASS
+T5 FM7 E52 detachment (parsed) V1,0.143,0.143,PASS
+T5 FM7 E52 detachment (parsed) V2,0.107,0.107,PASS
+T5 FM7 E52 detachment (parsed) V4,0.236,0.236,PASS

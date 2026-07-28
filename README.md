@@ -51,6 +51,7 @@ results/
   fm_metrics.json        failure-mode metrics (FM1/2/5/6/7)
   significance_tests.json  bootstrap 95% CIs
   el_sensitivity.{json,csv} F1 with/without owl:sameAs links
+  paper_tables/          paper Tables 4 & 5 as CSVs + verification vs. the PDF
 docs/
   MODELLING_GUIDE.md     annotation provenance + modelling conventions
   METRICS.md             full metric definitions
@@ -97,6 +98,10 @@ heritagekgbench evaluate --pred-dir predictions/gold_as_pred
 heritagekgbench fm-metrics
 heritagekgbench significance
 heritagekgbench el-sensitivity
+
+# Paper Tables 4 & 5 as CSVs, checked cell-by-cell against the PDF
+# -> results/paper_tables/{table4_ch_headline,table5_fm_system_metrics,verification}.csv
+heritagekgbench paper-tables
 ```
 
 **Re-run the baseline systems** (optional; requires an LLM API key and incurs
