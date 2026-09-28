@@ -128,6 +128,16 @@ with non-empty system output):
 | V4 agentic + SHACL | 27/30 | 0.0525 | 0.0472 | 0.606 | 0.725 |
 | gold (sanity) | 30/30 | 1.0000 | 1.0000 | 1.000 | 1.000 |
 
+## Text2KGBench experiments
+
+The paper's Text2KGBench results (Wikidata-TekGen, 10 ontologies) were
+produced with the agentic-kgc codebase and are not part of this release.
+Following the benchmark's own reporting protocol, they use the
+`manually_verified_sentences` subset of the test split (939 of 4,062
+sentences), the same subset on which the original Text2KGBench baseline scores
+are computed. Items with empty system output (25) were excluded from the
+averages. DBpedia-WebNLG and the unseen-sentence set were not evaluated.
+
 ## Notes and known limitations
 
 - `sound9` and `sound10` share a source text (factual vs subjective
